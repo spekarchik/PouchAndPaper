@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "item": "compactmod:paperstack",
+      "data": 32767
+    }
+  },
+  "result": {
+    "item": "compactmod:paperblock",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "compactmod:seedpocket_beet"
+    }
+  ],
+  "result": {
+    "item": "minecraft:beetroot_seeds",
+    "count": 4
+  }
+}

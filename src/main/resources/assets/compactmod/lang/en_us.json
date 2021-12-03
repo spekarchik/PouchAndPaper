@@ -1,0 +1,18 @@
+{
+  "language": "English",
+  "language.region": "United States",
+  "language.code": "en_us",
+  "author": "Sergey Pekarchik",
+
+  "itemGroup.compactmod": "Compact Mod",
+  "item.compactmod.paperstack": "Paper Stack",
+  "item.compactmod.inkbottle": "Ink Bottle",
+  "item.compactmod.leatherpack": "Leather Pack",
+  "item.compactmod.seedpocket_wheat": "Pocket of Wheat Seeds",
+  "item.compactmod.seedpocket_beet": "Pocket of Beet Seeds",
+  "item.compactmod.seedpocket_watermelon": "Pocket of Water Melon Seeds",
+  "item.compactmod.seedpocket_pumpkin": "Pocket of Pumpkin Seeds",
+
+  "block.compactmod.paperblock": "Paper Block",
+  "block.compactmod.gunpowderblock": "Gunpowder Block"
+}

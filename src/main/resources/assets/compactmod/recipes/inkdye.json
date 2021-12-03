@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "compactmod:inkbottle"
+    }
+  ],
+  "result": {
+    "item": "minecraft:dye",
+    "data": 0,
+    "count": 4
+  }
+}
