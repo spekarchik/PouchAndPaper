@@ -1,9 +1,9 @@
 {
   "variants":
   {
-    "normal":
+    "":
     {
-      "model": "compactmod:gunpowderblock"
+      "model": "compactmod:block/gunpowderblock"
     }
   }
 }

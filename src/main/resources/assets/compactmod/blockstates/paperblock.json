@@ -1,9 +1,9 @@
 {
   "variants":
   {
-    "normal":
+    "":
     {
-      "model": "compactmod:paperblock"
+      "model": "compactmod:block/paperblock"
     }
   }
 }

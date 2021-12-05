@@ -1,6 +1,9 @@
 package com.pekar.compactmod;
 
+import com.pekar.compactmod.blocks.BlockRegistry;
 import com.pekar.compactmod.items.ItemRegistry;
+import com.pekar.compactmod.tab.CompactModTab;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -14,6 +17,7 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -35,7 +39,7 @@ public class CompactMod
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
-        register();
+        initialyzeRegistry();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -44,8 +48,9 @@ public class CompactMod
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
-    private void register()
+    private void initialyzeRegistry()
     {
+        BlockRegistry.initStatic();
         ItemRegistry.initStatic();
     }
 
@@ -79,6 +84,23 @@ public class CompactMod
         {
             // register a new block here
             LOGGER.info("HELLO from Register Block");
+        }
+
+        @SubscribeEvent
+        public static void onRegisterItems(final RegistryEvent.Register<Item> event)
+        {
+            LOGGER.info("***");
+            var registry = event.getRegistry();
+            BLOCKS.getEntries().stream()
+                    .map(RegistryObject::get)
+                    .forEach(block ->
+                    {
+                        final var prop = new Item.Properties().tab(CompactModTab.COMPACT_MOD_TAB);
+                        var blockItem = new BlockItem(block, prop);
+                        blockItem.setRegistryName(block.getRegistryName());
+                        registry.register(blockItem);
+                        LOGGER.info("BlockItem registered : " + blockItem.getRegistryName().toString());
+                    });
         }
     }
 }
