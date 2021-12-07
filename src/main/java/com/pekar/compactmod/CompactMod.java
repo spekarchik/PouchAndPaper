@@ -35,9 +35,9 @@ public class CompactMod
     public CompactMod()
     {
         // Register the setup method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
+        //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
 
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+        //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
         initialyzeRegistry();
 
@@ -57,8 +57,8 @@ public class CompactMod
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+//        LOGGER.info("HELLO FROM PREINIT");
+//        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
     private void clientSetup(final FMLClientSetupEvent event)
@@ -67,7 +67,7 @@ public class CompactMod
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
+    //@SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
         // do something when the server starts
@@ -79,7 +79,7 @@ public class CompactMod
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents
     {
-        @SubscribeEvent
+        //@SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
         {
             // register a new block here
@@ -89,7 +89,6 @@ public class CompactMod
         @SubscribeEvent
         public static void onRegisterItems(final RegistryEvent.Register<Item> event)
         {
-            LOGGER.info("***");
             var registry = event.getRegistry();
             BLOCKS.getEntries().stream()
                     .map(RegistryObject::get)
@@ -99,7 +98,6 @@ public class CompactMod
                         var blockItem = new BlockItem(block, prop);
                         blockItem.setRegistryName(block.getRegistryName());
                         registry.register(blockItem);
-                        LOGGER.info("BlockItem registered : " + blockItem.getRegistryName().toString());
                     });
         }
     }
