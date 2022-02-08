@@ -1,9 +1,9 @@
 package com.pekar.compactmod.tab;
 
 import com.pekar.compactmod.CompactMod;
+import com.pekar.compactmod.items.ItemRegistry;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 
 public class CompactModTab extends CreativeModeTab
 {
@@ -17,6 +17,6 @@ public class CompactModTab extends CreativeModeTab
     @Override
     public ItemStack makeIcon()
     {
-        return new ItemStack(Items.STRING);
+        return new ItemStack(ItemRegistry.PAPER_STACK.get());
     }
 }
