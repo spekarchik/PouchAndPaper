@@ -6,7 +6,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class BlockRegistry
 {
-    public static final RegistryObject<Block> GUNPOWDER_BLOCK = CompactMod.BLOCKS.register("gunpowderblock", GunPowderBlock::new);
+//    public static final RegistryObject<Block> GUNPOWDER_BLOCK = CompactMod.BLOCKS.register("gunpowderblock", GunPowderBlock::new);
     public static final RegistryObject<Block> PAPER_BLOCK = CompactMod.BLOCKS.register("paperblock", PaperBlock::new);
 
     public static void initStatic()
