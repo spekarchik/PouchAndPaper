@@ -7,7 +7,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -69,33 +68,5 @@ public class CompactMod
     {
         // do something when the server starts
 //        LOGGER.info("HELLO from server starting");
-    }
-
-    // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
-    // Event bus for receiving Registry Events)
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents
-    {
-        //@SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
-        {
-            // register a new block here
-//            LOGGER.info("HELLO from Register Block");
-        }
-
-        @SubscribeEvent
-        public static void onRegisterItems(final RegistryEvent.Register<Item> event)
-        {
-            var registry = event.getRegistry();
-            BLOCKS.getEntries().stream()
-                    .map(RegistryObject::get)
-                    .forEach(block ->
-                    {
-                        final var prop = new Item.Properties().tab(CompactModTab.COMPACT_MOD_TAB);
-                        var blockItem = new BlockItem(block, prop);
-                        blockItem.setRegistryName(block.getRegistryName());
-                        registry.register(blockItem);
-                    });
-        }
     }
 }
