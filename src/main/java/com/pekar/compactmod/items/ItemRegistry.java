@@ -13,6 +13,7 @@ public class ItemRegistry
     public static final RegistryObject<Item> SEEDPOCKET_PUMPKIN = CompactMod.ITEMS.register("seedpocket_pumpkin", ModItem::new);
     public static final RegistryObject<Item> SEEDPOCKET_WATERMELON = CompactMod.ITEMS.register("seedpocket_watermelon", ModItem::new);
     public static final RegistryObject<Item> SEEDPOCKET_WHEAT = CompactMod.ITEMS.register("seedpocket_wheat", ModItem::new);
+    public static final RegistryObject<Item> FEATHERS_PACK = CompactMod.ITEMS.register("feathers_pack", ModItem::new);
 
     public static void initStatic()
     {
