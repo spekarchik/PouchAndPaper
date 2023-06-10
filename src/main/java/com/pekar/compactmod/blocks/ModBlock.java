@@ -2,13 +2,12 @@ package com.pekar.compactmod.blocks;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 
 public abstract class ModBlock extends Block
 {
-    protected ModBlock(Material material)
+    protected ModBlock(BlockBehaviour behaviour)
     {
-        super(BlockBehaviour.Properties.of(material));
+        super(BlockBehaviour.Properties.copy(behaviour));
     }
 
     protected ModBlock(BlockBehaviour.Properties properties)

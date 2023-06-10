@@ -3,10 +3,10 @@ package com.pekar.compactmod.blocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
 
 public class GunPowderBlock extends ModFallingBlock
 {
@@ -14,7 +14,7 @@ public class GunPowderBlock extends ModFallingBlock
 
     public GunPowderBlock()
     {
-        super(BlockBehaviour.Properties.of(Material.SAND)
+        super(BlockBehaviour.Properties.copy(Blocks.SAND)
                 .sound(SoundType.SNOW)
                 .strength(0.2f));
     }

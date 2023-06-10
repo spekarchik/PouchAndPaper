@@ -2,13 +2,12 @@ package com.pekar.compactmod.blocks;
 
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 
 public abstract class ModFallingBlock extends FallingBlock
 {
-    protected ModFallingBlock(Material material)
+    protected ModFallingBlock(BlockBehaviour behaviour)
     {
-        super(BlockBehaviour.Properties.of(material));
+        super(BlockBehaviour.Properties.copy(behaviour));
     }
 
     protected ModFallingBlock(BlockBehaviour.Properties properties)

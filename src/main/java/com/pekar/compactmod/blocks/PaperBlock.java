@@ -1,14 +1,14 @@
 package com.pekar.compactmod.blocks;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 
 public class PaperBlock extends ModBlock
 {
     public PaperBlock()
     {
-        super(BlockBehaviour.Properties.of(Material.PLANT)
+        super(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
                 .sound(SoundType.STONE)
                 .strength(0.6f));
     }

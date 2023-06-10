@@ -1,7 +1,6 @@
 package com.pekar.compactmod.blocks;
 
 import com.pekar.compactmod.CompactMod;
-import com.pekar.compactmod.items.ModItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
