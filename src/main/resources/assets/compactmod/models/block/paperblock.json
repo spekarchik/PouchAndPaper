@@ -2,9 +2,9 @@
   "parent": "minecraft:block/cube_bottom_top",
   "textures":
   {
-    "front": "compactmod:blocks/paperblock",
-    "side": "compactmod:blocks/paperblock",
-    "top": "compactmod:blocks/paperblock_2",
-    "bottom": "compactmod:blocks/paperblock_2"
+    "front": "compactmod:block/paperblock",
+    "side": "compactmod:block/paperblock",
+    "top": "compactmod:block/paperblock_2",
+    "bottom": "compactmod:block/paperblock_2"
   }
 }
