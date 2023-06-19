@@ -16,7 +16,7 @@ public class MainTab extends ModTab
     @Override
     protected String getTabName()
     {
-        return "compact_mod";
+        return "compactmod_tab";
     }
 
     @Override

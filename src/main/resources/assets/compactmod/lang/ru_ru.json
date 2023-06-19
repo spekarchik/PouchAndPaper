@@ -5,6 +5,7 @@
   "author": "Sergey Pekarchik",
 
   "itemGroup.compactmod": "Компакт Мод",
+  "itemGroup.compactmod_tab": "Compact Mod",
 
   "item.compactmod.paperstack": "Стопка Бумаги",
   "item.compactmod.inkbottle": "Банка Чернил",

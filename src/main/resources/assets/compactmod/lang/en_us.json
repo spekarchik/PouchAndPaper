@@ -5,6 +5,8 @@
   "author": "Sergey Pekarchik",
 
   "itemGroup.compactmod": "Compact Mod",
+  "itemGroup.compactmod_tab": "Compact Mod",
+
   "item.compactmod.paperstack": "Paper Stack",
   "item.compactmod.inkbottle": "Ink Bottle",
   "item.compactmod.leatherpack": "Leather Pack",
