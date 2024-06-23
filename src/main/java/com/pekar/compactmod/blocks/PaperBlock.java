@@ -8,7 +8,7 @@ public class PaperBlock extends ModBlock
 {
     public PaperBlock()
     {
-        super(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
+        super(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
                 .sound(SoundType.STONE)
                 .strength(0.6f));
     }

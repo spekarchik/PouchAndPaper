@@ -7,7 +7,7 @@ public abstract class ModFallingBlock extends FallingBlock
 {
     protected ModFallingBlock(BlockBehaviour behaviour)
     {
-        super(BlockBehaviour.Properties.copy(behaviour));
+        super(BlockBehaviour.Properties.ofFullCopy(behaviour));
     }
 
     protected ModFallingBlock(BlockBehaviour.Properties properties)

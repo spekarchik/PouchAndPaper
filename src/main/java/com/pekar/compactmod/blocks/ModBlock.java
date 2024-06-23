@@ -7,7 +7,7 @@ public abstract class ModBlock extends Block
 {
     protected ModBlock(BlockBehaviour behaviour)
     {
-        super(BlockBehaviour.Properties.copy(behaviour));
+        super(BlockBehaviour.Properties.ofFullCopy(behaviour));
     }
 
     protected ModBlock(BlockBehaviour.Properties properties)

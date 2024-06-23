@@ -7,7 +7,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.Collection;
 
@@ -20,13 +21,13 @@ public class MainTab extends ModTab
     }
 
     @Override
-    protected RegistryObject<Item> getIconItem()
+    protected DeferredItem<Item> getIconItem()
     {
         return ItemRegistry.PAPER_STACK;
     }
 
     @Override
-    protected Collection<RegistryObject<Item>> getTabItems()
+    protected Collection<DeferredHolder<Item, ? extends Item>> getTabItems()
     {
         ItemRegistry.initStatic();
         BlockRegistry.initStatic();

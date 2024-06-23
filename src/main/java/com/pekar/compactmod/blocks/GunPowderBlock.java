@@ -14,7 +14,7 @@ public class GunPowderBlock extends ModFallingBlock
 
     public GunPowderBlock()
     {
-        super(BlockBehaviour.Properties.copy(Blocks.SAND)
+        super(BlockBehaviour.Properties.ofFullCopy(Blocks.SAND)
                 .sound(SoundType.SNOW)
                 .strength(0.2f));
     }

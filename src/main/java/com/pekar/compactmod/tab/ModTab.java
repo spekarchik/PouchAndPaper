@@ -4,7 +4,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.Collection;
 
@@ -14,9 +15,9 @@ public abstract class ModTab
 {
     protected abstract String getTabName();
 
-    protected abstract RegistryObject<Item> getIconItem();
+    protected abstract DeferredItem<Item> getIconItem();
 
-    protected abstract Collection<RegistryObject<Item>> getTabItems();
+    protected abstract Collection<DeferredHolder<Item, ? extends Item>> getTabItems();
 
     protected abstract ResourceKey<CreativeModeTab>[] getTabsBefore();
 
@@ -25,7 +26,7 @@ public abstract class ModTab
         return "itemGroup." + getTabName();
     }
 
-    public final RegistryObject<CreativeModeTab> createTab()
+    public final DeferredHolder<CreativeModeTab, CreativeModeTab> createTab()
     {
         return CREATIVE_MODE_TABS.register(getTabName(), () -> CreativeModeTab.builder()
                 .withTabsBefore(getTabsBefore())
