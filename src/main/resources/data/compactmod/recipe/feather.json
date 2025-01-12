@@ -6,7 +6,7 @@
     }
   ],
   "result": {
-    "item": "minecraft:feather",
+    "id": "minecraft:feather",
     "count": 9
   }
 }
