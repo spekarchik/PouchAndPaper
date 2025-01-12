@@ -55,7 +55,7 @@ public class CompactMod
         CREATIVE_MODE_TABS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
-        NeoForge.EVENT_BUS.register(this);
+        //NeoForge.EVENT_BUS.register(this);
 
         // Register the item to a creative tab
         //modEventBus.addListener(this::addCreative);
