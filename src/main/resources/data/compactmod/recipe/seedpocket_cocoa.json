@@ -6,11 +6,12 @@
   ],
   "key": {
     "A": {
-      "item": "minecraft:ink_sac"
+      "item": "minecraft:cocoa_beans",
+      "data": 0
     }
   },
   "result": {
-    "id": "compactmod:inkbottle",
+    "id": "compactmod:seedpocket_cocoa",
     "count": 1
   }
 }

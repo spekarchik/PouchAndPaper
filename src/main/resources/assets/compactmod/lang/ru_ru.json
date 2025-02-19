@@ -8,12 +8,14 @@
   "itemGroup.compactmod_tab": "Compact Mod",
 
   "item.compactmod.paperstack": "Стопка Бумаги",
-  "item.compactmod.inkbottle": "Банка Чернил",
+  "item.compactmod.ink_bottle": "Банка Чернил",
+  "item.compactmod.glow_ink_bottle": "Банка Светящихся Чернил",
   "item.compactmod.leatherpack": "Пачка Кожи",
   "item.compactmod.seedpocket_wheat": "Пакет семян пшеницы",
   "item.compactmod.seedpocket_beet": "Пакет семян свеклы",
   "item.compactmod.seedpocket_watermelon": "Пакет семян арбуза",
   "item.compactmod.seedpocket_pumpkin": "Пакет семян тыквы",
+  "item.compactmod.seedpocket_cocoa": "Пакет семян какао",
   "item.compactmod.feathers_pack": "Пакет с перьями",
 
   "block.compactmod.paperblock": "Блок Бумаги",

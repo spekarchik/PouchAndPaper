@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "compactmod:ink_bottle"
+    }
+  ],
+  "result": {
+    "id": "minecraft:ink_sac",
+    "count": 4
+  }
+}

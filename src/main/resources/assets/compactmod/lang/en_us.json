@@ -8,12 +8,14 @@
   "itemGroup.compactmod_tab": "Compact Mod",
 
   "item.compactmod.paperstack": "Paper Stack",
-  "item.compactmod.inkbottle": "Ink Bottle",
+  "item.compactmod.ink_bottle": "Ink Bottle",
+  "item.compactmod.glow_ink_bottle": "Glow Ink Bottle",
   "item.compactmod.leatherpack": "Leather Pack",
   "item.compactmod.seedpocket_wheat": "Pocket of Wheat Seeds",
   "item.compactmod.seedpocket_beet": "Pocket of Beet Seeds",
   "item.compactmod.seedpocket_watermelon": "Pocket of Water Melon Seeds",
   "item.compactmod.seedpocket_pumpkin": "Pocket of Pumpkin Seeds",
+  "item.compactmod.seedpocket_cocoa": "Pocket of Cocoa Beans",
   "item.compactmod.feathers_pack": "Pack of feathers",
 
   "block.compactmod.paperblock": "Paper Block",
