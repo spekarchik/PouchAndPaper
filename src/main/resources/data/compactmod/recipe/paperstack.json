@@ -6,9 +6,7 @@
     "A"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:paper"
-    }
+    "A": "minecraft:paper"
   },
   "result": {
     "id": "compactmod:paperstack",

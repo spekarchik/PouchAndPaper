@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "compactmod:seedpocket_cocoa"
-    }
+    "compactmod:seedpocket_cocoa"
   ],
   "result": {
     "id": "minecraft:cocoa_beans",

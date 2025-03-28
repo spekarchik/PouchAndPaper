@@ -6,9 +6,7 @@
     "AAA"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:feather"
-    }
+    "A": "minecraft:feather"
   },
   "result": {
     "id": "compactmod:feathers_pack",

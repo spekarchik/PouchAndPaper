@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "compactmod:paperblock"
-    }
+    "compactmod:paperblock"
   ],
   "result": {
     "id": "compactmod:paperstack",

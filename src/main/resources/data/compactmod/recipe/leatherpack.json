@@ -5,9 +5,7 @@
     "AA"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:leather"
-    }
+    "A": "minecraft:leather"
   },
   "result": {
     "id": "compactmod:leatherpack",

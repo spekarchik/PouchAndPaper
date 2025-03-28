@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "compactmod:seedpocket_pumpkin"
-    }
+    "compactmod:seedpocket_pumpkin"
   ],
   "result": {
     "id": "minecraft:pumpkin_seeds",

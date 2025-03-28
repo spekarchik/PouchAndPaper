@@ -5,9 +5,7 @@
     "AA"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:glow_ink_sac"
-    }
+    "A": "minecraft:glow_ink_sac"
   },
   "result": {
     "id": "compactmod:glow_ink_bottle",

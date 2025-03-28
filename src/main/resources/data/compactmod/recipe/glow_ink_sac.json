@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "compactmod:glow_ink_bottle"
-    }
+    "compactmod:glow_ink_bottle"
   ],
   "result": {
     "id": "minecraft:glow_ink_sac",

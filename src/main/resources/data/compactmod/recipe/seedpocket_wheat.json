@@ -5,10 +5,7 @@
     "AA"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:wheat_seeds",
-      "data": 0
-    }
+    "A": "minecraft:wheat_seeds"
   },
   "result": {
     "id": "compactmod:seedpocket_wheat",

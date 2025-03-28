@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "compactmod:feathers_pack"
-    }
+    "compactmod:feathers_pack"
   ],
   "result": {
     "id": "minecraft:feather",

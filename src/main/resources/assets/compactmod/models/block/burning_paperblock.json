@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures":
+  {
+    "front": "compactmod:block/burning_paperblock_side",
+    "side": "compactmod:block/burning_paperblock_side",
+    "top": "compactmod:block/burning_paperblock_top",
+    "bottom": "compactmod:block/burning_paperblock_top"
+  }
+}

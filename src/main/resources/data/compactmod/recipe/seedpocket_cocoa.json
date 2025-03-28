@@ -5,10 +5,7 @@
     "AA"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:cocoa_beans",
-      "data": 0
-    }
+    "A": "minecraft:cocoa_beans"
   },
   "result": {
     "id": "compactmod:seedpocket_cocoa",
