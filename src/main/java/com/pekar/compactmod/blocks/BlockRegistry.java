@@ -17,6 +17,9 @@ public class BlockRegistry
     public static final DeferredBlock<Block> PAPER_BLOCK = register("paperblock", PaperBlock::new,
             BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.STONE).strength(0.6f));
 
+    public static final DeferredBlock<Block> BURNING_PAPER_BLOCK = register("burning_paperblock", BurningPaperBlock::new,
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.STONE).strength(0.6f));
+
     public static void initStatic()
     {
         // just to initialize static members
