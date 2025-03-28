@@ -1,10 +1,12 @@
 package com.pekar.compactmod;
 
 import com.pekar.compactmod.blocks.BlockRegistry;
+import com.pekar.compactmod.blocks.entity.BlockEntityRegistry;
 import com.pekar.compactmod.items.ItemRegistry;
 import com.pekar.compactmod.tab.MainTab;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -25,18 +27,11 @@ public class Main
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
-
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, MODID);
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> COMPACT_MOD_TAB = new MainTab().createTab();
-//    public static final DeferredItem<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
-//            //.withTabsBefore(CreativeModeTabs.COMBAT)
-//            .icon(() -> ItemRegistry.PAPER_STACK.get().getDefaultInstance())
-//            .displayItems((parameters, output) -> {
-//                output.accept(ItemRegistry.PAPER_STACK.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
-//            }).build());
 
 
     public Main(IEventBus modEventBus, ModContainer modContainer)
@@ -48,6 +43,7 @@ public class Main
 
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
+        BLOCK_ENTITIES.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
@@ -68,6 +64,7 @@ public class Main
     private void initialyzeRegistry()
     {
         BlockRegistry.initStatic();
+        BlockEntityRegistry.initStatic();
         ItemRegistry.initStatic();
     }
 

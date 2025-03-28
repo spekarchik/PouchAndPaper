@@ -18,5 +18,18 @@
   "item.compactmod.seedpocket_cocoa": "Pocket of Cocoa Beans",
   "item.compactmod.feathers_pack": "Pack of feathers",
 
-  "block.compactmod.paperblock": "Paper Block"
+  "item.compactmod.paperblock": "Paper Block",
+  "item.compactmod.paperblock.desc1": "Drops paper when it falls",
+  "item.compactmod.paperblock.desc2": "Burning transforms it into a Burned Paper Block, but it may be completely destroyed",
+  "item.compactmod.paperblock.desc3": "A Burned Paper Block, if not burning, attracts creepers within a 70-block radius",
+  "item.compactmod.paperblock.desc4": "Breaking a Burned Paper Block drops nothing",
+  "item.compactmod.paperblock.desc5": "",
+  "item.compactmod.burning_paperblock": "Burned Paper Block",
+  "item.compactmod.burning_paperblock.desc1": "Can be obtained by burning a Paper Block",
+  "item.compactmod.burning_paperblock.desc2": "If not burning, attracts creepers within a 70-block radius",
+  "item.compactmod.burning_paperblock.desc3": "Drops nothing when broken",
+  "item.compactmod.burning_paperblock.desc4": "Cannot be harvested with a Silk Touch tool",
+  "item.compactmod.burning_paperblock.desc5": "",
+
+  "description.press_shift": "§7Press §9Shift§7 for details..."
 }

@@ -1,13 +1,20 @@
 package com.pekar.compactmod.blocks;
 
 import com.mojang.serialization.MapCodec;
+import com.pekar.compactmod.items.ItemRegistry;
+import com.pekar.compactmod.utils.Utils;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -16,9 +23,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import org.jetbrains.annotations.Nullable;
 
-public class PaperBlock extends ModFallingBlock
+import java.util.List;
+
+public class PaperBlock extends FallingBlock implements ISupportHoverText
 {
     private static final MapCodec<PaperBlock> CODEC = simpleCodec(PaperBlock::new);
 
@@ -36,33 +44,48 @@ public class PaperBlock extends ModFallingBlock
     @Override
     public boolean canDropFromExplosion(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion)
     {
-        return true;
+        return false;
     }
 
     @Override
     public void fallOn(Level level, BlockState blockState, BlockPos pos, Entity entity, float fallDistance)
     {
-        // drop
-        super.fallOn(level, blockState, pos, entity, fallDistance);
+        if (fallDistance > 3.0F)
+        {
+            dropBlock(level, pos);
+        }
+    }
+
+    private static void dropBlock(Level level, BlockPos pos)
+    {
+        int paperStacks = level.random.nextIntBetweenInclusive(0, 4);
+        int papers = 12 - paperStacks * 3;
+        popResource(level, pos, new ItemStack(ItemRegistry.PAPER_STACK.get(), paperStacks));
+        popResource(level, pos, new ItemStack(Items.PAPER, papers));
+        level.removeBlock(pos, false);
     }
 
     @Override
     public void onLand(Level level, BlockPos pos, BlockState blockState, BlockState blockState1, FallingBlockEntity fallingBlockEntity)
     {
-        // drop
+        dropBlock(level, pos);
     }
 
     @Override
-    public void onCaughtFire(BlockState state, Level level, BlockPos pos, @Nullable Direction direction, @Nullable LivingEntity igniter)
+    public void onBlockExploded(BlockState state, ServerLevel level, BlockPos pos, Explosion explosion)
     {
-        System.out.println("caught fire");
-        level.scheduleTick(pos, this, 400);
+        dropBlock(level, pos);
     }
+
+//    @Override
+//    public void onCaughtFire(BlockState state, Level level, BlockPos pos, @Nullable Direction direction, @Nullable LivingEntity igniter)
+//    {
+//        level.scheduleTick(pos, this, 400);
+//    }
 
     @Override
     protected void tick(BlockState blockState, ServerLevel serverLevel, BlockPos pos, RandomSource randomSource)
     {
-        System.out.println("tick");
         if (serverLevel.getBlockState(pos.above()).is(Blocks.FIRE))
         {
             int val = randomSource.nextIntBetweenInclusive(0, 4);
@@ -70,8 +93,9 @@ public class PaperBlock extends ModFallingBlock
             {
                 serverLevel.setBlock(pos, BlockRegistry.BURNING_PAPER_BLOCK.get().defaultBlockState(), Block.UPDATE_ALL);
             }
-
         }
+
+        super.tick(blockState, serverLevel, pos, randomSource);
     }
 
     @Override
@@ -90,5 +114,17 @@ public class PaperBlock extends ModFallingBlock
     protected MapCodec<? extends FallingBlock> codec()
     {
         return CODEC;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+    {
+        if (!Utils.instance.text.showExtendedDescription(tooltipComponents)) return;
+
+        for (int i = 1; i <= 4; i++)
+        {
+            var component = getDisplayName(asItem(), i).withStyle(ChatFormatting.DARK_GRAY);
+            tooltipComponents.add(component);
+        }
     }
 }

@@ -18,5 +18,18 @@
   "item.compactmod.seedpocket_cocoa": "Пакет какао бобов",
   "item.compactmod.feathers_pack": "Пакет с перьями",
 
-  "block.compactmod.paperblock": "Блок Бумаги"
+  "item.compactmod.paperblock": "Блок Бумаги",
+  "item.compactmod.paperblock.desc1": "При падении блока выпадает бумага",
+  "item.compactmod.paperblock.desc2": "В процессе горения превращается в Сгоревший Блок Бумаги, но может сгореть полностью",
+  "item.compactmod.paperblock.desc3": "Сгоревший Блок Бумаги, если не горит, привлекает криперов в радиусе 70 блоков",
+  "item.compactmod.paperblock.desc4": "При разрушении Сгоревшего Блока Бумаги ничего не выпадает",
+  "item.compactmod.paperblock.desc5": "",
+  "item.compactmod.burning_paperblock": "Сгоревший Блок Бумаги",
+  "item.compactmod.burning_paperblock.desc1": "Можно получить сжиганием Блока Бумаги",
+  "item.compactmod.burning_paperblock.desc2": "Если не горит, привлекает криперов в радиусе 70 блоков",
+  "item.compactmod.burning_paperblock.desc3": "При разрушении ничего не выпадает",
+  "item.compactmod.burning_paperblock.desc4": "Нельзя добыть инструментом с чарами Шелковое Касание",
+  "item.compactmod.burning_paperblock.desc5": "",
+
+  "description.press_shift": "§7Нажмите §9Shift§7 для подробностей..."
 }
