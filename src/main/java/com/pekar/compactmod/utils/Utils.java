@@ -16,12 +16,8 @@ public class Utils
 
     public static Random random = new Random();
 
-    public final BlockUtils blocks = new BlockUtils();
-    public final Dimensions dimension = new Dimensions();
-    public final Player player = new Player();
     public final Resources resources = new Resources();
     public final Text text = new Text();
-    public final AttributeModifiers attributeModifiers = new AttributeModifiers();
 
     public AABB getRenderBoundingBox(BlockPos pos)
     {
