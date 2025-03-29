@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "compactmod:item/paperstack"
+    "layer0": "compactmod:item/paper_stack"
   }
 }
