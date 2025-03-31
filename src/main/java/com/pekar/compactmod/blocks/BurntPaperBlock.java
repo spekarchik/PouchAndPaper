@@ -2,8 +2,7 @@ package com.pekar.compactmod.blocks;
 
 import com.mojang.serialization.MapCodec;
 import com.pekar.compactmod.blocks.entity.BlockEntityRegistry;
-import com.pekar.compactmod.blocks.entity.BurningPaperBlockEntity;
-import com.pekar.compactmod.items.ItemRegistry;
+import com.pekar.compactmod.blocks.entity.BurntPaperBlockEntity;
 import com.pekar.compactmod.utils.Utils;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -11,12 +10,13 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
@@ -31,20 +31,14 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class BurningPaperBlock extends PaperBlock implements EntityBlock
+public class BurntPaperBlock extends PaperBlock implements EntityBlock
 {
-    private static final MapCodec<BurningPaperBlock> CODEC = simpleCodec(BurningPaperBlock::new);
+    private static final MapCodec<BurntPaperBlock> CODEC = simpleCodec(BurntPaperBlock::new);
 
-    public BurningPaperBlock(Properties properties)
+    public BurntPaperBlock(Properties properties)
     {
         super(properties);
     }
-
-//    @Override
-//    public void onCaughtFire(BlockState state, Level level, BlockPos pos, @Nullable Direction direction, @Nullable LivingEntity igniter)
-//    {
-//        level.scheduleTick(pos, this, 400);
-//    }
 
     @Override
     protected void tick(BlockState blockState, ServerLevel serverLevel, BlockPos pos, RandomSource randomSource)
@@ -66,6 +60,30 @@ public class BurningPaperBlock extends PaperBlock implements EntityBlock
     public void onLand(Level level, BlockPos pos, BlockState blockState, BlockState blockState1, FallingBlockEntity fallingBlockEntity)
     {
         level.destroyBlock(pos, false);
+    }
+
+    @Override
+    public void onBlockExploded(BlockState state, ServerLevel level, BlockPos pos, Explosion explosion)
+    {
+        level.destroyBlock(pos, false);
+    }
+
+    @Override
+    public void fallOn(Level level, BlockState blockState, BlockPos pos, Entity entity, float fallDistance)
+    {
+        level.destroyBlock(pos, false);
+    }
+
+    @Override
+    public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity)
+    {
+        level.destroyBlock(pos, false);
+    }
+
+    @Override
+    public boolean canDropFromExplosion(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion)
+    {
+        return false;
     }
 
     @Override
@@ -95,7 +113,7 @@ public class BurningPaperBlock extends PaperBlock implements EntityBlock
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState)
     {
-        return BlockEntityRegistry.BURNING_PAPER_BLOCK_ENTITY.get().create(blockPos, blockState);
+        return BlockEntityRegistry.BURNT_PAPER_BLOCK_ENTITY.get().create(blockPos, blockState);
     }
 
     @Override
@@ -103,7 +121,7 @@ public class BurningPaperBlock extends PaperBlock implements EntityBlock
     {
         return level.isClientSide()
                 ? null
-                :((level1, blockPos, blockState, blockEntity) -> ((BurningPaperBlockEntity)blockEntity).tick(level1, blockPos, blockState, (BurningPaperBlockEntity)blockEntity));
+                :((level1, blockPos, blockState, blockEntity) -> ((BurntPaperBlockEntity)blockEntity).tick(level1, blockPos, blockState, (BurntPaperBlockEntity)blockEntity));
     }
 
     @Override
