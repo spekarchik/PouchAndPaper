@@ -4,7 +4,7 @@
   {
     "front": "compactmod:block/paperblock",
     "side": "compactmod:block/paperblock",
-    "top": "compactmod:block/paperblock_2",
-    "bottom": "compactmod:block/paperblock_2"
+    "top": "compactmod:block/paperblock_top",
+    "bottom": "compactmod:block/paperblock_top"
   }
 }
