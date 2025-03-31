@@ -24,12 +24,12 @@
   "item.compactmod.paperblock.desc3": "A Burnt Paper Block, if not burning, attracts creepers within a 70-block radius",
   "item.compactmod.paperblock.desc4": "Bees fly away from the block within a 50-block radius",
   "item.compactmod.paperblock.desc5": "Nothing drops when a Burnt Paper Block is destroyed",
-  "item.compactmod.burning_paperblock": "Burnt Paper Block",
-  "item.compactmod.burning_paperblock.desc1": "Can be obtained by burning a Paper Block",
-  "item.compactmod.burning_paperblock.desc2": "If not burning, attracts creepers within a 70-block radius",
-  "item.compactmod.burning_paperblock.desc3": "Bees within a 50-block radius fly out of this zone",
-  "item.compactmod.burning_paperblock.desc4": "Nothing drops when the block is destroyed",
-  "item.compactmod.burning_paperblock.desc5": "The block cannot be harvested even with a Silk Touch-enchanted tool",
+  "item.compactmod.burnt_paper_block": "Burnt Paper Block",
+  "item.compactmod.burnt_paper_block.desc1": "Can be obtained by burning a Paper Block",
+  "item.compactmod.burnt_paper_block.desc2": "If not burning, attracts creepers within a 70-block radius",
+  "item.compactmod.burnt_paper_block.desc3": "Bees within a 50-block radius fly out of this zone",
+  "item.compactmod.burnt_paper_block.desc4": "Nothing drops when the block is destroyed",
+  "item.compactmod.burnt_paper_block.desc5": "The block cannot be harvested even with a Silk Touch-enchanted tool",
 
   "description.press_shift": "§7Press §9Shift§7 for details..."
 }

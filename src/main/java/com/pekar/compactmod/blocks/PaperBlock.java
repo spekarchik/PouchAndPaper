@@ -91,7 +91,7 @@ public class PaperBlock extends FallingBlock implements ISupportHoverText
             int val = randomSource.nextIntBetweenInclusive(0, 4);
             if (val == 0)
             {
-                serverLevel.setBlock(pos, BlockRegistry.BURNING_PAPER_BLOCK.get().defaultBlockState(), Block.UPDATE_ALL);
+                serverLevel.setBlock(pos, BlockRegistry.BURNT_PAPER_BLOCK.get().defaultBlockState(), Block.UPDATE_ALL);
             }
         }
 

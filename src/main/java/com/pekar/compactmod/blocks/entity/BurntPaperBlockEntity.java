@@ -1,9 +1,7 @@
 package com.pekar.compactmod.blocks.entity;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Vec3i;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.level.Level;
@@ -16,18 +14,18 @@ import net.minecraft.world.phys.Vec3;
 
 import java.util.List;
 
-public class BurningPaperBlockEntity extends BlockEntity implements BlockEntityTicker<BurningPaperBlockEntity>
+public class BurntPaperBlockEntity extends BlockEntity implements BlockEntityTicker<BurntPaperBlockEntity>
 {
     private static final int CREEPER_SEEK_RADUIS = 70;
     private static final int BEE_SEEK_RADUIS = 50;
 
-    public BurningPaperBlockEntity(BlockPos pos, BlockState blockState)
+    public BurntPaperBlockEntity(BlockPos pos, BlockState blockState)
     {
-        super(BlockEntityRegistry.BURNING_PAPER_BLOCK_ENTITY.get(), pos, blockState);
+        super(BlockEntityRegistry.BURNT_PAPER_BLOCK_ENTITY.get(), pos, blockState);
     }
 
     @Override
-    public void tick(Level level, BlockPos pos, BlockState blockState, BurningPaperBlockEntity burningPaperBlockEntity)
+    public void tick(Level level, BlockPos pos, BlockState blockState, BurntPaperBlockEntity burntPaperBlockEntity)
     {
         if (level.getGameTime() % 40 != 0) return;
         if (!(level instanceof ServerLevel serverLevel)) return;

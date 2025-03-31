@@ -2,8 +2,8 @@
   "parent": "minecraft:block/cube_bottom_top",
   "textures":
   {
-    "front": "compactmod:block/paperblock",
-    "side": "compactmod:block/paperblock",
+    "front": "compactmod:block/paperblock_side",
+    "side": "compactmod:block/paperblock_side",
     "top": "compactmod:block/paperblock_top",
     "bottom": "compactmod:block/paperblock_top"
   }

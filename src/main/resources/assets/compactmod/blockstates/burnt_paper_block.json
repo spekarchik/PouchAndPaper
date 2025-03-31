@@ -1,0 +1,9 @@
+{
+  "variants":
+  {
+    "":
+    {
+      "model": "compactmod:block/burnt_paper_block"
+    }
+  }
+}
