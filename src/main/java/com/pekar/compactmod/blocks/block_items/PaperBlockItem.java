@@ -1,0 +1,38 @@
+package com.pekar.compactmod.blocks.block_items;
+
+import com.pekar.compactmod.tooltip.ITooltip;
+import com.pekar.compactmod.tooltip.ITooltipProvider;
+import com.pekar.compactmod.utils.Utils;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.level.block.Block;
+
+import java.util.function.Consumer;
+
+public class PaperBlockItem extends ModBlockItem implements ITooltipProvider
+{
+    public PaperBlockItem(Block block, Properties properties)
+    {
+        super(block, properties);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> component, TooltipFlag flag)
+    {
+        ITooltipProvider.appendHoverText(this, stack, context, display, component, flag);
+    }
+
+    @Override
+    public void addTooltip(ItemStack stack, Item.TooltipContext context, ITooltip tooltip, TooltipFlag flag)
+    {
+        if (!Utils.instance.text.showExtendedDescription(tooltip)) return;
+
+        for (int i = 1; i <= 5; i++)
+        {
+            tooltip.addLine(getDescriptionId(), i).asDarkGrey().apply();
+        }
+    }
+}
