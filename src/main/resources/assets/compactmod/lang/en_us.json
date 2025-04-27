@@ -22,7 +22,7 @@
   "item.compactmod.paperblock.desc1": "When the block falls, paper drops out",
   "item.compactmod.paperblock.desc2": "When burning, it turns into a Burnt Paper Block, but it may burn completely",
   "item.compactmod.paperblock.desc3": "A Burnt Paper Block, if not burning, attracts creepers within a 70-block radius",
-  "item.compactmod.paperblock.desc4": "Bees fly away from the block within a 50-block radius",
+  "item.compactmod.paperblock.desc4": "Bees fly away from the Burnt Paper Block within a 50-block radius",
   "item.compactmod.paperblock.desc5": "Nothing drops when a Burnt Paper Block is destroyed",
   "item.compactmod.burnt_paper_block": "Burnt Paper Block",
   "item.compactmod.burnt_paper_block.desc1": "Can be obtained by burning a Paper Block",
