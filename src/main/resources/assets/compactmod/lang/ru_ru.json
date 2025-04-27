@@ -22,7 +22,7 @@
   "item.compactmod.paperblock.desc1": "При падении блока выпадает бумага",
   "item.compactmod.paperblock.desc2": "В процессе горения превращается в Сгоревший Блок Бумаги, но может сгореть полностью",
   "item.compactmod.paperblock.desc3": "Сгоревший Блок Бумаги, если не горит, привлекает криперов в радиусе 70 блоков",
-  "item.compactmod.paperblock.desc4": "Пчелы улетают от блока на расстояние 50 блоков",
+  "item.compactmod.paperblock.desc4": "Пчелы улетают от Сгоревшего Блока Бумаги на расстояние 50 блоков",
   "item.compactmod.paperblock.desc5": "При разрушении Сгоревшего Блока Бумаги ничего не выпадает",
   "item.compactmod.burnt_paper_block": "Сгоревший Блок Бумаги",
   "item.compactmod.burnt_paper_block.desc1": "Можно получить сжиганием Блока Бумаги",
