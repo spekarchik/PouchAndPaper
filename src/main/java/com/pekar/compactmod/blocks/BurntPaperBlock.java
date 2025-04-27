@@ -3,18 +3,12 @@ package com.pekar.compactmod.blocks;
 import com.mojang.serialization.MapCodec;
 import com.pekar.compactmod.blocks.entity.BlockEntityRegistry;
 import com.pekar.compactmod.blocks.entity.BurntPaperBlockEntity;
-import com.pekar.compactmod.utils.Utils;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -28,8 +22,6 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.PushReaction;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
 
 public class BurntPaperBlock extends PaperBlock implements EntityBlock
 {
@@ -69,7 +61,7 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
     }
 
     @Override
-    public void fallOn(Level level, BlockState blockState, BlockPos pos, Entity entity, float fallDistance)
+    public void fallOn(Level level, BlockState blockState, BlockPos pos, Entity entity, double fallDistance)
     {
         level.destroyBlock(pos, false);
     }
@@ -125,22 +117,14 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
     }
 
     @Override
-    protected MapCodec<? extends FallingBlock> codec()
+    public int getDustColor(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos)
     {
-        return CODEC;
+        return 0x333333;
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+    protected MapCodec<? extends FallingBlock> codec()
     {
-        if (!Utils.instance.text.showExtendedDescription(tooltipComponents)) return;
-
-        for (int i = 1; i <= 4; i++)
-        {
-            var component = getDisplayName(asItem(), i).withStyle(ChatFormatting.DARK_GRAY);
-            if (i == 1)
-                component.withStyle(ChatFormatting.ITALIC).withStyle(ChatFormatting.GRAY);
-            tooltipComponents.add(component);
-        }
+        return CODEC;
     }
 }

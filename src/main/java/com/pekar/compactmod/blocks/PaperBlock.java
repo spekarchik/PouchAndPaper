@@ -2,19 +2,14 @@ package com.pekar.compactmod.blocks;
 
 import com.mojang.serialization.MapCodec;
 import com.pekar.compactmod.items.ItemRegistry;
-import com.pekar.compactmod.utils.Utils;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -24,9 +19,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-import java.util.List;
-
-public class PaperBlock extends FallingBlock implements ISupportHoverText
+public class PaperBlock extends FallingBlock
 {
     private static final MapCodec<PaperBlock> CODEC = simpleCodec(PaperBlock::new);
 
@@ -48,7 +41,7 @@ public class PaperBlock extends FallingBlock implements ISupportHoverText
     }
 
     @Override
-    public void fallOn(Level level, BlockState blockState, BlockPos pos, Entity entity, float fallDistance)
+    public void fallOn(Level level, BlockState blockState, BlockPos pos, Entity entity, double fallDistance)
     {
         if (fallDistance > 3.0F)
         {
@@ -99,6 +92,12 @@ public class PaperBlock extends FallingBlock implements ISupportHoverText
     }
 
     @Override
+    public int getDustColor(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos)
+    {
+        return 0x777777;
+    }
+
+    @Override
     public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
         return 200; // ignite: 5..60
@@ -114,17 +113,5 @@ public class PaperBlock extends FallingBlock implements ISupportHoverText
     protected MapCodec<? extends FallingBlock> codec()
     {
         return CODEC;
-    }
-
-    @Override
-    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
-    {
-        if (!Utils.instance.text.showExtendedDescription(tooltipComponents)) return;
-
-        for (int i = 1; i <= 5; i++)
-        {
-            var component = getDisplayName(asItem(), i).withStyle(ChatFormatting.DARK_GRAY);
-            tooltipComponents.add(component);
-        }
     }
 }
