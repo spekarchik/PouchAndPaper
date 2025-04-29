@@ -9,6 +9,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
+import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -63,12 +64,14 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
     @Override
     public void fallOn(Level level, BlockState blockState, BlockPos pos, Entity entity, double fallDistance)
     {
+        if (entity instanceof Creeper && fallDistance < 0.5f) return;
         level.destroyBlock(pos, false);
     }
 
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity)
     {
+        if (entity instanceof Creeper) return;
         level.destroyBlock(pos, false);
     }
 
