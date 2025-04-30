@@ -34,6 +34,7 @@ Its natural behavior makes it ideal for traps, for driving away bees from the ar
 ## Technical Details
 - **Developer:** Sergey Pekarchik
 - **Supported NeoForge versions:** 1.21.4 and 1.21.5
+- **Texture resolution:** 32×32
 
 ---
 
