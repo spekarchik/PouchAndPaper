@@ -11,6 +11,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.item.Item;
@@ -73,13 +74,14 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
     public void fallOn(Level level, BlockState blockState, BlockPos pos, Entity entity, float fallDistance)
     {
         if (entity instanceof Creeper && fallDistance < 0.5f) return;
+        if (entity instanceof Bee) return;
         level.destroyBlock(pos, false);
     }
 
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity)
     {
-        if (entity instanceof Creeper) return;
+        if (entity instanceof Creeper || entity instanceof Bee) return;
         level.destroyBlock(pos, false);
     }
 
