@@ -38,6 +38,29 @@ Its natural behavior makes it ideal for traps, for driving away bees from the ar
 
 ---
 
+## 🧩 Related Mods
+
+CompactMod is fully compatible with the following mods by the same author:
+
+- **[🌟 Angel Block Mod](https://modrinth.com/mod/angel-block-mod)**
+  An exploration-focused mod that rewards curiosity and reduces repetitive grind — while keeping the core survival balance intact. Perfect for players who want each discovery to matter.
+  Start with almost nothing — earn every shortcut.  
+  This mod transforms Minecraft into a world of meaningful adventure and artifact-driven progression. No grind, no farms — just clever tools, dangerous dungeons, and rewards you must conquer.
+
+  • Progression-focused gameplay: leather armor, stone weapons, and real survival.  
+  • Unique tools: magnetic rods, precision builders, instant crop planters.  
+  • Legendary gear: 6 armor sets, powerful weapons, and upgrade paths.  
+  • Angel Block & Rod: sacred artifacts that protect and purify your world.  
+  • No custom UIs — pure, immersive gameplay.
+
+  Ideal for adventurers who want to *explore*, *survive*, and *earn* their power — not dig tunnels forever.
+
+- **[🔧 EnchantOnce](https://modrinth.com/mod/enchantonce)** — a minimalistic but powerful rework of enchanting and repairing.  
+  Fixed XP costs, enchanted book duplication, material-based repairs, and perfect gear cloning — all with vanilla-style mechanics.  
+  Fully supports custom gear and enchantments from Angel Block Mod.
+
+---
+
 ## ☕ Support Development
 
 If you enjoy the mod and would like to support future updates and new features, you can support me here:  
