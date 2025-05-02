@@ -23,7 +23,7 @@ public class Main
 {
     // Directly reference a log4j logger.
 //    private static final Logger LOGGER = LogManager.getLogger();
-    public static final String MODID = "compactmod";
+    public static final String MODID = "pouchandpaper";
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
