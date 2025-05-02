@@ -1,6 +1,6 @@
-# 🌟 CompactMod — convenient storage of tradeable resources, with a curious effect of burnt paper
+# 🌟 Pouch & Paper — convenient storage of tradeable resources, with a curious effect of burnt paper
 
-**Compact Mod** is designed to make storage and usage of common resources more convenient — specifically paper, ink, leather, seeds, and feathers. These items are often used for trading with villagers, both directly and for crafting more valuable goods like books and "Book and Quill".
+**Pouch & Paper** is designed to make storage and usage of common resources more convenient — specifically paper, ink, leather, seeds, and feathers. These items are often used for trading with villagers, both directly and for crafting more valuable goods like books and "Book and Quill".
 
 The mod introduces compact versions of:
 - paper — as stacks and blocks,
@@ -40,7 +40,7 @@ Its natural behavior makes it ideal for traps, for driving away bees from the ar
 
 ## 🧩 Related Mods
 
-CompactMod is fully compatible with the following mods by the same author:
+Pouch & Paper is fully compatible with the following mods by the same author:
 
 - **[🌟 Angel Block Mod](https://modrinth.com/mod/angel-block-mod)**
   An exploration-focused mod that rewards curiosity and reduces repetitive grind — while keeping the core survival balance intact. Perfect for players who want each discovery to matter.
@@ -69,7 +69,3 @@ If you enjoy the mod and would like to support future updates and new features, 
 Your support means a lot and helps me dedicate more time to creating new content and improving the mod! ❤️
 
 ---
-
-# 📷 Screenshots and videos
-
-*(Attach screenshots showing Angel Block in action, Angel Rod protection, armor sets, Nether exploration, planter staff usage, etc.)*
