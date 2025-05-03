@@ -4,8 +4,8 @@
   "language.code": "ru_ru",
   "author": "Sergey Pekarchik",
 
-  "itemGroup.pouchandpaper": "Pounch & Paper",
-  "itemGroup.compactmod_tab": "Pounch & Paper",
+  "itemGroup.pouchandpaper": "Pouch & Paper",
+  "itemGroup.compactmod_tab": "Pouch & Paper",
 
   "item.pouchandpaper.paperstack": "Стопка бумаги",
   "item.pouchandpaper.ink_bottle": "Банка чернил",
