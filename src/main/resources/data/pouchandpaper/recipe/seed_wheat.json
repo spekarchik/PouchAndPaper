@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "pouchandpaper:seedpocket_wheat"
+  ],
+  "result": {
+    "id": "minecraft:wheat_seeds",
+    "count": 4
+  }
+}

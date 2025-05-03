@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": "minecraft:leather"
+  },
+  "result": {
+    "id": "pouchandpaper:leatherpack",
+    "count": 1
+  }
+}

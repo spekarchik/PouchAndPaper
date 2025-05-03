@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": "minecraft:wheat_seeds"
+  },
+  "result": {
+    "id": "pouchandpaper:seedpocket_wheat",
+    "count": 1
+  }
+}

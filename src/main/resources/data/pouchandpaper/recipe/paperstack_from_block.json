@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "pouchandpaper:paperblock"
+  ],
+  "result": {
+    "id": "pouchandpaper:paperstack",
+    "count": 4
+  }
+}
