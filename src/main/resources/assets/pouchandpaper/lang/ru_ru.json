@@ -1,0 +1,36 @@
+{
+  "language": "Russian",
+  "language.region": "Russia",
+  "language.code": "ru_ru",
+  "author": "Sergey Pekarchik",
+
+  "itemGroup.pouchandpaper": "Pounch & Paper",
+  "itemGroup.compactmod_tab": "Pounch & Paper",
+
+  "item.pouchandpaper.paperstack": "Стопка бумаги",
+  "item.pouchandpaper.ink_bottle": "Банка чернил",
+  "item.pouchandpaper.glow_ink_bottle": "Банка светящихся чернил",
+  "item.pouchandpaper.leatherpack": "Пачка кожи",
+  "item.pouchandpaper.seedpocket_wheat": "Мешочек с семенами пшеницы",
+  "item.pouchandpaper.seedpocket_beet": "Мешочек с семенами свёклы",
+  "item.pouchandpaper.seedpocket_watermelon": "Мешочек с семенами арбуза",
+  "item.pouchandpaper.seedpocket_pumpkin": "Мешочек с семенами тыквы",
+  "item.pouchandpaper.seedpocket_cocoa": "Мешочек с какао-бобами",
+  "item.pouchandpaper.feathers_pack": "Пакет с перьями",
+
+  "item.pouchandpaper.paperblock": "Блок бумаги",
+  "item.pouchandpaper.paperblock.desc1": "При падении блока выпадает бумага",
+  "item.pouchandpaper.paperblock.desc2": "При горении превращается в Сгоревший блок бумаги, но может сгореть полностью",
+  "item.pouchandpaper.paperblock.desc3": "Сгоревший блок бумаги, если не горит, привлекает криперов в радиусе 70 блоков",
+  "item.pouchandpaper.paperblock.desc4": "Пчёлы улетают от Сгоревшего блока бумаги на расстояние до 50 блоков",
+  "item.pouchandpaper.paperblock.desc5": "При разрушении Сгоревшего блока бумаги ничего не выпадает",
+
+  "item.pouchandpaper.burnt_paper_block": "Сгоревший блок бумаги",
+  "item.pouchandpaper.burnt_paper_block.desc1": "Можно получить сжиганием блока бумаги",
+  "item.pouchandpaper.burnt_paper_block.desc2": "Если не горит, привлекает криперов в радиусе 70 блоков",
+  "item.pouchandpaper.burnt_paper_block.desc3": "Пчёлы в радиусе 50 блоков улетают за пределы зоны действия",
+  "item.pouchandpaper.burnt_paper_block.desc4": "При разрушении блока ничего не выпадает",
+  "item.pouchandpaper.burnt_paper_block.desc5": "Блок нельзя добыть даже инструментом с чарами «Шёлковое касание»",
+
+  "description.press_shift": "§7Нажмите §9Shift§7 для подробностей..."
+}
