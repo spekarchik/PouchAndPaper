@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:cocoa_beans",
+      "data": 0
+    }
+  },
+  "result": {
+    "id": "pouchandpaper:seedpocket_cocoa",
+    "count": 1
+  }
+}

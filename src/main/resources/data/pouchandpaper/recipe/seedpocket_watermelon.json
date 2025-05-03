@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:melon_seeds",
+      "data": 0
+    }
+  },
+  "result": {
+    "id": "pouchandpaper:seedpocket_watermelon",
+    "count": 1
+  }
+}

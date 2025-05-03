@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:pumpkin_seeds",
+      "data": 0
+    }
+  },
+  "result": {
+    "id": "pouchandpaper:seedpocket_pumpkin",
+    "count": 1
+  }
+}
