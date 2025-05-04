@@ -42,7 +42,7 @@ Its natural behavior makes it ideal for traps, for driving away bees from the ar
 
 Pouch & Paper is fully compatible with the following mods by the same author:
 
-- **[🌟 Angel Block Mod](https://www.curseforge.com/minecraft/mc-mods/angel-block-mod)**
+- **[🌟 The Block of Angel](https://www.curseforge.com/minecraft/mc-mods/angel-block-mod)**
   An exploration-focused mod that rewards curiosity and reduces repetitive grind — while keeping the core survival balance intact. Perfect for players who want each discovery to matter.
   Start with almost nothing — earn every shortcut.  
   This mod transforms Minecraft into a world of meaningful adventure and artifact-driven progression. No grind, no farms — just clever tools, dangerous dungeons, and rewards you must conquer.
@@ -57,7 +57,7 @@ Pouch & Paper is fully compatible with the following mods by the same author:
 
 - **[🔧 EnchantOnce](https://www.curseforge.com/minecraft/mc-mods/enchantonce)** — a minimalistic but powerful rework of enchanting and repairing.  
   Fixed XP costs, enchanted book duplication, material-based repairs, and perfect gear cloning — all with vanilla-style mechanics.  
-  Fully supports custom gear and enchantments from Angel Block Mod.
+  Fully supports custom gear and enchantments from The Block of Angel mod.
 
 ---
 
