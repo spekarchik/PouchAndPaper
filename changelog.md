@@ -1,23 +1,24 @@
-## 📦 Version 1.1.0
+## 📦 Version 1.1.0-beta
 
 ### ✨ Added
 - Advancement-based recipe unlocking
 
-## 📦 Version 1.0.10
+## 📦 Version 1.0.4-beta
 
 ### 📝 Fixed
 - Creative Mode Tab: name misspeling fixed
 
-## 📦 Version 1.0.9
+## 📦 Version 1.0.3-beta
 
 ### 📝 Fixed
 - Bug fixed: textures did not display due to renaming. Now the mod completely renamed to 'pounchandpaper' including the namespace and directories.
 
-## 📦 Version 1.0.8
+## 📦 Version 1.0.2-beta
 
 ### 🛠️ Changed
 - CompactMod has been renamed to Pouch & Paper
 
-## 📦 Version 1.0.7
+## 📦 Version 1.0.1-beta
 
 - Initial publishing
+
