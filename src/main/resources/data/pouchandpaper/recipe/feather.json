@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "compactmod:feathers_pack"
+      "item": "pouchandpaper:feathers_pack"
     }
   ],
   "result": {

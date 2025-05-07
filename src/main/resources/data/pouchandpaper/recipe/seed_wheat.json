@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "compactmod:seedpocket_wheat"
+      "item": "pouchandpaper:seedpocket_wheat"
     }
   ],
   "result": {

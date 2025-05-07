@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "compactmod:glow_ink_bottle"
+      "item": "pouchandpaper:glow_ink_bottle"
     }
   ],
   "result": {

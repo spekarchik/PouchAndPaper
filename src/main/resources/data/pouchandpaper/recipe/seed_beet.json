@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "compactmod:seedpocket_beet"
+      "item": "pouchandpaper:seedpocket_beet"
     }
   ],
   "result": {

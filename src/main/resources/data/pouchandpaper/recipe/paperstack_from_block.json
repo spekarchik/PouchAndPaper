@@ -1,12 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "paperstack",
   "ingredients": [
     {
-      "item": "compactmod:paperblock"
+      "item": "pouchandpaper:paperblock"
     }
   ],
   "result": {
-    "id": "compactmod:paperstack",
+    "id": "pouchandpaper:paperstack",
     "count": 4
   }
 }
