@@ -26,6 +26,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.PushReaction;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -83,6 +84,12 @@ public class BurningPaperBlock extends PaperBlock implements EntityBlock
     public boolean isFireSource(BlockState state, LevelReader world, BlockPos pos, Direction side)
     {
         return false;
+    }
+
+    @Override
+    public @Nullable PushReaction getPistonPushReaction(BlockState state)
+    {
+        return PushReaction.DESTROY;
     }
 
     @Override

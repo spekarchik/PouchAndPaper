@@ -15,10 +15,10 @@ import static com.pekar.compactmod.Main.BLOCKS;
 public class BlockRegistry
 {
     public static final DeferredBlock<Block> PAPER_BLOCK = register("paperblock", PaperBlock::new,
-            BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.STONE).strength(0.6f));
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.GRASS).strength(0.6f));
 
     public static final DeferredBlock<Block> BURNING_PAPER_BLOCK = register("burning_paperblock", BurningPaperBlock::new,
-            BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.STONE).strength(0.6f));
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.GRAVEL).strength(0.6f));
 
     public static void initStatic()
     {
