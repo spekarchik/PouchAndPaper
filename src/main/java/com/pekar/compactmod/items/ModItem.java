@@ -4,8 +4,8 @@ import net.minecraft.world.item.Item;
 
 public class ModItem extends Item
 {
-    public ModItem()
+    public ModItem(Properties properties)
     {
-        super(new Properties());
+        super(properties);
     }
 }

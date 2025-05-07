@@ -9,7 +9,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.Collection;
 
-import static com.pekar.compactmod.CompactMod.CREATIVE_MODE_TABS;
+import static com.pekar.compactmod.Main.CREATIVE_MODE_TABS;
 
 public abstract class ModTab
 {

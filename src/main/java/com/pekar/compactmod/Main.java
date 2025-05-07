@@ -10,15 +10,14 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(CompactMod.MODID)
-public class CompactMod
+@Mod(Main.MODID)
+public class Main
 {
     // Directly reference a log4j logger.
 //    private static final Logger LOGGER = LogManager.getLogger();
@@ -40,7 +39,7 @@ public class CompactMod
 //            }).build());
 
 
-    public CompactMod(IEventBus modEventBus, ModContainer modContainer)
+    public Main(IEventBus modEventBus, ModContainer modContainer)
     {
         initialyzeRegistry();
 

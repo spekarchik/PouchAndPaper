@@ -1,6 +1,6 @@
 package com.pekar.compactmod.tab;
 
-import com.pekar.compactmod.CompactMod;
+import com.pekar.compactmod.Main;
 import com.pekar.compactmod.blocks.BlockRegistry;
 import com.pekar.compactmod.items.ItemRegistry;
 import net.minecraft.resources.ResourceKey;
@@ -31,7 +31,7 @@ public class MainTab extends ModTab
     {
         ItemRegistry.initStatic();
         BlockRegistry.initStatic();
-        return CompactMod.ITEMS.getEntries(); // block items are also included
+        return Main.ITEMS.getEntries(); // block items are also included
     }
 
     @Override
