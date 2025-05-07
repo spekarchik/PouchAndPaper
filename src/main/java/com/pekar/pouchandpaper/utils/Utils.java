@@ -16,7 +16,6 @@ public class Utils
 
     public static Random random = new Random();
 
-    public final Resources resources = new Resources();
     public final Text text = new Text();
 
     public AABB getRenderBoundingBox(BlockPos pos)
