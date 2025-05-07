@@ -1,0 +1,36 @@
+﻿{
+    "criteria":  {
+                     "item0":  {
+                                   "trigger":  "minecraft:inventory_changed",
+                                   "conditions":  {
+                                                      "items":  [
+                                                                    {
+                                                                        "items":  "pouchandpaper:seedpocket_pumpkin"
+                                                                    }
+                                                                ]
+                                                  }
+                               },
+                     "item1":  {
+                                   "trigger":  "minecraft:inventory_changed",
+                                   "conditions":  {
+                                                      "items":  [
+                                                                    {
+                                                                        "items":  "minecraft:pumpkin_seeds"
+                                                                    }
+                                                                ]
+                                                  }
+                               }
+                 },
+    "parent":  "minecraft:recipes/root",
+    "rewards":  {
+                    "recipes":  [
+                                    "pouchandpaper:seed_pumpkin"
+                                ]
+                },
+    "requirements":  [
+                         [
+                             "item0",
+                             "item1"
+                         ]
+                     ]
+}

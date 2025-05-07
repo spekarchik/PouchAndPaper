@@ -1,0 +1,36 @@
+﻿{
+    "criteria":  {
+                     "item0":  {
+                                   "trigger":  "minecraft:inventory_changed",
+                                   "conditions":  {
+                                                      "items":  [
+                                                                    {
+                                                                        "items":  "pouchandpaper:seedpocket_wheat"
+                                                                    }
+                                                                ]
+                                                  }
+                               },
+                     "item1":  {
+                                   "trigger":  "minecraft:inventory_changed",
+                                   "conditions":  {
+                                                      "items":  [
+                                                                    {
+                                                                        "items":  "minecraft:wheat_seeds"
+                                                                    }
+                                                                ]
+                                                  }
+                               }
+                 },
+    "parent":  "minecraft:recipes/root",
+    "rewards":  {
+                    "recipes":  [
+                                    "pouchandpaper:seed_wheat"
+                                ]
+                },
+    "requirements":  [
+                         [
+                             "item0",
+                             "item1"
+                         ]
+                     ]
+}
