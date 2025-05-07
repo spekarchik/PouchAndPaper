@@ -18,12 +18,12 @@
   "item.pouchandpaper.seedpocket_cocoa": "Pouch of Cocoa Beans",
   "item.pouchandpaper.feathers_pack": "Feather Pack",
 
-  "item.pouchandpaper.paperblock": "Paper Block",
-  "item.pouchandpaper.paperblock.desc1": "Drops paper when the block falls",
-  "item.pouchandpaper.paperblock.desc2": "Burns into a Burnt Paper Block, but may burn away entirely",
-  "item.pouchandpaper.paperblock.desc3": "If not burning, the Burnt Paper Block attracts creepers within 70 blocks",
-  "item.pouchandpaper.paperblock.desc4": "Bees flee from the Burnt Paper Block within a 50-block radius",
-  "item.pouchandpaper.paperblock.desc5": "Nothing drops when a Burnt Paper Block is broken",
+  "block.pouchandpaper.paperblock": "Paper Block",
+  "block.pouchandpaper.paperblock.desc1": "Drops paper when the block falls",
+  "block.pouchandpaper.paperblock.desc2": "Burns into a Burnt Paper Block, but may burn away entirely",
+  "block.pouchandpaper.paperblock.desc3": "If not burning, the Burnt Paper Block attracts creepers within 70 blocks",
+  "block.pouchandpaper.paperblock.desc4": "Bees flee from the Burnt Paper Block within a 50-block radius",
+  "block.pouchandpaper.paperblock.desc5": "Nothing drops when a Burnt Paper Block is broken",
 
   "block.pouchandpaper.burnt_paper_block": "Burnt Paper Block",
   "block.pouchandpaper.burnt_paper_block.desc1": "Created by burning a Paper Block",

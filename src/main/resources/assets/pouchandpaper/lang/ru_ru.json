@@ -18,12 +18,12 @@
   "item.pouchandpaper.seedpocket_cocoa": "Мешочек с какао-бобами",
   "item.pouchandpaper.feathers_pack": "Пакет с перьями",
 
-  "item.pouchandpaper.paperblock": "Блок бумаги",
-  "item.pouchandpaper.paperblock.desc1": "При падении блока выпадает бумага",
-  "item.pouchandpaper.paperblock.desc2": "При горении превращается в Сгоревший блок бумаги, но может сгореть полностью",
-  "item.pouchandpaper.paperblock.desc3": "Сгоревший блок бумаги, если не горит, привлекает криперов в радиусе 70 блоков",
-  "item.pouchandpaper.paperblock.desc4": "Пчёлы улетают от Сгоревшего блока бумаги на расстояние до 50 блоков",
-  "item.pouchandpaper.paperblock.desc5": "При разрушении Сгоревшего блока бумаги ничего не выпадает",
+  "block.pouchandpaper.paperblock": "Блок бумаги",
+  "block.pouchandpaper.paperblock.desc1": "При падении блока выпадает бумага",
+  "block.pouchandpaper.paperblock.desc2": "При горении превращается в Сгоревший блок бумаги, но может сгореть полностью",
+  "block.pouchandpaper.paperblock.desc3": "Сгоревший блок бумаги, если не горит, привлекает криперов в радиусе 70 блоков",
+  "block.pouchandpaper.paperblock.desc4": "Пчёлы улетают от Сгоревшего блока бумаги на расстояние до 50 блоков",
+  "block.pouchandpaper.paperblock.desc5": "При разрушении Сгоревшего блока бумаги ничего не выпадает",
 
   "block.pouchandpaper.burnt_paper_block": "Сгоревший блок бумаги",
   "block.pouchandpaper.burnt_paper_block.desc1": "Можно получить сжиганием блока бумаги",
