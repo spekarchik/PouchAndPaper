@@ -9,7 +9,7 @@ public class BlockEntityRegistry
 {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BurntPaperBlockEntity>> BURNT_PAPER_BLOCK_ENTITY =
             Main.BLOCK_ENTITIES.register("burnt_paper_block_entity", () ->
-                    new BlockEntityType<>(BurntPaperBlockEntity::new, BlockRegistry.BURNT_PAPER_BLOCK.get()));
+                    BlockEntityType.Builder.of(BurntPaperBlockEntity::new, BlockRegistry.BURNT_PAPER_BLOCK.get()).build(null));
 
     public static void initStatic()
     {

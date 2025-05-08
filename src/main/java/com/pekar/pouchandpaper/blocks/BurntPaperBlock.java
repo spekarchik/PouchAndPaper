@@ -32,6 +32,7 @@ import net.minecraft.world.level.material.PushReaction;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.function.BiConsumer;
 
 public class BurntPaperBlock extends PaperBlock implements EntityBlock
 {
@@ -65,7 +66,7 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
     }
 
     @Override
-    public void onBlockExploded(BlockState state, ServerLevel level, BlockPos pos, Explosion explosion)
+    protected void onExplosionHit(BlockState state, Level level, BlockPos pos, Explosion explosion, BiConsumer<ItemStack, BlockPos> dropConsumer)
     {
         level.destroyBlock(pos, false);
     }

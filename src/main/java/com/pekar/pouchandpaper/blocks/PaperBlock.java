@@ -25,6 +25,7 @@ import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
+import java.util.function.BiConsumer;
 
 public class PaperBlock extends FallingBlock implements ISupportHoverText
 {
@@ -72,7 +73,7 @@ public class PaperBlock extends FallingBlock implements ISupportHoverText
     }
 
     @Override
-    public void onBlockExploded(BlockState state, ServerLevel level, BlockPos pos, Explosion explosion)
+    protected void onExplosionHit(BlockState state, Level level, BlockPos pos, Explosion explosion, BiConsumer<ItemStack, BlockPos> dropConsumer)
     {
         dropBlock(level, pos);
     }
