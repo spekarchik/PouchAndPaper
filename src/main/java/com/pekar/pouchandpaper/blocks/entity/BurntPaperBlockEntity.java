@@ -49,6 +49,10 @@ public class BurntPaperBlockEntity extends BlockEntity implements BlockEntityTic
 
         for (Bee bee : bees)
         {
+            bee.setHivePos(null);
+            if (bee.hasSavedFlowerPos() && level.getBlockState(bee.getSavedFlowerPos()).is(BlockTags.FLOWERS))
+                bee.setSavedFlowerPos(bee.getSavedFlowerPos().above(5));
+
             var navigation = bee.getNavigation();
 
             if (navigation.isDone() || navigation.isStuck())
@@ -60,9 +64,6 @@ public class BurntPaperBlockEntity extends BlockEntity implements BlockEntityTic
 
                 int escapeY = escapePosVec.y < blockCenter.y ? pos.getY() + 1 : (int)escapePosVec.y;
                 BlockPos escapePos = new BlockPos((int)escapePosVec.x, escapeY, (int)escapePosVec.z);
-                bee.setHivePos(null);
-                if (bee.hasSavedFlowerPos() && level.getBlockState(bee.getSavedFlowerPos()).is(BlockTags.FLOWERS))
-                    bee.setSavedFlowerPos(bee.getSavedFlowerPos().above(2));
 
                 if (level.getBlockState(escapePos).isAir())
                 {
