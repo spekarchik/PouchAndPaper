@@ -2,6 +2,7 @@ package com.pekar.pouchandpaper.blocks.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.level.Level;
@@ -49,19 +50,19 @@ public class BurntPaperBlockEntity extends BlockEntity implements BlockEntityTic
         for (Bee bee : bees)
         {
             var navigation = bee.getNavigation();
-            bee.setHivePos(null);
-            bee.setSavedFlowerPos(null);
-
-            Vec3 beePos = bee.position();
 
             if (navigation.isDone() || navigation.isStuck())
             {
+                Vec3 beePos = bee.position();
                 Vec3 blockCenter = Vec3.atCenterOf(pos);
                 Vec3 escapeDirection = beePos.subtract(blockCenter).normalize().scale(BEE_SEEK_RADUIS);
                 Vec3 escapePosVec = beePos.add(escapeDirection);
 
                 int escapeY = escapePosVec.y < blockCenter.y ? pos.getY() + 1 : (int)escapePosVec.y;
                 BlockPos escapePos = new BlockPos((int)escapePosVec.x, escapeY, (int)escapePosVec.z);
+                bee.setHivePos(null);
+                if (bee.hasSavedFlowerPos() && level.getBlockState(bee.getSavedFlowerPos()).is(BlockTags.FLOWERS))
+                    bee.setSavedFlowerPos(bee.getSavedFlowerPos().above(2));
 
                 if (level.getBlockState(escapePos).isAir())
                 {
