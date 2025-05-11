@@ -33,7 +33,10 @@ public class BurntPaperBlockItem extends ModBlockItem implements ITooltipProvide
 
         for (int i = 1; i <= 4; i++)
         {
-            tooltip.addLine(getDescriptionId(), i).asDarkGrey().styledAs(TextStyle.Notice, i == 1).apply();
+            tooltip.addLine(getDescriptionId(), i)
+                    .styledAs(TextStyle.Notice, i == 1)
+                    .styledAs(TextStyle.DarkGray, i == 4)
+                    .apply();
         }
     }
 }

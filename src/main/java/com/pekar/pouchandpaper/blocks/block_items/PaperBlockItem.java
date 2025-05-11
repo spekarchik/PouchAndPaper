@@ -2,6 +2,7 @@ package com.pekar.pouchandpaper.blocks.block_items;
 
 import com.pekar.pouchandpaper.tooltip.ITooltip;
 import com.pekar.pouchandpaper.tooltip.ITooltipProvider;
+import com.pekar.pouchandpaper.tooltip.TextStyle;
 import com.pekar.pouchandpaper.utils.Utils;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
@@ -32,7 +33,7 @@ public class PaperBlockItem extends ModBlockItem implements ITooltipProvider
 
         for (int i = 1; i <= 5; i++)
         {
-            tooltip.addLine(getDescriptionId(), i).asDarkGrey().apply();
+            tooltip.addLine(getDescriptionId(), i).styledAs(TextStyle.DarkGray, i >= 3).apply();
         }
     }
 }
