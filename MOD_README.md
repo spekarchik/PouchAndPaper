@@ -32,7 +32,7 @@ Its natural behavior makes it ideal for traps, for driving away bees from the ar
 - Launch the game and enjoy your adventure!
 
 ## Technical Details
-- **Developer:** Sergey Pekarchik
+- **Developer:** Sergey Pekarchik (with testing and creative support by Tima Pekarchik)
 - **Supported NeoForge versions:** 1.21.1, 1.21.4 and 1.21.5
 - **Texture resolution:** 32×32
 
