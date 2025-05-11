@@ -124,7 +124,12 @@ public class PaperBlock extends FallingBlock implements ISupportHoverText
 
         for (int i = 1; i <= 5; i++)
         {
-            var component = getDisplayName(asItem(), i).withStyle(ChatFormatting.DARK_GRAY);
+            var component = getDisplayName(asItem(), i);
+            if (i >= 3)
+                component.withStyle(ChatFormatting.DARK_GRAY);
+            else
+                component.withStyle(ChatFormatting.GRAY);
+
             tooltipComponents.add(component);
         }
     }
