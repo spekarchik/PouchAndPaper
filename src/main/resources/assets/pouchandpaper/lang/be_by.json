@@ -1,0 +1,36 @@
+{
+  "language": "Беларуская (Кірыліца)",
+  "language.region": "Беларусь",
+  "language.code": "be_by",
+  "author": "Сяргей Пякарчык",
+
+  "itemGroup.pouchandpaper": "Pouch & Paper",
+  "itemGroup.compactmod_tab": "Pouch & Paper",
+
+  "item.pouchandpaper.paperstack": "Стос паперы",
+  "item.pouchandpaper.ink_bottle": "Бутэлечка з чарнілам",
+  "item.pouchandpaper.glow_ink_bottle": "Бутэлечка з зіхатлівым чарнілам",
+  "item.pouchandpaper.leatherpack": "Пачак скуры",
+  "item.pouchandpaper.seedpocket_wheat": "Мяшочак з насеннем пшаніцы",
+  "item.pouchandpaper.seedpocket_beet": "Мяшочак з насеннем буракоў",
+  "item.pouchandpaper.seedpocket_watermelon": "Мяшочак з насеннем кавуна",
+  "item.pouchandpaper.seedpocket_pumpkin": "Мяшочак з насеннем гарбуза",
+  "item.pouchandpaper.seedpocket_cocoa": "Мяшочак з какава-бабамі",
+  "item.pouchandpaper.feathers_pack": "Пакет з пер'ем",
+
+  "item.pouchandpaper.paperblock": "Блок паперы",
+  "item.pouchandpaper.paperblock.desc1": "Пры падзенні блока выпадае папера",
+  "item.pouchandpaper.paperblock.desc2": "Пры згаранні ператвараецца ў Згарэлы блок паперы, але можа згарэць цалкам",
+  "item.pouchandpaper.paperblock.desc3": "Згарэлы блок паперы, калі не гарыць, прыцягвае крыпераў у радыусе 70 блокаў",
+  "item.pouchandpaper.paperblock.desc4": "Пчолы ўцякаюць ад Згарэлага блока паперы на адлегласць да 50 блокаў",
+  "item.pouchandpaper.paperblock.desc5": "Пры разбурэнні Згарэлага блока паперы нічога не выпадае",
+
+  "item.pouchandpaper.burnt_paper_block": "Згарэлы блок паперы",
+  "item.pouchandpaper.burnt_paper_block.desc1": "Можна атрымаць, спаліўшы блок паперы",
+  "item.pouchandpaper.burnt_paper_block.desc2": "Калі не гарыць, прыцягвае крыпераў у радыусе 70 блокаў",
+  "item.pouchandpaper.burnt_paper_block.desc3": "Пчолы ў радыусе 50 блокаў уцякаюць за межы гэтай зоны",
+  "item.pouchandpaper.burnt_paper_block.desc4": "Пры разбурэнні блока нічога не выпадае",
+  "item.pouchandpaper.burnt_paper_block.desc5": "Блок нельга здабыць нават інструментам з чарамі «Шаўковы дотык»",
+
+  "description.press_shift": "§7Націсніце §9Shift§7 для падрабязнасцей..."
+}
