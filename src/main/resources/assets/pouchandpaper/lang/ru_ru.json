@@ -8,8 +8,8 @@
   "itemGroup.compactmod_tab": "Pouch & Paper",
 
   "item.pouchandpaper.paperstack": "Стопка бумаги",
-  "item.pouchandpaper.ink_bottle": "Банка чернил",
-  "item.pouchandpaper.glow_ink_bottle": "Банка светящихся чернил",
+  "item.pouchandpaper.ink_bottle": "Баночка чернил",
+  "item.pouchandpaper.glow_ink_bottle": "Баночка светящихся чернил",
   "item.pouchandpaper.leatherpack": "Пачка кожи",
   "item.pouchandpaper.seedpocket_wheat": "Мешочек с семенами пшеницы",
   "item.pouchandpaper.seedpocket_beet": "Мешочек с семенами свёклы",
@@ -28,7 +28,7 @@
   "item.pouchandpaper.burnt_paper_block": "Сгоревший блок бумаги",
   "item.pouchandpaper.burnt_paper_block.desc1": "Можно получить сжиганием блока бумаги",
   "item.pouchandpaper.burnt_paper_block.desc2": "Если не горит, привлекает криперов в радиусе 70 блоков",
-  "item.pouchandpaper.burnt_paper_block.desc3": "Пчёлы в радиусе 50 блоков улетают за пределы зоны действия",
+  "item.pouchandpaper.burnt_paper_block.desc3": "Пчёлы в радиусе 50 блоков улетают за пределы этой зоны",
   "item.pouchandpaper.burnt_paper_block.desc4": "При разрушении блока ничего не выпадает",
   "item.pouchandpaper.burnt_paper_block.desc5": "Блок нельзя добыть даже инструментом с чарами «Шёлковое касание»",
 
