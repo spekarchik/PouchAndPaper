@@ -142,9 +142,14 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
 
         for (int i = 1; i <= 4; i++)
         {
-            var component = getDisplayName(asItem(), i).withStyle(ChatFormatting.DARK_GRAY);
+            var component = getDisplayName(asItem(), i);
             if (i == 1)
                 component.withStyle(ChatFormatting.ITALIC).withStyle(ChatFormatting.GRAY);
+            else if (i == 4)
+                component.withStyle(ChatFormatting.DARK_GRAY);
+            else
+                component.withStyle(ChatFormatting.GRAY);
+
             tooltipComponents.add(component);
         }
     }
