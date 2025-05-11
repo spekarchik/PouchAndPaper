@@ -27,7 +27,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import java.util.List;
 import java.util.function.BiConsumer;
 
-public class PaperBlock extends FallingBlock implements ISupportHoverText
+public class PaperBlock extends ModFallingBlock implements ISupportHoverText
 {
     private static final MapCodec<PaperBlock> CODEC = simpleCodec(PaperBlock::new);
 
