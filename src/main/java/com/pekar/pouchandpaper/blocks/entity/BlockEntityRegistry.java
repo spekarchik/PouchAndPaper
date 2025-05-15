@@ -19,6 +19,18 @@ public class BlockEntityRegistry
             Main.BLOCK_ENTITIES.register("pouch_of_beet_block_entity", () ->
                     new BlockEntityType<>(PouchOfBeetrootSeedsBlockEntity::new, BlockRegistry.POUCH_OF_BEET.get()));
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfPumpkinSeedsBlockEntity>> POUCH_OF_PUMPKIN_BLOCK_ENTITY =
+            Main.BLOCK_ENTITIES.register("pouch_of_pumpkin_block_entity", () ->
+                    new BlockEntityType<>(PouchOfPumpkinSeedsBlockEntity::new, BlockRegistry.POUCH_OF_PUMPKIN.get()));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfWatermelonSeedsBlockEntity>> POUCH_OF_WATERMELON_BLOCK_ENTITY =
+            Main.BLOCK_ENTITIES.register("pouch_of_watermelon_block_entity", () ->
+                    new BlockEntityType<>(PouchOfWatermelonSeedsBlockEntity::new, BlockRegistry.POUCH_OF_WATERMELON.get()));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfCocoaBeansBlockEntity>> POUCH_OF_COCOA_BLOCK_ENTITY =
+            Main.BLOCK_ENTITIES.register("pouch_of_cocoa_block_entity", () ->
+                    new BlockEntityType<>(PouchOfCocoaBeansBlockEntity::new, BlockRegistry.POUCH_OF_COCOA.get()));
+
     public static void initStatic()
     {
         // just to initialize static members

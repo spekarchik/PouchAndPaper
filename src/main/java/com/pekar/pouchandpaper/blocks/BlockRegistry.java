@@ -29,6 +29,15 @@ public class BlockRegistry
     public static final DeferredBlock<Block> POUCH_OF_BEET = register("seedpocket_beet", PouchOfBeetrootSeeds::new, PouchOfBeetrootSeedsBlockItem::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
 
+    public static final DeferredBlock<Block> POUCH_OF_PUMPKIN = register("seedpocket_pumpkin", PouchOfPumpkinSeeds::new, PouchOfPumpkinSeedsBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
+
+    public static final DeferredBlock<Block> POUCH_OF_WATERMELON = register("seedpocket_watermelon", PouchOfWatermelonSeeds::new, PouchOfWatermelonSeedsBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GREEN).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
+
+    public static final DeferredBlock<Block> POUCH_OF_COCOA = register("seedpocket_cocoa", PouchOfCocoaBeans::new, PouchOfCocoaBeansBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
+
     public static void initStatic()
     {
         // just to initialize static members
