@@ -11,13 +11,13 @@ public class BlockEntityRegistry
             Main.BLOCK_ENTITIES.register("burnt_paper_block_entity", () ->
                     BlockEntityType.Builder.of(BurntPaperBlockEntity::new, BlockRegistry.BURNT_PAPER_BLOCK.get()).build(null));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfWheatBlockEntity>> POUCH_OF_WHEAT_BLOCK_ENTITY =
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfWheatSeedsBlockEntity>> POUCH_OF_WHEAT_BLOCK_ENTITY =
             Main.BLOCK_ENTITIES.register("pouch_of_wheat_block_entity", () ->
-                    BlockEntityType.Builder.of(PouchOfWheatBlockEntity::new, BlockRegistry.POUCH_OF_WHEAT.get()).build(null));
+                    BlockEntityType.Builder.of(PouchOfWheatSeedsBlockEntity::new, BlockRegistry.POUCH_OF_WHEAT.get()).build(null));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfBeetBlockEntity>> POUCH_OF_BEET_BLOCK_ENTITY =
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfBeetrootSeedsBlockEntity>> POUCH_OF_BEET_BLOCK_ENTITY =
             Main.BLOCK_ENTITIES.register("pouch_of_beet_block_entity", () ->
-                    new BlockEntityType<>(PouchOfBeetBlockEntity::new, BlockRegistry.POUCH_OF_BEET.get()));
+                    BlockEntityType.Builder.of(PouchOfBeetrootSeedsBlockEntity::new, BlockRegistry.POUCH_OF_BEET.get()).build(null));
 
     public static void initStatic()
     {

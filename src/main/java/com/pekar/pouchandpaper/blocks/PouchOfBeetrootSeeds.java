@@ -11,10 +11,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.Nullable;
 
-public class PouchOfWheat extends PouchOfSeeds implements EntityBlock
+public class PouchOfBeetrootSeeds extends PouchOfSeeds implements EntityBlock
 {
 
-    protected PouchOfWheat(Properties properties)
+    protected PouchOfBeetrootSeeds(Properties properties)
     {
         super(properties);
         registerDefaultState(stateDefinition.any().setValue(FACING_ALONG_X, true));
@@ -23,18 +23,18 @@ public class PouchOfWheat extends PouchOfSeeds implements EntityBlock
     @Override
     protected DeferredBlock<Block> getPouchBlock()
     {
-        return BlockRegistry.POUCH_OF_WHEAT;
+        return BlockRegistry.POUCH_OF_BEET;
     }
 
     @Override
     protected Item getSeedsItem()
     {
-        return Items.WHEAT_SEEDS;
+        return Items.BEETROOT_SEEDS;
     }
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState)
     {
-        return BlockEntityRegistry.POUCH_OF_WHEAT_BLOCK_ENTITY.get().create(blockPos, blockState);
+        return BlockEntityRegistry.POUCH_OF_BEET_BLOCK_ENTITY.get().create(blockPos, blockState);
     }
 }
