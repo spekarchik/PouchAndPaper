@@ -22,11 +22,11 @@ public class BlockRegistry
     public static final DeferredBlock<Block> BURNT_PAPER_BLOCK = register("burnt_paper_block", BurntPaperBlock::new,
             BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.GRAVEL).strength(0.6f));
 
-    public static final DeferredBlock<Block> POUCH_OF_WHEAT = register("seedpocket_wheat", PouchOfWheat::new,
+    public static final DeferredBlock<Block> POUCH_OF_WHEAT = register("seedpocket_wheat", PouchOfWheatSeeds::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
 
-    public static final DeferredBlock<Block> POUCH_OF_BEET = register("seedpocket_beet", PouchOfBeet::new,
-            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
+    public static final DeferredBlock<Block> POUCH_OF_BEET = register("seedpocket_beet", PouchOfBeetrootSeeds::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
 
     public static void initStatic()
     {

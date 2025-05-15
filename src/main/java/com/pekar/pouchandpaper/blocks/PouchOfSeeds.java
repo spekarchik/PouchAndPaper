@@ -38,6 +38,7 @@ public abstract class PouchOfSeeds extends ModBlock
     public PouchOfSeeds(Properties properties)
     {
         super(properties);
+        registerDefaultState(stateDefinition.any().setValue(FACING_ALONG_X, true));
     }
 
     protected abstract DeferredBlock<Block> getPouchBlock();
