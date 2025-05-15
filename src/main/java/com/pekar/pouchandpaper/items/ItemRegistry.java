@@ -14,7 +14,6 @@ public class ItemRegistry
     public static final DeferredItem<Item> SEEDPOCKET_BEET = ITEMS.registerItem("seedpocket_beet", ModItem::new);
     public static final DeferredItem<Item> SEEDPOCKET_PUMPKIN = ITEMS.registerItem("seedpocket_pumpkin", ModItem::new);
     public static final DeferredItem<Item> SEEDPOCKET_WATERMELON = ITEMS.registerItem("seedpocket_watermelon", ModItem::new);
-    public static final DeferredItem<Item> SEEDPOCKET_WHEAT = ITEMS.registerItem("seedpocket_wheat", ModItem::new);
     public static final DeferredItem<Item> SEEDPOCKET_COCOA = ITEMS.registerItem("seedpocket_cocoa", ModItem::new);
     public static final DeferredItem<Item> FEATHERS_PACK = ITEMS.registerItem("feathers_pack", ModItem::new);
 
