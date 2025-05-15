@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "facing_along_x=true": { "model": "pouchandpaper:block/seedpocket_wheat" },
+    "facing_along_x=false": { "model": "pouchandpaper:block/seedpocket_wheat_z" }
+  }
+}
