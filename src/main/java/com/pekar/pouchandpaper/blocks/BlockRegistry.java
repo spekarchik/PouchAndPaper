@@ -5,6 +5,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.function.Function;
@@ -19,6 +21,9 @@ public class BlockRegistry
 
     public static final DeferredBlock<Block> BURNT_PAPER_BLOCK = register("burnt_paper_block", BurntPaperBlock::new,
             BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.GRAVEL).strength(0.6f));
+
+    public static final DeferredBlock<Block> POUCH_OF_WHEAT = register("seedpocket_wheat", PouchOfWheat::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
 
     public static void initStatic()
     {

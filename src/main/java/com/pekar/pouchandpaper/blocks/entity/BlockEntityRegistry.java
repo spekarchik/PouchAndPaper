@@ -11,6 +11,10 @@ public class BlockEntityRegistry
             Main.BLOCK_ENTITIES.register("burnt_paper_block_entity", () ->
                     new BlockEntityType<>(BurntPaperBlockEntity::new, BlockRegistry.BURNT_PAPER_BLOCK.get()));
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfWheatBlockEntity>> POUCH_OF_WHEAT_BLOCK_ENTITY =
+            Main.BLOCK_ENTITIES.register("pouch_of_wheat_block_entity", () ->
+                    new BlockEntityType<>(PouchOfWheatBlockEntity::new, BlockRegistry.POUCH_OF_WHEAT.get()));
+
     public static void initStatic()
     {
         // just to initialize static members
