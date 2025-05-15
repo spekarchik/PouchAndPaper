@@ -1,10 +1,7 @@
 package com.pekar.pouchandpaper.blocks;
 
 import com.pekar.pouchandpaper.Main;
-import com.pekar.pouchandpaper.blocks.block_items.BurntPaperBlockItem;
-import com.pekar.pouchandpaper.blocks.block_items.ModBlockItem;
-import com.pekar.pouchandpaper.blocks.block_items.PaperBlockItem;
-import com.pekar.pouchandpaper.blocks.block_items.PouchOfWheatBlockItem;
+import com.pekar.pouchandpaper.blocks.block_items.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -27,6 +24,9 @@ public class BlockRegistry
             BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.GRAVEL).strength(0.6f));
 
     public static final DeferredBlock<Block> POUCH_OF_WHEAT = register("seedpocket_wheat", PouchOfWheat::new, PouchOfWheatBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
+
+    public static final DeferredBlock<Block> POUCH_OF_BEET = register("seedpocket_beet", PouchOfBeet::new, PouchOfBeetBlockItem::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
 
     public static void initStatic()

@@ -15,6 +15,10 @@ public class BlockEntityRegistry
             Main.BLOCK_ENTITIES.register("pouch_of_wheat_block_entity", () ->
                     new BlockEntityType<>(PouchOfWheatBlockEntity::new, BlockRegistry.POUCH_OF_WHEAT.get()));
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfBeetBlockEntity>> POUCH_OF_BEET_BLOCK_ENTITY =
+            Main.BLOCK_ENTITIES.register("pouch_of_beet_block_entity", () ->
+                    new BlockEntityType<>(PouchOfBeetBlockEntity::new, BlockRegistry.POUCH_OF_BEET.get()));
+
     public static void initStatic()
     {
         // just to initialize static members
