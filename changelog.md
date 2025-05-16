@@ -4,9 +4,9 @@
 - Seed pouches are now blocks: they can be placed in the world and used as seed storage containers.
 - Added detailed descriptions to pouch tooltips.
 
-
 ### 📝 Improvements
 - Updated texture for Feather Pack.
+
 
 ## 📦 Version 1.2.0-beta
 
