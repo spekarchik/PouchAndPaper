@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "pouchandpaper:item/seedpocket_watermelon"
+    "layer0": "pouchandpaper:item/pouch_of_watermelon"
   }
 }

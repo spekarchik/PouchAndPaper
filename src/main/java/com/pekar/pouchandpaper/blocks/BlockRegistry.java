@@ -1,14 +1,14 @@
 package com.pekar.pouchandpaper.blocks;
 
 import com.pekar.pouchandpaper.Main;
-import com.pekar.pouchandpaper.blocks.block_items.BurntPaperBlockItem;
-import com.pekar.pouchandpaper.blocks.block_items.ModBlockItem;
-import com.pekar.pouchandpaper.blocks.block_items.PaperBlockItem;
+import com.pekar.pouchandpaper.blocks.block_items.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.function.BiFunction;
@@ -22,6 +22,21 @@ public class BlockRegistry
 
     public static final DeferredBlock<Block> BURNT_PAPER_BLOCK = register("burnt_paper_block", BurntPaperBlock::new, BurntPaperBlockItem::new,
             BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.GRAVEL).strength(0.6f));
+
+    public static final DeferredBlock<Block> POUCH_OF_WHEAT = register("seedpocket_wheat", PouchOfWheatSeeds::new, PouchOfWheatSeedsBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
+
+    public static final DeferredBlock<Block> POUCH_OF_BEET = register("seedpocket_beet", PouchOfBeetrootSeeds::new, PouchOfBeetrootSeedsBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
+
+    public static final DeferredBlock<Block> POUCH_OF_PUMPKIN = register("seedpocket_pumpkin", PouchOfPumpkinSeeds::new, PouchOfPumpkinSeedsBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
+
+    public static final DeferredBlock<Block> POUCH_OF_WATERMELON = register("seedpocket_watermelon", PouchOfWatermelonSeeds::new, PouchOfWatermelonSeedsBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GREEN).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
+
+    public static final DeferredBlock<Block> POUCH_OF_COCOA = register("seedpocket_cocoa", PouchOfCocoaBeans::new, PouchOfCocoaBeansBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
 
     public static void initStatic()
     {
