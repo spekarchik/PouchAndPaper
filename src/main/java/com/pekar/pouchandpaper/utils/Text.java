@@ -1,5 +1,6 @@
 package com.pekar.pouchandpaper.utils;
 
+import com.pekar.pouchandpaper.tooltip.ITooltip;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -12,6 +13,17 @@ public class Text
     Text()
     {
 
+    }
+
+    public boolean showExtendedDescription(ITooltip tooltip)
+    {
+        if (!Screen.hasShiftDown())
+        {
+            tooltip.addLineById("description.press_shift").apply();
+            return false;
+        }
+
+        return true;
     }
 
     public MutableComponent getFormattedTextComponent(MutableComponent initialComponent, boolean isHeader, boolean isSubHeader, boolean isNotice, boolean isImportantNotice, boolean isDarkGray)
