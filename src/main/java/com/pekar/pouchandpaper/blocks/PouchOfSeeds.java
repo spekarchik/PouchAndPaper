@@ -3,6 +3,7 @@ package com.pekar.pouchandpaper.blocks;
 import com.google.common.collect.ImmutableMap;
 import com.pekar.pouchandpaper.blocks.entity.PouchOfSeedsBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
@@ -17,6 +18,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -25,6 +27,8 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Objects;
+import java.util.Random;
 import java.util.function.Function;
 
 public abstract class PouchOfSeeds extends ModBlock
@@ -32,14 +36,36 @@ public abstract class PouchOfSeeds extends ModBlock
     private static final int MAX_SEEDS_INSIDE = 60;
 
     private static final VoxelShape SHAPE_X = Shapes.create(0.234375, 0.0, 0.25, 0.671875, 0.4375, 0.5625);
+//    "from": [3.75, 0, 7],
+//            "to": [10.75, 7, 12],
+    private static final VoxelShape SHAPE_X1 = Shapes.create(0.234375, 0.0, 0.4375, 0.671875, 0.4375, 0.75);
+//    "from": [4.5, 0, 6],
+//            "to": [12.25, 7, 12.75],
+    private static final VoxelShape SHAPE_X2 = Shapes.create(0.28125, 0, 0.375, 0.765625, 0.4375, 0.796875);
+//    "from": [4, 0, 4],
+//            "to": [12, 7, 11],
+    private static final VoxelShape SHAPE_X3 = Shapes.create(0.25, 0.0, 0.25, 0.75, 0.4375, 0.6875);
     private static final VoxelShape SHAPE_Z = Shapes.create(0.40625, 0.0, 0.328125, 0.71875, 0.4375, 0.765625);
+//    "from": [4.5, 0, 4.25],
+//            "to": [9.5, 7, 11.25],
+    private static final VoxelShape SHAPE_Z1 = Shapes.create(0.28125, 0.0, 0.265625, 0.59375, 0.4375, 0.703125);
+//    "from": [4.5, 0, 6],
+//            "to": [12.25, 7, 12.75],
+//    "from": [4, 0, 4.75],
+//            "to": [10.5, 7, 12.25],
+    private static final VoxelShape SHAPE_Z2 = Shapes.create(0.25, 0.0, 0.296875, 0.65625, 0.4375, 0.765625);
+//    "from": [5, 0, 4],
+//            "to": [11.75, 7, 11.5],
+    private static final VoxelShape SHAPE_Z3 = Shapes.create(0.3125, 0.0, 0.25, 0.734375, 0.4375, 0.71875);
 
     public static final BooleanProperty FACING_ALONG_X = BooleanProperty.create("facing_along_x");
+    public static final IntegerProperty PLACING_OPTION = IntegerProperty.create("placing_option", 0, 3);
 
     public PouchOfSeeds(Properties properties)
     {
         super(properties);
         registerDefaultState(stateDefinition.any().setValue(FACING_ALONG_X, true));
+        registerDefaultState(stateDefinition.any().setValue(PLACING_OPTION, 0));
     }
 
     protected abstract DeferredBlock<Block> getPouchBlock();
@@ -128,18 +154,31 @@ public abstract class PouchOfSeeds extends ModBlock
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
-        builder.add(FACING_ALONG_X);
+        builder.add(FACING_ALONG_X, PLACING_OPTION);
     }
 
     @Override
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext context)
     {
+        var pos = context.getClickedPos();
+        long seed = mixCoords(pos.getX(), pos.getY(), pos.getZ());
+        var rand = new Random(seed);
+        int placingOption = rand.nextInt(4);
+        System.out.println("  placingOption: " + placingOption + ", seed: " + seed + ", Rand: " + rand);
         var direction = context.getHorizontalDirection();
         return switch (direction)
         {
-            case EAST, WEST -> defaultBlockState().setValue(FACING_ALONG_X, false);
-            default -> defaultBlockState().setValue(FACING_ALONG_X, true);
+            case EAST, WEST -> defaultBlockState().setValue(FACING_ALONG_X, false).setValue(PLACING_OPTION, placingOption);
+            default -> defaultBlockState().setValue(FACING_ALONG_X, true).setValue(PLACING_OPTION, placingOption);
         };
+    }
+
+    private static long mixCoords(int x, int y, int z)
+    {
+        long a = x * 341873128712L;
+        long b = y * 132897987541L;
+        long c = z * 42317861L;
+        return a ^ b ^ c;
     }
 
     @Override
@@ -147,15 +186,50 @@ public abstract class PouchOfSeeds extends ModBlock
     {
         var defaultBlockState = defaultBlockState();
         return ImmutableMap.of(
-                defaultBlockState.setValue(FACING_ALONG_X, true), SHAPE_X,
-                defaultBlockState.setValue(FACING_ALONG_X, false), SHAPE_Z
+                defaultBlockState.setValue(FACING_ALONG_X, true).setValue(PLACING_OPTION, 0), SHAPE_X,
+                defaultBlockState.setValue(FACING_ALONG_X, true).setValue(PLACING_OPTION, 1), SHAPE_X1,
+                defaultBlockState.setValue(FACING_ALONG_X, true).setValue(PLACING_OPTION, 2), SHAPE_X2,
+                defaultBlockState.setValue(FACING_ALONG_X, true).setValue(PLACING_OPTION, 3), SHAPE_X3,
+                defaultBlockState.setValue(FACING_ALONG_X, false).setValue(PLACING_OPTION, 0), SHAPE_Z,
+                defaultBlockState.setValue(FACING_ALONG_X, false).setValue(PLACING_OPTION, 1), SHAPE_Z1,
+                defaultBlockState.setValue(FACING_ALONG_X, false).setValue(PLACING_OPTION, 2), SHAPE_Z2,
+                defaultBlockState.setValue(FACING_ALONG_X, false).setValue(PLACING_OPTION, 3), SHAPE_Z3
         );
     }
 
     @Override
     public @NotNull VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext)
     {
-        return blockState.getValue(FACING_ALONG_X) ? SHAPE_X : SHAPE_Z;
+        return getShapeByBlockState(blockState);
+    }
+
+    private VoxelShape getShapeByBlockState(BlockState blockState)
+    {
+        boolean facingAlongX = blockState.getValue(FACING_ALONG_X);
+        int placingOption = blockState.getValue(PLACING_OPTION);
+
+        if (facingAlongX)
+        {
+            return switch (placingOption)
+            {
+                case 0 -> SHAPE_X;
+                case 1 -> SHAPE_X1;
+                case 2 -> SHAPE_X2;
+                case 3 -> SHAPE_X3;
+                default -> throw new IllegalStateException("Unexpected value: " + placingOption);
+            };
+        }
+        else
+        {
+            return switch (placingOption)
+            {
+                case 0 -> SHAPE_Z;
+                case 1 -> SHAPE_Z1;
+                case 2 -> SHAPE_Z2;
+                case 3 -> SHAPE_Z3;
+                default -> throw new IllegalStateException("Unexpected value: " + placingOption);
+            };
+        }
     }
 
     @Override
