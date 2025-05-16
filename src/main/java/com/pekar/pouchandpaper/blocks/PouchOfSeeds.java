@@ -5,6 +5,7 @@ import com.pekar.pouchandpaper.blocks.entity.PouchOfSeedsBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -45,20 +46,20 @@ public abstract class PouchOfSeeds extends ModBlock
     protected abstract Item getSeedsItem();
 
     @Override
-    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
     {
         if (stack.is(getPouchBlock().asItem()))
         {
             var blockEntity = level.getBlockEntity(pos);
             if (!(blockEntity instanceof PouchOfSeedsBlockEntity pouchOfSeedsBlockEntity))
             {
-                return InteractionResult.CONSUME;
+                return ItemInteractionResult.CONSUME;
             }
 
             int seedsInside = pouchOfSeedsBlockEntity.getSeedsInside();
             if (seedsInside + 4 > MAX_SEEDS_INSIDE)
             {
-                return InteractionResult.CONSUME;
+                return ItemInteractionResult.CONSUME;
             }
 
             pouchOfSeedsBlockEntity.setSeedsInside(seedsInside + 4);
@@ -68,20 +69,20 @@ public abstract class PouchOfSeeds extends ModBlock
                 player.getItemInHand(hand).shrink(1);
             }
 
-            return level.isClientSide() ? InteractionResult.SUCCESS : InteractionResult.SUCCESS_SERVER;
+            return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
         else if (stack.is(getSeedsItem()))
         {
             var blockEntity = level.getBlockEntity(pos);
             if (!(blockEntity instanceof PouchOfSeedsBlockEntity pouchOfSeedsBlockEntity))
             {
-                return InteractionResult.CONSUME;
+                return ItemInteractionResult.CONSUME;
             }
 
             int seedsInside = pouchOfSeedsBlockEntity.getSeedsInside();
             if (seedsInside >= MAX_SEEDS_INSIDE)
             {
-                return InteractionResult.CONSUME;
+                return ItemInteractionResult.CONSUME;
             }
 
             pouchOfSeedsBlockEntity.setSeedsInside(seedsInside + 1);
@@ -91,7 +92,7 @@ public abstract class PouchOfSeeds extends ModBlock
                 player.getItemInHand(hand).shrink(1);
             }
 
-            return level.isClientSide() ? InteractionResult.SUCCESS : InteractionResult.SUCCESS_SERVER;
+            return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
 
         return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
@@ -120,7 +121,7 @@ public abstract class PouchOfSeeds extends ModBlock
         }
         pouchOfSeedsBlockEntity.setSeedsInside(seedsInside - seedsToDrop);
 
-        return level.isClientSide() ? InteractionResult.SUCCESS : InteractionResult.SUCCESS_SERVER;
+        return InteractionResult.sidedSuccess(level.isClientSide());
     }
 
     @Override

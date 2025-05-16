@@ -13,7 +13,7 @@ public class BlockEntityRegistry
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfWheatBlockEntity>> POUCH_OF_WHEAT_BLOCK_ENTITY =
             Main.BLOCK_ENTITIES.register("pouch_of_wheat_block_entity", () ->
-                    new BlockEntityType<>(PouchOfWheatBlockEntity::new, BlockRegistry.POUCH_OF_WHEAT.get()));
+                    BlockEntityType.Builder.of(PouchOfWheatBlockEntity::new, BlockRegistry.POUCH_OF_WHEAT.get()).build(null));
 
     public static void initStatic()
     {
