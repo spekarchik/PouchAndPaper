@@ -7,14 +7,24 @@ The mod introduces compact versions of:
 - ink and glow ink — stored in small bottles,
 - leather — bundled into a neat pack,
 - seeds (wheat, beetroot, melon, pumpkin, cocoa) — packed into fabric pouches,
-- feathers — bundled into a compact pillow-like pack.
+- feathers — wrapped into a dense, soft bundle.
 
 These forms allow you to:
 - save inventory and storage space,
 - streamline resource farming and trading,
 - quickly prepare for breeding animals and gaining XP.
 
-Later, the mod was expanded with a **Burnt Paper Block**, created by setting a regular Paper Block on fire. It has unique and realistic properties:
+### 🌱 Seed Pouches — now placeable blocks with real functionality
+
+Seed pouches are no longer just items — they are now **placeable blocks** that act as **mini seed containers**. When placed in the world, a pouch can store up to **60 seeds**, not counting the 4 used to craft it. You can fill it by:
+- inserting compatible seeds directly, or
+- right-clicking it with another pouch of the same type (which converts into seeds inside the block).
+
+Pouches can now be used for **organizing farms**, **decorating storage areas**, or **quickly planting seeds** during gardening. Breaking a pouch block will drop both the pouch and all stored seeds. You can withdraw seeds in portions of 4 by right-clicking with an empty hand or a non-seed item.
+
+### 🔥 Burnt Paper Block — natural and dangerous
+
+The **Burnt Paper Block** is created by setting a regular Paper Block on fire. It has unique and realistic properties:
 - attracts creepers within a 70-block radius (when not burning),
 - repels bees within a 50-block radius,
 - drops nothing when broken and can't be harvested even with Silk Touch.
