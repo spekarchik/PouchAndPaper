@@ -11,12 +11,20 @@
   "item.pouchandpaper.ink_bottle": "Ink Bottle",
   "item.pouchandpaper.glow_ink_bottle": "Glow Ink Bottle",
   "item.pouchandpaper.leatherpack": "Leather Pack",
+  "item.pouchandpaper.feathers_pack": "Feather Pack",
+
   "item.pouchandpaper.seedpocket_wheat": "Pouch of Wheat Seeds",
   "item.pouchandpaper.seedpocket_beet": "Pouch of Beetroot Seeds",
   "item.pouchandpaper.seedpocket_watermelon": "Pouch of Melon Seeds",
   "item.pouchandpaper.seedpocket_pumpkin": "Pouch of Pumpkin Seeds",
   "item.pouchandpaper.seedpocket_cocoa": "Pouch of Cocoa Beans",
-  "item.pouchandpaper.feathers_pack": "Feather Pack",
+
+  "item.pouchandpaper.pouch.desc1": "- Can be placed in the world",
+  "item.pouchandpaper.pouch.desc2": "- Use another pouch or compatible seeds to add them inside",
+  "item.pouchandpaper.pouch.desc3": "- Each extra pouch adds 4 seeds to the storage",
+  "item.pouchandpaper.pouch.desc4": "- Holds up to 60 seeds, excluding the 4 used to craft it",
+  "item.pouchandpaper.pouch.desc5": "- Breaking it drops the pouch and all stored seeds",
+  "item.pouchandpaper.pouch.desc6": "- Right-click with an empty hand or incompatible item to withdraw 4 seeds (or what's left)",
 
   "item.pouchandpaper.paperblock": "Paper Block",
   "item.pouchandpaper.paperblock.desc1": "Drops paper when the block falls",
