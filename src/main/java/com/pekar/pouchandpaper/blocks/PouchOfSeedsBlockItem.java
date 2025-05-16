@@ -1,6 +1,5 @@
-package com.pekar.pouchandpaper.blocks.block_items;
+package com.pekar.pouchandpaper.blocks;
 
-import com.pekar.pouchandpaper.blocks.ModBlockItem;
 import net.minecraft.world.level.block.Block;
 
 public class PouchOfSeedsBlockItem extends ModBlockItem
