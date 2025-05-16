@@ -3,7 +3,6 @@ package com.pekar.pouchandpaper.blocks;
 import com.google.common.collect.ImmutableMap;
 import com.pekar.pouchandpaper.blocks.entity.PouchOfSeedsBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -26,7 +25,6 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Objects;
 import java.util.Random;
 import java.util.function.Function;
 
@@ -163,7 +161,6 @@ public abstract class PouchOfSeeds extends ModBlock
         long seed = mixCoords(pos.getX(), pos.getY(), pos.getZ());
         var rand = new Random(seed);
         int placingOption = rand.nextInt(4);
-        System.out.println("  placingOption: " + placingOption + ", seed: " + seed + ", Rand: " + rand);
         var direction = context.getHorizontalDirection();
         return switch (direction)
         {
