@@ -1,6 +1,12 @@
 {
   "variants": {
-    "facing_along_x=true": { "model": "pouchandpaper:block/seedpocket_cocoa" },
-    "facing_along_x=false": { "model": "pouchandpaper:block/seedpocket_cocoa_z" }
+    "facing_along_x=true,placing_option=0": { "model": "pouchandpaper:block/seedpocket_cocoa" },
+    "facing_along_x=true,placing_option=1": { "model": "pouchandpaper:block/seedpocket_cocoa1" },
+    "facing_along_x=true,placing_option=2": { "model": "pouchandpaper:block/seedpocket_cocoa2" },
+    "facing_along_x=true,placing_option=3": { "model": "pouchandpaper:block/seedpocket_cocoa3" },
+    "facing_along_x=false,placing_option=0": { "model": "pouchandpaper:block/seedpocket_cocoa_z" },
+    "facing_along_x=false,placing_option=1": { "model": "pouchandpaper:block/seedpocket_cocoa1_z" },
+    "facing_along_x=false,placing_option=2": { "model": "pouchandpaper:block/seedpocket_cocoa2_z" },
+    "facing_along_x=false,placing_option=3": { "model": "pouchandpaper:block/seedpocket_cocoa3_z" }
   }
 }
