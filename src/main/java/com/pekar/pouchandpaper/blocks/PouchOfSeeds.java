@@ -32,26 +32,12 @@ public abstract class PouchOfSeeds extends ModBlock
     private static final int MAX_SEEDS_INSIDE = 60;
 
     private static final VoxelShape SHAPE_X = Shapes.create(0.234375, 0.0, 0.25, 0.671875, 0.4375, 0.5625);
-//    "from": [3.75, 0, 7],
-//            "to": [10.75, 7, 12],
     private static final VoxelShape SHAPE_X1 = Shapes.create(0.234375, 0.0, 0.4375, 0.671875, 0.4375, 0.75);
-//    "from": [4.5, 0, 6],
-//            "to": [12.25, 7, 12.75],
     private static final VoxelShape SHAPE_X2 = Shapes.create(0.28125, 0, 0.375, 0.765625, 0.4375, 0.796875);
-//    "from": [4, 0, 4],
-//            "to": [12, 7, 11],
     private static final VoxelShape SHAPE_X3 = Shapes.create(0.25, 0.0, 0.25, 0.75, 0.4375, 0.6875);
     private static final VoxelShape SHAPE_Z = Shapes.create(0.40625, 0.0, 0.328125, 0.71875, 0.4375, 0.765625);
-//    "from": [4.5, 0, 4.25],
-//            "to": [9.5, 7, 11.25],
     private static final VoxelShape SHAPE_Z1 = Shapes.create(0.28125, 0.0, 0.265625, 0.59375, 0.4375, 0.703125);
-//    "from": [4.5, 0, 6],
-//            "to": [12.25, 7, 12.75],
-//    "from": [4, 0, 4.75],
-//            "to": [10.5, 7, 12.25],
     private static final VoxelShape SHAPE_Z2 = Shapes.create(0.25, 0.0, 0.296875, 0.65625, 0.4375, 0.765625);
-//    "from": [5, 0, 4],
-//            "to": [11.75, 7, 11.5],
     private static final VoxelShape SHAPE_Z3 = Shapes.create(0.3125, 0.0, 0.25, 0.734375, 0.4375, 0.71875);
 
     public static final BooleanProperty FACING_ALONG_X = BooleanProperty.create("facing_along_x");
