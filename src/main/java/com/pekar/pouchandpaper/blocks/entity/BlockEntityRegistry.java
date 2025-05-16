@@ -21,15 +21,15 @@ public class BlockEntityRegistry
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfPumpkinSeedsBlockEntity>> POUCH_OF_PUMPKIN_BLOCK_ENTITY =
             Main.BLOCK_ENTITIES.register("pouch_of_pumpkin_block_entity", () ->
-                    new BlockEntityType<>(PouchOfPumpkinSeedsBlockEntity::new, BlockRegistry.POUCH_OF_PUMPKIN.get()));
+                    BlockEntityType.Builder.of(PouchOfPumpkinSeedsBlockEntity::new, BlockRegistry.POUCH_OF_PUMPKIN.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfWatermelonSeedsBlockEntity>> POUCH_OF_WATERMELON_BLOCK_ENTITY =
             Main.BLOCK_ENTITIES.register("pouch_of_watermelon_block_entity", () ->
-                    new BlockEntityType<>(PouchOfWatermelonSeedsBlockEntity::new, BlockRegistry.POUCH_OF_WATERMELON.get()));
+                    BlockEntityType.Builder.of(PouchOfWatermelonSeedsBlockEntity::new, BlockRegistry.POUCH_OF_WATERMELON.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PouchOfCocoaBeansBlockEntity>> POUCH_OF_COCOA_BLOCK_ENTITY =
             Main.BLOCK_ENTITIES.register("pouch_of_cocoa_block_entity", () ->
-                    new BlockEntityType<>(PouchOfCocoaBeansBlockEntity::new, BlockRegistry.POUCH_OF_COCOA.get()));
+                    BlockEntityType.Builder.of(PouchOfCocoaBeansBlockEntity::new, BlockRegistry.POUCH_OF_COCOA.get()).build(null));
 
     public static void initStatic()
     {
