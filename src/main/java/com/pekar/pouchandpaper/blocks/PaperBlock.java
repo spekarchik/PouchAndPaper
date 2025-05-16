@@ -2,19 +2,14 @@ package com.pekar.pouchandpaper.blocks;
 
 import com.mojang.serialization.MapCodec;
 import com.pekar.pouchandpaper.items.ItemRegistry;
-import com.pekar.pouchandpaper.utils.Utils;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -24,10 +19,9 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-import java.util.List;
 import java.util.function.BiConsumer;
 
-public class PaperBlock extends ModFallingBlock implements ISupportHoverText
+public class PaperBlock extends ModFallingBlock
 {
     private static final MapCodec<PaperBlock> CODEC = simpleCodec(PaperBlock::new);
 
@@ -115,22 +109,5 @@ public class PaperBlock extends ModFallingBlock implements ISupportHoverText
     protected MapCodec<? extends FallingBlock> codec()
     {
         return CODEC;
-    }
-
-    @Override
-    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
-    {
-        if (!Utils.instance.text.showExtendedDescription(tooltipComponents)) return;
-
-        for (int i = 1; i <= 5; i++)
-        {
-            var component = getDisplayName(asItem(), i);
-            if (i >= 3)
-                component.withStyle(ChatFormatting.DARK_GRAY);
-            else
-                component.withStyle(ChatFormatting.GRAY);
-
-            tooltipComponents.add(component);
-        }
     }
 }

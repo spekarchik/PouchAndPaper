@@ -1,6 +1,10 @@
 package com.pekar.pouchandpaper.blocks;
 
 import com.pekar.pouchandpaper.Main;
+import com.pekar.pouchandpaper.blocks.block_items.BurntPaperBlockItem;
+import com.pekar.pouchandpaper.blocks.block_items.ModBlockItem;
+import com.pekar.pouchandpaper.blocks.block_items.PaperBlockItem;
+import com.pekar.pouchandpaper.blocks.block_items.PouchOfSeedsBlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -18,10 +22,10 @@ import static com.pekar.pouchandpaper.Main.BLOCKS;
 
 public class BlockRegistry
 {
-    public static final DeferredBlock<Block> PAPER_BLOCK = register("paperblock", PaperBlock::new,
+    public static final DeferredBlock<Block> PAPER_BLOCK = register("paperblock", PaperBlock::new, PaperBlockItem::new,
             BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.GRASS).strength(0.6f));
 
-    public static final DeferredBlock<Block> BURNT_PAPER_BLOCK = register("burnt_paper_block", BurntPaperBlock::new,
+    public static final DeferredBlock<Block> BURNT_PAPER_BLOCK = register("burnt_paper_block", BurntPaperBlock::new, BurntPaperBlockItem::new,
             BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.GRAVEL).strength(0.6f));
 
     public static final DeferredBlock<Block> POUCH_OF_WHEAT = register("seedpocket_wheat", PouchOfWheatSeeds::new, PouchOfSeedsBlockItem::new,
