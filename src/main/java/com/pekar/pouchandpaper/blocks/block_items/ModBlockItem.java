@@ -1,4 +1,4 @@
-package com.pekar.pouchandpaper.blocks;
+package com.pekar.pouchandpaper.blocks.block_items;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

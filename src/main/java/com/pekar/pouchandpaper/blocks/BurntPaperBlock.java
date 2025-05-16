@@ -3,20 +3,14 @@ package com.pekar.pouchandpaper.blocks;
 import com.mojang.serialization.MapCodec;
 import com.pekar.pouchandpaper.blocks.entity.BlockEntityRegistry;
 import com.pekar.pouchandpaper.blocks.entity.BurntPaperBlockEntity;
-import com.pekar.pouchandpaper.utils.Utils;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.monster.Creeper;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -30,8 +24,6 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.PushReaction;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
 
 public class BurntPaperBlock extends PaperBlock implements EntityBlock
 {
@@ -133,24 +125,5 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
     protected MapCodec<? extends FallingBlock> codec()
     {
         return CODEC;
-    }
-
-    @Override
-    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
-    {
-        if (!Utils.instance.text.showExtendedDescription(tooltipComponents)) return;
-
-        for (int i = 1; i <= 4; i++)
-        {
-            var component = getDisplayName(asItem(), i);
-            if (i == 1)
-                component.withStyle(ChatFormatting.ITALIC).withStyle(ChatFormatting.GRAY);
-            else if (i == 4)
-                component.withStyle(ChatFormatting.DARK_GRAY);
-            else
-                component.withStyle(ChatFormatting.GRAY);
-
-            tooltipComponents.add(component);
-        }
     }
 }
