@@ -11,12 +11,20 @@
   "item.pouchandpaper.ink_bottle": "Бутэлечка з чарнілам",
   "item.pouchandpaper.glow_ink_bottle": "Бутэлечка з зіхатлівым чарнілам",
   "item.pouchandpaper.leatherpack": "Пачак скуры",
+  "item.pouchandpaper.feathers_pack": "Пакет з пер'ем",
+
   "item.pouchandpaper.seedpocket_wheat": "Мяшочак з насеннем пшаніцы",
   "item.pouchandpaper.seedpocket_beet": "Мяшочак з насеннем буракоў",
   "item.pouchandpaper.seedpocket_watermelon": "Мяшочак з насеннем кавуна",
   "item.pouchandpaper.seedpocket_pumpkin": "Мяшочак з насеннем гарбуза",
   "item.pouchandpaper.seedpocket_cocoa": "Мяшочак з какава-бабамі",
-  "item.pouchandpaper.feathers_pack": "Пакет з пер'ем",
+
+  "item.pouchandpaper.pouch.desc1": "- Можна размясціць як блок",
+  "item.pouchandpaper.pouch.desc2": "- Пасля размяшчэння ў яго можна дадаваць іншыя такія ж мяшочкі і сумяшчальнае насенне",
+  "item.pouchandpaper.pouch.desc3": "- Кожны дададзены мяшочак павялічвае запас на 4 адзінкі насення",
+  "item.pouchandpaper.pouch.desc4": "- Максімальная ўмяшчальнасць - 60 адзінак насення, не лічачы 4, з якіх зроблены сам мяшочак",
+  "item.pouchandpaper.pouch.desc5": "- Пры разбурэнні выпадае сам мяшочак і ўвесь змешчаны запас насення",
+  "item.pouchandpaper.pouch.desc6": "- Пры выкарыстанні рукой або непрыдатным прадметам мяшочак выдае па 4 адзінкі насення, або рэшту",
 
   "item.pouchandpaper.paperblock": "Блок паперы",
   "item.pouchandpaper.paperblock.desc1": "Пры падзенні блока выпадае папера",
