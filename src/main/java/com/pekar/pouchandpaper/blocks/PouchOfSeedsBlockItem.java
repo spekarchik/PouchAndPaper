@@ -6,10 +6,9 @@ import com.pekar.pouchandpaper.utils.Utils;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.block.Block;
 
-import java.util.function.Consumer;
+import java.util.List;
 
 public class PouchOfSeedsBlockItem extends ModBlockItem implements ITooltipProvider
 {
@@ -21,9 +20,9 @@ public class PouchOfSeedsBlockItem extends ModBlockItem implements ITooltipProvi
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag tooltipFlag)
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipDisplay, TooltipFlag tooltipFlag)
     {
-        ITooltipProvider.appendHoverText(this, stack, context, tooltipDisplay, componentConsumer, tooltipFlag);
+        ITooltipProvider.appendHoverText(this, stack, context, tooltipDisplay, tooltipFlag);
     }
 
     @Override
