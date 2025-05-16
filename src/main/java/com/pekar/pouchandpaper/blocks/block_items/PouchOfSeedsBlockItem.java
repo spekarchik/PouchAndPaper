@@ -2,9 +2,9 @@ package com.pekar.pouchandpaper.blocks.block_items;
 
 import net.minecraft.world.level.block.Block;
 
-public class PouchOfBeetrootSeedsBlockItem extends PouchOfSeedsBlockItem
+public class PouchOfSeedsBlockItem extends ModBlockItem
 {
-    public PouchOfBeetrootSeedsBlockItem(Block block, Properties properties)
+    public PouchOfSeedsBlockItem(Block block, Properties properties)
     {
         super(block, properties);
     }
