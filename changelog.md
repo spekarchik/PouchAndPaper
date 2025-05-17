@@ -1,3 +1,9 @@
+## 📦 Version 2.0.1
+
+### 📝 Fixed
+- Fixed visual artifacts on seed pouch models caused by transparent texture edges.
+
+
 ## 📦 Version 2.0.0
 
 ### ✨ New
