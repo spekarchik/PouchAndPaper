@@ -1,0 +1,36 @@
+﻿{
+    "criteria":  {
+                     "item0":  {
+                                   "trigger":  "minecraft:inventory_changed",
+                                   "conditions":  {
+                                                      "items":  [
+                                                                    {
+                                                                        "items":  "pouchandpaper:sack_of_potato"
+                                                                    }
+                                                                ]
+                                                  }
+                               },
+                     "item1":  {
+                                   "trigger":  "minecraft:inventory_changed",
+                                   "conditions":  {
+                                                      "items":  [
+                                                                    {
+                                                                        "items":  "minecraft:potato"
+                                                                    }
+                                                                ]
+                                                  }
+                               }
+                 },
+    "parent":  "minecraft:recipes/root",
+    "rewards":  {
+                    "recipes":  [
+                                    "pouchandpaper:potato"
+                                ]
+                },
+    "requirements":  [
+                         [
+                             "item0",
+                             "item1"
+                         ]
+                     ]
+}

@@ -38,6 +38,9 @@ public class BlockRegistry
     public static final DeferredBlock<Block> POUCH_OF_COCOA = register("seedpocket_cocoa", PouchOfCocoaBeans::new, PouchOfSeedsBlockItem::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
 
+    public static final DeferredBlock<Block> SACK_OF_POTATO = register("sack_of_potato", PotatoSack::new, FarmSackBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
+
     public static void initStatic()
     {
         // just to initialize static members
