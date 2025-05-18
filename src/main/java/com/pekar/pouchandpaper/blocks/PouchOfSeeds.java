@@ -1,37 +1,24 @@
 package com.pekar.pouchandpaper.blocks;
 
 import com.google.common.collect.ImmutableMap;
-import com.pekar.pouchandpaper.blocks.entity.PouchOfSeedsBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 import java.util.function.Function;
 
-public abstract class PouchOfSeeds extends ModBlock
+public abstract class PouchOfSeeds extends FarmContainer
 {
-    private static final int MAX_SEEDS_INSIDE = 60;
 
     private static final VoxelShape SHAPE_X = Shapes.create(0.234375, 0.0, 0.25, 0.671875, 0.4375, 0.5625);
     private static final VoxelShape SHAPE_X1 = Shapes.create(0.234375, 0.0, 0.4375, 0.671875, 0.4375, 0.75);
@@ -43,96 +30,11 @@ public abstract class PouchOfSeeds extends ModBlock
     private static final VoxelShape SHAPE_Z3 = Shapes.create(0.3125, 0.0, 0.25, 0.734375, 0.4375, 0.71875);
 
     public static final BooleanProperty FACING_ALONG_X = BooleanProperty.create("facing_along_x");
-    public static final IntegerProperty PLACING_OPTION = IntegerProperty.create("placing_option", 0, 3);
 
     public PouchOfSeeds(Properties properties)
     {
         super(properties);
         registerDefaultState(stateDefinition.any().setValue(FACING_ALONG_X, true));
-        registerDefaultState(stateDefinition.any().setValue(PLACING_OPTION, 0));
-    }
-
-    protected abstract DeferredBlock<Block> getPouchBlock();
-
-    protected abstract Item getSeedsItem();
-
-    @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
-    {
-        if (stack.is(getPouchBlock().asItem()))
-        {
-            var blockEntity = level.getBlockEntity(pos);
-            if (!(blockEntity instanceof PouchOfSeedsBlockEntity pouchOfSeedsBlockEntity))
-            {
-                return ItemInteractionResult.CONSUME;
-            }
-
-            int seedsInside = pouchOfSeedsBlockEntity.getSeedsInside();
-            if (seedsInside + 4 > MAX_SEEDS_INSIDE)
-            {
-                return ItemInteractionResult.CONSUME;
-            }
-
-            pouchOfSeedsBlockEntity.setSeedsInside(seedsInside + 4);
-
-            if (!level.isClientSide())
-            {
-                player.getItemInHand(hand).shrink(1);
-            }
-
-            return ItemInteractionResult.sidedSuccess(level.isClientSide());
-        }
-        else if (stack.is(getSeedsItem()))
-        {
-            var blockEntity = level.getBlockEntity(pos);
-            if (!(blockEntity instanceof PouchOfSeedsBlockEntity pouchOfSeedsBlockEntity))
-            {
-                return ItemInteractionResult.CONSUME;
-            }
-
-            int seedsInside = pouchOfSeedsBlockEntity.getSeedsInside();
-            if (seedsInside >= MAX_SEEDS_INSIDE)
-            {
-                return ItemInteractionResult.CONSUME;
-            }
-
-            pouchOfSeedsBlockEntity.setSeedsInside(seedsInside + 1);
-
-            if (!level.isClientSide())
-            {
-                player.getItemInHand(hand).shrink(1);
-            }
-
-            return ItemInteractionResult.sidedSuccess(level.isClientSide());
-        }
-
-        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
-    }
-
-    @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult)
-    {
-        final int SeedsToDropNormally = 4;
-        var blockEntity = level.getBlockEntity(pos);
-        if (!(blockEntity instanceof PouchOfSeedsBlockEntity pouchOfSeedsBlockEntity))
-        {
-            return InteractionResult.FAIL;
-        }
-
-        int seedsInside = pouchOfSeedsBlockEntity.getSeedsInside();
-        if (seedsInside < 1)
-        {
-            return InteractionResult.CONSUME;
-        }
-
-        int seedsToDrop = Math.min(seedsInside, SeedsToDropNormally);
-        if (!level.isClientSide())
-        {
-            popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsToDrop));
-        }
-        pouchOfSeedsBlockEntity.setSeedsInside(seedsInside - seedsToDrop);
-
-        return InteractionResult.sidedSuccess(level.isClientSide());
     }
 
     @Override
@@ -154,14 +56,6 @@ public abstract class PouchOfSeeds extends ModBlock
             case EAST, WEST -> defaultBlockState().setValue(FACING_ALONG_X, false).setValue(PLACING_OPTION, placingOption);
             default -> defaultBlockState().setValue(FACING_ALONG_X, true).setValue(PLACING_OPTION, placingOption);
         };
-    }
-
-    private static long mixCoords(int x, int y, int z)
-    {
-        long a = x * 341873128712L;
-        long b = y * 132897987541L;
-        long c = z * 42317861L;
-        return a ^ b ^ c;
     }
 
     @Override
@@ -213,20 +107,5 @@ public abstract class PouchOfSeeds extends ModBlock
                 default -> throw new IllegalStateException("Unexpected value: " + placingOption);
             };
         }
-    }
-
-    @Override
-    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool)
-    {
-        if (!level.isClientSide() && blockEntity instanceof PouchOfSeedsBlockEntity pouchOfSeedsBlockEntity)
-        {
-            int seedsInside = pouchOfSeedsBlockEntity.getSeedsInside();
-            if (seedsInside > 0)
-            {
-                popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsInside));
-            }
-        }
-
-        popResourceFromFace(level, pos, player.getDirection().getOpposite(), getPouchBlock().toStack());
     }
 }
