@@ -31,6 +31,10 @@ public class BlockEntityRegistry
             Main.BLOCK_ENTITIES.register("pouch_of_cocoa_block_entity", () ->
                     new BlockEntityType<>(PouchOfCocoaBeansBlockEntity::new, BlockRegistry.POUCH_OF_COCOA.get()));
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PotatoSackBlockEntity>> SACK_OF_POTATO_BLOCK_ENTITY =
+            Main.BLOCK_ENTITIES.register("sack_of_potato_block_entity", () ->
+                    new BlockEntityType<>(PotatoSackBlockEntity::new, BlockRegistry.SACK_OF_POTATO.get()));
+
     public static void initStatic()
     {
         // just to initialize static members
