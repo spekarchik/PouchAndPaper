@@ -26,6 +26,15 @@
   "item.pouchandpaper.pouch.desc5": "- Пры разбурэнні выпадае сам мяшочак і ўвесь змешчаны запас насення",
   "item.pouchandpaper.pouch.desc6": "- Пры выкарыстанні рукой або непрыдатным прадметам мяшочак выдае па 4 адзінкі насення, або рэшту",
 
+  "item.pouchandpaper.sack_of_potato": "Мех з бульбай",
+
+  "item.pouchandpaper.crop_sack.desc1": "- Можна размясціць як блок",
+  "item.pouchandpaper.crop_sack.desc2": "- Пасля размяшчэння ў яго можна дадаваць іншыя такія ж мяхі і сумяшчальны ўраджай",
+  "item.pouchandpaper.crop_sack.desc3": "- Кожны дададзены мех павялічвае запас на 4 адзінкі ўраджаю",
+  "item.pouchandpaper.crop_sack.desc4": "- Максімальная ўмяшчальнасць — 60 адзінак ураджаю, не лічачы 4, з якіх зроблены сам мех",
+  "item.pouchandpaper.crop_sack.desc5": "- Пры разбурэнні выпадае сам мех і ўвесь змешчаны ў ім ураджай",
+  "item.pouchandpaper.crop_sack.desc6": "- Пры выкарыстанні рукой або непрыдатным прадметам мех выдае па 4 адзінкі ўраджаю, або рэшту",
+
   "item.pouchandpaper.paperblock": "Блок паперы",
   "item.pouchandpaper.paperblock.desc1": "Пры падзенні блока выпадае папера",
   "item.pouchandpaper.paperblock.desc2": "Пры згаранні ператвараецца ў Згарэлы блок паперы, але можа згарэць цалкам",
