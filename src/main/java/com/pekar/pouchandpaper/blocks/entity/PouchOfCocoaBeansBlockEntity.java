@@ -3,7 +3,7 @@ package com.pekar.pouchandpaper.blocks.entity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class PouchOfCocoaBeansBlockEntity extends PouchOfSeedsBlockEntity
+public class PouchOfCocoaBeansBlockEntity extends FarmContainerBlockEntity
 {
 
     public PouchOfCocoaBeansBlockEntity(BlockPos pos, BlockState blockState)
