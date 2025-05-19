@@ -41,6 +41,12 @@ public class BlockRegistry
     public static final DeferredBlock<Block> SACK_OF_POTATO = register("sack_of_potato", PotatoSack::new, FarmSackBlockItem::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
 
+    public static final DeferredBlock<Block> SACK_OF_BEETROOT = register("sack_of_beetroot", BeetrootSack::new, FarmSackBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
+
+    public static final DeferredBlock<Block> SACK_OF_CARROT = register("sack_of_carrot", CarrotSack::new, FarmSackBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f));
+
     public static void initStatic()
     {
         // just to initialize static members

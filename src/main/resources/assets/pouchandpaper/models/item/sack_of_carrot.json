@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pouchandpaper:item/sack_of_carrot"
+  }
+}
