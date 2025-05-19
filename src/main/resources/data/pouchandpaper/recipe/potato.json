@@ -1,7 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "pouchandpaper:sack_of_potato"
+    {
+      "item": "pouchandpaper:sack_of_potato"
+    }
   ],
   "result": {
     "id": "minecraft:potato",

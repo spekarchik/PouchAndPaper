@@ -5,7 +5,9 @@
     "AA"
   ],
   "key": {
-    "A": "minecraft:potato"
+    "A": {
+      "item": "minecraft:potato"
+    }
   },
   "result": {
     "id": "pouchandpaper:sack_of_potato",

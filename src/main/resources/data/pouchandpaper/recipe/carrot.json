@@ -1,7 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "pouchandpaper:sack_of_carrot"
+    {
+      "item": "pouchandpaper:sack_of_carrot"
+    }
   ],
   "result": {
     "id": "minecraft:carrot",

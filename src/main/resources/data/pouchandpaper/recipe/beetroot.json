@@ -1,7 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "pouchandpaper:sack_of_beetroot"
+    {
+      "item": "pouchandpaper:sack_of_beetroot"
+    }
   ],
   "result": {
     "id": "minecraft:beetroot",
