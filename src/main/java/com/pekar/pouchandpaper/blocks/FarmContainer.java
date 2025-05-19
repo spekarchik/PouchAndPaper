@@ -15,7 +15,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.Nullable;
@@ -141,13 +140,13 @@ public abstract class FarmContainer extends ModBlock
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos)
     {
         var blockBelow = level.getBlockState(pos.below());
-        return blockBelow.isSolidRender()
+        return blockBelow.isSolidRender(level, pos)
                 || blockBelow.is(Blocks.FARMLAND)
                 || blockBelow.is(Blocks.DIRT_PATH);
     }
 
     @Override
-    protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, @Nullable Orientation orientation, boolean movedByPiston)
+    protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, BlockPos neighborPos, boolean movedByPiston)
     {
         if (!canSurvive(state, level, pos))
         {
@@ -165,6 +164,6 @@ public abstract class FarmContainer extends ModBlock
             }
         }
 
-        super.neighborChanged(state, level, pos, neighborBlock, orientation, movedByPiston);
+        super.neighborChanged(state, level, pos, neighborBlock, neighborPos, movedByPiston);
     }
 }
