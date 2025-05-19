@@ -27,6 +27,8 @@
   "item.pouchandpaper.pouch.desc6": "- При использовании рукой или неподходящим предметом мешочек выдаёт по 4 единицы семян, либо остаток",
 
   "item.pouchandpaper.sack_of_potato": "Мешок с картошкой",
+  "item.pouchandpaper.sack_of_beetroot": "Мешок со свеклой",
+  "item.pouchandpaper.sack_of_carrot": "Мешок с морковью",
 
   "item.pouchandpaper.crop_sack.desc1": "- Можно размещать как блок",
   "item.pouchandpaper.crop_sack.desc2": "- После размещения в него можно добавлять другие такие же мешки и совместимые культуры",

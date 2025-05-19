@@ -26,7 +26,9 @@
   "item.pouchandpaper.pouch.desc5": "- Breaking it drops the pouch and all stored seeds",
   "item.pouchandpaper.pouch.desc6": "- Right-click with an empty hand or incompatible item to withdraw 4 seeds (or what's left)",
 
-  "item.pouchandpaper.sack_of_potato": "Sack of Potato",
+  "item.pouchandpaper.sack_of_potato": "Sack of Potatoes",
+  "item.pouchandpaper.sack_of_beetroot": "Sack of Beetroots",
+  "item.pouchandpaper.sack_of_carrot": "Sack of Carrots",
 
   "item.pouchandpaper.crop_sack.desc1": "- Can be placed in the world",
   "item.pouchandpaper.crop_sack.desc2": "- Use another sack or compatible crops to add them inside",

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": "minecraft:beetroot"
+  },
+  "result": {
+    "id": "pouchandpaper:sack_of_beetroot",
+    "count": 1
+  }
+}
