@@ -1,10 +1,7 @@
 package com.pekar.pouchandpaper.blocks;
 
 import com.pekar.pouchandpaper.Main;
-import com.pekar.pouchandpaper.blocks.block_items.BurntPaperBlockItem;
-import com.pekar.pouchandpaper.blocks.block_items.ModBlockItem;
-import com.pekar.pouchandpaper.blocks.block_items.PaperBlockItem;
-import com.pekar.pouchandpaper.blocks.block_items.PouchOfSeedsBlockItem;
+import com.pekar.pouchandpaper.blocks.block_items.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;

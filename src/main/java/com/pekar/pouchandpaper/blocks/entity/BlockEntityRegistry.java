@@ -33,15 +33,15 @@ public class BlockEntityRegistry
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PotatoSackBlockEntity>> SACK_OF_POTATO_BLOCK_ENTITY =
             Main.BLOCK_ENTITIES.register("sack_of_potato_block_entity", () ->
-                    new BlockEntityType<>(PotatoSackBlockEntity::new, BlockRegistry.SACK_OF_POTATO.get()));
+                    BlockEntityType.Builder.of(PotatoSackBlockEntity::new, BlockRegistry.SACK_OF_POTATO.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BeetrootSackBlockEntity>> SACK_OF_BEETROOT_BLOCK_ENTITY =
             Main.BLOCK_ENTITIES.register("sack_of_beetroot_block_entity", () ->
-                    new BlockEntityType<>(BeetrootSackBlockEntity::new, BlockRegistry.SACK_OF_BEETROOT.get()));
+                    BlockEntityType.Builder.of(BeetrootSackBlockEntity::new, BlockRegistry.SACK_OF_BEETROOT.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CarrotSackBlockEntity>> SACK_OF_CARROT_BLOCK_ENTITY =
             Main.BLOCK_ENTITIES.register("sack_of_carrot_block_entity", () ->
-                    new BlockEntityType<>(CarrotSackBlockEntity::new, BlockRegistry.SACK_OF_CARROT.get()));
+                    BlockEntityType.Builder.of(CarrotSackBlockEntity::new, BlockRegistry.SACK_OF_CARROT.get()).build(null));
 
     public static void initStatic()
     {
