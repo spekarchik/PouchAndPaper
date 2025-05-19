@@ -1,3 +1,13 @@
+## 📦 Version 2.1.1
+
+### 🛠️ Improvements
+- **Adjusted sack hitboxes** for more accurate collisions and visuals  
+- **Sacks no longer transform Farmland into Dirt** when placed on top
+
+### 🐞 Fixed
+- **Blocked placement of sacks and pouches** on non-solid surfaces
+
+
 ## 📦 Version 2.1.0
 
 ### ✨ New
