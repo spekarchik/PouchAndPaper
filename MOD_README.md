@@ -14,6 +14,24 @@ These forms allow you to:
 - streamline resource farming and trading,
 - quickly prepare for breeding animals and gaining XP.
 
+### 🥕 Crop Sacks — same mechanic, now for carrots, potatoes, and beetroots
+
+Version **2.1.0** introduces three new blocks:
+
+- 🥔 **Sack of Potato**  
+- 🥕 **Sack of Carrot**  
+- 🍠 **Sack of Beetroot**
+
+These sacks work **just like seed pouches**, but are designed for **storing harvested crops**. Each sack can be filled with its respective crop by right-clicking, including inserting another sack of the same type (which gets absorbed into storage).
+
+Crop sacks show how full they are with **three visual fill levels**, making them handy for inventory management in:
+
+- 🚜 Automated farms  
+- 🏡 Storage cellars  
+- 🧱 Farm-themed builds
+
+When broken, they drop all contents and the sack itself.
+
 ### 🌱 Seed Pouches — now placeable blocks with real functionality
 
 Seed pouches are no longer just items — they are now **placeable blocks** that act as **mini seed containers**. When placed in the world, a pouch can store up to **60 seeds**, not counting the 4 used to craft it. You can fill it by:
