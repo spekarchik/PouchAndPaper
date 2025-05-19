@@ -27,18 +27,20 @@ import java.util.function.Function;
 
 public abstract class FarmSack extends FarmContainer
 {
-    private static final VoxelShape SHAPE_FULL = Shapes.create(0.125, 0.0, 0.0, 0.875, 1.0, 1.0);
-    private static final VoxelShape SHAPE_FULL1 = Shapes.create(0.0, 0.0, 0.1875, 1.0, 1.0, 0.9375);
-    private static final VoxelShape SHAPE_FULL2 = Shapes.create(0.03125, 0.0, 0.046875, 0.84375, 1.0, 0.96875);
-    private static final VoxelShape SHAPE_FULL3 = Shapes.create(0.078125, 0.0, 0.09375, 0.984375, 1.0, 0.96875);
-    private static final VoxelShape SHAPE_SEMI = Shapes.create(0.125, 0.0, 0.0, 0.875, 0.75, 1.0);
-    private static final VoxelShape SHAPE_SEMI1 = Shapes.create(0.0, 0.0, 0.1875, 1.0, 0.75, 0.9375);
-    private static final VoxelShape SHAPE_SEMI2 = Shapes.create(0.03125, 0.0, 0.046875, 0.84375, 0.75, 0.96875);
-    private static final VoxelShape SHAPE_SEMI3 = Shapes.create(0.078125, 0.0, 0.09375, 0.984375, 0.75, 0.96875);
-    private static final VoxelShape SHAPE_EMPTY = Shapes.create(0.125, 0.0, 0.0, 0.875, 0.5, 1.0);
-    private static final VoxelShape SHAPE_EMPTY1 = Shapes.create(0.0, 0.0, 0.1875, 1.0, 0.5, 0.9375);
-    private static final VoxelShape SHAPE_EMPTY2 = Shapes.create(0.03125, 0.0, 0.046875, 0.84375, 0.5, 0.96875);
-    private static final VoxelShape SHAPE_EMPTY3 = Shapes.create(0.078125, 0.0, 0.09375, 0.984375, 0.5, 0.96875);
+    private static final VoxelShape SHAPE_FULL = Shapes.create(0.1875, 0.0, 0.0625, 0.84375, 1.0, 0.9375);
+    private static final VoxelShape SHAPE_FULL1 = Shapes.create(0.0625, 0.0, 0.25, 0.9375, 1.0, 0.90625);
+    private static final VoxelShape SHAPE_FULL2 = Shapes.create(0.078125, 0.0, 0.09375, 0.828125, 1.0, 0.953125);
+    private static final VoxelShape SHAPE_FULL3 = Shapes.create(0.109375, 0.0, 0.109375, 0.953125, 1.0, 0.953125);
+
+    private static final VoxelShape SHAPE_SEMI = Shapes.create(0.1875, 0.0, 0.0625, 0.84375, 0.75, 0.9375);
+    private static final VoxelShape SHAPE_SEMI1 = Shapes.create(0.0625, 0.0, 0.25, 0.9375, 0.75, 0.90625);
+    private static final VoxelShape SHAPE_SEMI2 = Shapes.create(0.078125, 0.0, 0.09375, 0.828125, 0.75, 0.953125);
+    private static final VoxelShape SHAPE_SEMI3 = Shapes.create(0.109375, 0.0, 0.109375, 0.953125, 0.75, 0.953125);
+
+    private static final VoxelShape SHAPE_EMPTY = Shapes.create(0.1875, 0.0, 0.0625, 0.84375, 0.5, 0.9375);
+    private static final VoxelShape SHAPE_EMPTY1 = Shapes.create(0.0625, 0.0, 0.234375, 0.953125, 0.5, 0.890625);
+    private static final VoxelShape SHAPE_EMPTY2 = Shapes.create(0.046875, 0.0, 0.0625, 0.8125, 0.5, 0.9375);
+    private static final VoxelShape SHAPE_EMPTY3 = Shapes.create(0.09375, 0.0, 0.125, 0.90625, 0.5, 0.9375);
 
     public static final IntegerProperty FILL_LEVEL = IntegerProperty.create("fill_level", 0, 2);
 
