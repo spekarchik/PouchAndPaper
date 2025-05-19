@@ -1,5 +1,6 @@
 package com.pekar.pouchandpaper.blocks;
 
+import com.google.common.collect.ImmutableMap;
 import com.pekar.pouchandpaper.blocks.entity.FarmContainerBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -87,9 +88,23 @@ public abstract class FarmSack extends FarmContainer
     }
 
     @Override
-    protected Function<BlockState, VoxelShape> getShapeForEachState(Function<BlockState, VoxelShape> voxelShapeFunction)
+    protected ImmutableMap<BlockState, VoxelShape> getShapeForEachState(Function<BlockState, VoxelShape> voxelShapeFunction)
     {
-        return this::getShapeByBlockState;
+        var defaultBlockState = defaultBlockState();
+        return ImmutableMap.<BlockState, VoxelShape>builder()
+                .put(defaultBlockState.setValue(FILL_LEVEL, 0).setValue(PLACING_OPTION, 0), SHAPE_EMPTY)
+                .put(defaultBlockState.setValue(FILL_LEVEL, 0).setValue(PLACING_OPTION, 1), SHAPE_EMPTY1)
+                .put(defaultBlockState.setValue(FILL_LEVEL, 0).setValue(PLACING_OPTION, 2), SHAPE_EMPTY2)
+                .put(defaultBlockState.setValue(FILL_LEVEL, 0).setValue(PLACING_OPTION, 3), SHAPE_EMPTY3)
+                .put(defaultBlockState.setValue(FILL_LEVEL, 1).setValue(PLACING_OPTION, 0), SHAPE_SEMI)
+                .put(defaultBlockState.setValue(FILL_LEVEL, 1).setValue(PLACING_OPTION, 1), SHAPE_SEMI1)
+                .put(defaultBlockState.setValue(FILL_LEVEL, 1).setValue(PLACING_OPTION, 2), SHAPE_SEMI2)
+                .put(defaultBlockState.setValue(FILL_LEVEL, 1).setValue(PLACING_OPTION, 3), SHAPE_SEMI3)
+                .put(defaultBlockState.setValue(FILL_LEVEL, 2).setValue(PLACING_OPTION, 0), SHAPE_FULL)
+                .put(defaultBlockState.setValue(FILL_LEVEL, 2).setValue(PLACING_OPTION, 1), SHAPE_FULL1)
+                .put(defaultBlockState.setValue(FILL_LEVEL, 2).setValue(PLACING_OPTION, 2), SHAPE_FULL2)
+                .put(defaultBlockState.setValue(FILL_LEVEL, 2).setValue(PLACING_OPTION, 3), SHAPE_FULL3)
+                .build();
     }
 
     @Override
