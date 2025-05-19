@@ -45,18 +45,18 @@ public abstract class FarmContainer extends ModBlock
         if (stack.is(getPouchBlock().asItem()))
         {
             var blockEntity = level.getBlockEntity(pos);
-            if (!(blockEntity instanceof FarmContainerBlockEntity pouchOfSeedsBlockEntity))
+            if (!(blockEntity instanceof FarmContainerBlockEntity containerBlockEntity))
             {
                 return InteractionResult.CONSUME;
             }
 
-            int seedsInside = pouchOfSeedsBlockEntity.getSeedsInside();
+            int seedsInside = containerBlockEntity.getSeedsInside();
             if (seedsInside + 4 > MAX_SEEDS_INSIDE)
             {
                 return InteractionResult.CONSUME;
             }
 
-            pouchOfSeedsBlockEntity.setSeedsInside(seedsInside + 4);
+            containerBlockEntity.setSeedsInside(seedsInside + 4);
 
             if (!level.isClientSide())
             {
@@ -68,18 +68,18 @@ public abstract class FarmContainer extends ModBlock
         else if (stack.is(getSeedsItem()))
         {
             var blockEntity = level.getBlockEntity(pos);
-            if (!(blockEntity instanceof FarmContainerBlockEntity pouchOfSeedsBlockEntity))
+            if (!(blockEntity instanceof FarmContainerBlockEntity containerBlockEntity))
             {
                 return InteractionResult.CONSUME;
             }
 
-            int seedsInside = pouchOfSeedsBlockEntity.getSeedsInside();
+            int seedsInside = containerBlockEntity.getSeedsInside();
             if (seedsInside >= MAX_SEEDS_INSIDE)
             {
                 return InteractionResult.CONSUME;
             }
 
-            pouchOfSeedsBlockEntity.setSeedsInside(seedsInside + 1);
+            containerBlockEntity.setSeedsInside(seedsInside + 1);
 
             if (!level.isClientSide())
             {
@@ -97,12 +97,12 @@ public abstract class FarmContainer extends ModBlock
     {
         final int SeedsToDropNormally = 4;
         var blockEntity = level.getBlockEntity(pos);
-        if (!(blockEntity instanceof FarmContainerBlockEntity pouchOfSeedsBlockEntity))
+        if (!(blockEntity instanceof FarmContainerBlockEntity containerBlockEntity))
         {
             return InteractionResult.FAIL;
         }
 
-        int seedsInside = pouchOfSeedsBlockEntity.getSeedsInside();
+        int seedsInside = containerBlockEntity.getSeedsInside();
         if (seedsInside < 1)
         {
             return InteractionResult.CONSUME;
@@ -113,7 +113,7 @@ public abstract class FarmContainer extends ModBlock
         {
             popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsToDrop));
         }
-        pouchOfSeedsBlockEntity.setSeedsInside(seedsInside - seedsToDrop);
+        containerBlockEntity.setSeedsInside(seedsInside - seedsToDrop);
 
         return level.isClientSide() ? InteractionResult.SUCCESS : InteractionResult.SUCCESS_SERVER;
     }
@@ -121,9 +121,9 @@ public abstract class FarmContainer extends ModBlock
     @Override
     public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool)
     {
-        if (!level.isClientSide() && blockEntity instanceof FarmContainerBlockEntity pouchOfSeedsBlockEntity)
+        if (!level.isClientSide() && blockEntity instanceof FarmContainerBlockEntity containerBlockEntity)
         {
-            int seedsInside = pouchOfSeedsBlockEntity.getSeedsInside();
+            int seedsInside = containerBlockEntity.getSeedsInside();
             if (seedsInside > 0)
             {
                 popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsInside));
