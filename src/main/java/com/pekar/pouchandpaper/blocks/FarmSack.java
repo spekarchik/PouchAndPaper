@@ -25,41 +25,17 @@ import java.util.function.Function;
 
 public abstract class FarmSack extends FarmContainer
 {
-//    "from": [2, 0, 0],
-//            "to": [14, 16, 16],
     private static final VoxelShape SHAPE_FULL = Shapes.create(0.125, 0.0, 0.0, 0.875, 1.0, 1.0);
-//    "from": [0, 0, 3],
-//            "to": [16, 16, 15],
     private static final VoxelShape SHAPE_FULL1 = Shapes.create(0.0, 0.0, 0.1875, 1.0, 1.0, 0.9375);
-//"from": [0.5, 0, 0.75],
-//        "to": [13.5, 16, 15.5],
     private static final VoxelShape SHAPE_FULL2 = Shapes.create(0.03125, 0.0, 0.046875, 0.84375, 1.0, 0.96875);
-//"from": [1.25, 0, 1.5],
-//        "to": [15.75, 16, 15.5],
     private static final VoxelShape SHAPE_FULL3 = Shapes.create(0.078125, 0.0, 0.09375, 0.984375, 1.0, 0.96875);
-//"from": [2, 0, 0],
-//        "to": [14, 12, 16],
     private static final VoxelShape SHAPE_SEMI = Shapes.create(0.125, 0.0, 0.0, 0.875, 0.75, 1.0);
-//"from": [0, 0, 3],
-//        "to": [16, 12, 15],
     private static final VoxelShape SHAPE_SEMI1 = Shapes.create(0.0, 0.0, 0.1875, 1.0, 0.75, 0.9375);
-//"from": [0.5, 0, 0.75],
-//        "to": [13.5, 12, 15.5],
     private static final VoxelShape SHAPE_SEMI2 = Shapes.create(0.03125, 0.0, 0.046875, 0.84375, 0.75, 0.96875);
-//"from": [1.25, 0, 1.5],
-//        "to": [15.75, 12, 15.5],
     private static final VoxelShape SHAPE_SEMI3 = Shapes.create(0.078125, 0.0, 0.09375, 0.984375, 0.75, 0.96875);
-//"from": [2, 0, 0],
-//        "to": [14, 8, 16],
     private static final VoxelShape SHAPE_EMPTY = Shapes.create(0.125, 0.0, 0.0, 0.875, 0.5, 1.0);
-//"from": [0, 0, 3],
-//        "to": [16, 8, 15],
     private static final VoxelShape SHAPE_EMPTY1 = Shapes.create(0.0, 0.0, 0.1875, 1.0, 0.5, 0.9375);
-//"from": [0.5, 0, 0.75],
-//        "to": [13.5, 8, 15.5],
     private static final VoxelShape SHAPE_EMPTY2 = Shapes.create(0.03125, 0.0, 0.046875, 0.84375, 0.5, 0.96875);
-//"from": [1.25, 0, 1.5],
-//        "to": [15.75, 8, 15.5],
     private static final VoxelShape SHAPE_EMPTY3 = Shapes.create(0.078125, 0.0, 0.09375, 0.984375, 0.5, 0.96875);
 
     public static final IntegerProperty FILL_LEVEL = IntegerProperty.create("fill_level", 0, 2);
