@@ -167,10 +167,4 @@ public abstract class FarmContainer extends ModBlock
 
         super.neighborChanged(state, level, pos, neighborBlock, orientation, movedByPiston);
     }
-
-//    @Override
-//    protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context)
-//    {
-//        return Shapes.empty();
-//    }
 }

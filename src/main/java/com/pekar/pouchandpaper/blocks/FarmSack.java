@@ -42,6 +42,24 @@ public abstract class FarmSack extends FarmContainer
     private static final VoxelShape SHAPE_EMPTY2 = Shapes.create(0.046875, 0.0, 0.0625, 0.8125, 0.5, 0.9375);
     private static final VoxelShape SHAPE_EMPTY3 = Shapes.create(0.09375, 0.0, 0.125, 0.90625, 0.5, 0.9375);
 
+    // FULL – высота 1.0 → 0.99, ширина -2 пикселя с каждой стороны (0.125 = 2px)
+    private static final VoxelShape COLLISION_FULL = Shapes.create(0.1875 + 0.125, 0.0, 0.0625 + 0.125, 0.84375 - 0.125, 0.99, 0.9375 - 0.125);
+    private static final VoxelShape COLLISION_FULL1 = Shapes.create(0.0625 + 0.125, 0.0, 0.25 + 0.125, 0.9375 - 0.125, 0.99, 0.90625 - 0.125);
+    private static final VoxelShape COLLISION_FULL2 = Shapes.create(0.078125 + 0.125, 0.0, 0.09375 + 0.125, 0.828125 - 0.125, 0.99, 0.953125 - 0.125);
+    private static final VoxelShape COLLISION_FULL3 = Shapes.create(0.109375 + 0.125, 0.0, 0.109375 + 0.125, 0.953125 - 0.125, 0.99, 0.953125 - 0.125);
+
+    // SEMI – высота 0.75 → 0.74, ширина -2 пикселя
+    private static final VoxelShape COLLISION_SEMI = Shapes.create(0.1875 + 0.125, 0.0, 0.0625 + 0.125, 0.84375 - 0.125, 0.74, 0.9375 - 0.125);
+    private static final VoxelShape COLLISION_SEMI1 = Shapes.create(0.0625 + 0.125, 0.0, 0.25 + 0.125, 0.9375 - 0.125, 0.74, 0.90625 - 0.125);
+    private static final VoxelShape COLLISION_SEMI2 = Shapes.create(0.078125 + 0.125, 0.0, 0.09375 + 0.125, 0.828125 - 0.125, 0.74, 0.953125 - 0.125);
+    private static final VoxelShape COLLISION_SEMI3 = Shapes.create(0.109375 + 0.125, 0.0, 0.109375 + 0.125, 0.953125 - 0.125, 0.74, 0.953125 - 0.125);
+
+    // EMPTY – высота без изменений, только ширина
+    private static final VoxelShape COLLISION_EMPTY = Shapes.create(0.1875 + 0.125, 0.0, 0.0625 + 0.125, 0.84375 - 0.125, 0.5, 0.9375 - 0.125);
+    private static final VoxelShape COLLISION_EMPTY1 = Shapes.create(0.0625 + 0.125, 0.0, 0.234375 + 0.125, 0.953125 - 0.125, 0.5, 0.890625 - 0.125);
+    private static final VoxelShape COLLISION_EMPTY2 = Shapes.create(0.046875 + 0.125, 0.0, 0.0625 + 0.125, 0.8125 - 0.125, 0.5, 0.9375 - 0.125);
+    private static final VoxelShape COLLISION_EMPTY3 = Shapes.create(0.09375 + 0.125, 0.0, 0.125 + 0.125, 0.90625 - 0.125, 0.5, 0.9375 - 0.125);
+
     public static final IntegerProperty FILL_LEVEL = IntegerProperty.create("fill_level", 0, 2);
 
     public FarmSack(Properties properties)
@@ -148,6 +166,41 @@ public abstract class FarmSack extends FarmContainer
     {
         updateFillLevel(state, level, pos);
         return super.useWithoutItem(state, level, pos, player, hitResult);
+    }
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context)
+    {
+        int fillLevel = state.getValue(FILL_LEVEL);
+        int placingOption = state.getValue(PLACING_OPTION);
+
+        return switch (fillLevel)
+        {
+            case 0 -> switch (placingOption)
+            {
+                case 0 -> COLLISION_EMPTY;
+                case 1 -> COLLISION_EMPTY1;
+                case 2 -> COLLISION_EMPTY2;
+                case 3 -> COLLISION_EMPTY3;
+                default -> throw new IllegalStateException("Unexpected placingOption: " + placingOption);
+            };
+            case 1 -> switch (placingOption)
+            {
+                case 0 -> COLLISION_SEMI;
+                case 1 -> COLLISION_SEMI1;
+                case 2 -> COLLISION_SEMI2;
+                case 3 -> COLLISION_SEMI3;
+                default -> throw new IllegalStateException("Unexpected placingOption: " + placingOption);
+            };
+            default -> switch (placingOption)
+            {
+                case 0 -> COLLISION_FULL;
+                case 1 -> COLLISION_FULL1;
+                case 2 -> COLLISION_FULL2;
+                case 3 -> COLLISION_FULL3;
+                default -> throw new IllegalStateException("Unexpected placingOption: " + placingOption);
+            };
+        };
     }
 
     private void updateFillLevel(BlockState state, Level level, BlockPos pos)
