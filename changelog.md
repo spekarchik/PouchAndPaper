@@ -1,3 +1,9 @@
+## 📦 Version 2.1.2
+
+### 📝 Improvements
+- Updated texture for Leather Pack.
+
+
 ## 📦 Version 2.1.1
 
 ### 🛠️ Improvements
