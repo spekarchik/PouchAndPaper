@@ -14,6 +14,14 @@ These forms allow you to:
 - streamline resource farming and trading,
 - quickly prepare for breeding animals and gaining XP.
 
+### 🌱 Seed Pouches — now placeable blocks with real functionality
+
+Seed pouches are no longer just items — they are now **placeable blocks** that act as **mini seed containers**. When placed in the world, a pouch can store up to **60 seeds**, not counting the 4 used to craft it. You can fill it by:
+- inserting compatible seeds directly, or
+- right-clicking it with another pouch of the same type (which converts into seeds inside the block).
+
+Pouches can now be used for **organizing farms**, **decorating storage areas**, or **quickly planting seeds** during gardening. Breaking a pouch block will drop both the pouch and all stored seeds. You can withdraw seeds in portions of 4 by right-clicking with an empty hand or a non-seed item.
+
 ### 🥕 Crop Sacks — same mechanic, now for carrots, potatoes, and beetroots
 
 Version **2.1.0** introduces three new blocks:
@@ -31,14 +39,6 @@ Crop sacks show how full they are with **three visual fill levels**, making them
 - 🧱 Farm-themed builds
 
 When broken, they drop all contents and the sack itself.
-
-### 🌱 Seed Pouches — now placeable blocks with real functionality
-
-Seed pouches are no longer just items — they are now **placeable blocks** that act as **mini seed containers**. When placed in the world, a pouch can store up to **60 seeds**, not counting the 4 used to craft it. You can fill it by:
-- inserting compatible seeds directly, or
-- right-clicking it with another pouch of the same type (which converts into seeds inside the block).
-
-Pouches can now be used for **organizing farms**, **decorating storage areas**, or **quickly planting seeds** during gardening. Breaking a pouch block will drop both the pouch and all stored seeds. You can withdraw seeds in portions of 4 by right-clicking with an empty hand or a non-seed item.
 
 ### 🔥 Burnt Paper Block — natural and dangerous
 
