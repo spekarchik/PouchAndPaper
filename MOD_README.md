@@ -6,9 +6,9 @@ The mod introduces compact versions of:
 - paper — as stacks and blocks,
 - ink and glow ink — stored in small bottles,
 - leather — bundled into a neat pack,
-- seeds (wheat, beetroot, melon, pumpkin, cocoa) — packed into fabric pouches,
+- seeds (wheat, beetroot, melon, pumpkin, cocoa) — packed into fabric pouches (placeable blocks),
 - feathers — wrapped into a dense, soft bundle,
-- carrots, potatoes, and beetroots — stored in compact crop sacks.
+- carrots, potatoes, and beetroots — packed into functional crop sacks (placeable blocks).
 
 These forms allow you to:
 - save inventory and storage space,
