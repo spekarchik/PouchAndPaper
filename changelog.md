@@ -1,3 +1,12 @@
+## 📦 Version 2.1.3
+
+### 🛠️ Improvements
+- Pouches now support **visual fill levels**, just like sacks.
+- Fill level thresholds have been updated for both sacks and pouches:
+  - **Empty** — less than **4** seeds or crops.
+  - **Full** — more than **56** seeds or crops.
+
+
 ## 📦 Version 2.1.2
 
 ### 📝 Improvements
