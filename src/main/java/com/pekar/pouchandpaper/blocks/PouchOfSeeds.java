@@ -18,7 +18,7 @@ public abstract class PouchOfSeeds extends FarmContainer
     private static final VoxelShape SHAPE_EMPTY2 = Shapes.create(0.265625, 0.0, 0.296875, 0.65625, 0.125, 0.765625);
     private static final VoxelShape SHAPE_EMPTY3 = Shapes.create(0.34375, 0.0, 0.25, 0.734375, 0.125, 0.71875);
 
-    private static final VoxelShape SHAPE_SEMI = Shapes.create(0.234375, 0.0, 0.265625, 0.671875, 0.21875, 0.546875);
+    private static final VoxelShape SHAPE_SEMI = Shapes.create(0.234375, 0.0, 0.25, 0.671875, 0.25, 0.5625);
     private static final VoxelShape SHAPE_SEMI1 = Shapes.create(0.28125, 0, 0.375, 0.765625, 0.25, 0.796875);
     private static final VoxelShape SHAPE_SEMI2 = Shapes.create(0.25, 0.0, 0.296875, 0.65625, 0.25, 0.765625);
     private static final VoxelShape SHAPE_SEMI3 = Shapes.create(0.3125, 0.0, 0.25, 0.734375, 0.25, 0.71875);
