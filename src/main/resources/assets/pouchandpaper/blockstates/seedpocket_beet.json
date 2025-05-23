@@ -1,12 +1,16 @@
 {
   "variants": {
-    "facing_along_x=true,placing_option=0": { "model": "pouchandpaper:block/seedpocket_beet" },
-    "facing_along_x=true,placing_option=1": { "model": "pouchandpaper:block/seedpocket_beet1" },
-    "facing_along_x=true,placing_option=2": { "model": "pouchandpaper:block/seedpocket_beet2" },
-    "facing_along_x=true,placing_option=3": { "model": "pouchandpaper:block/seedpocket_beet3" },
-    "facing_along_x=false,placing_option=0": { "model": "pouchandpaper:block/seedpocket_beet_z" },
-    "facing_along_x=false,placing_option=1": { "model": "pouchandpaper:block/seedpocket_beet1_z" },
-    "facing_along_x=false,placing_option=2": { "model": "pouchandpaper:block/seedpocket_beet2_z" },
-    "facing_along_x=false,placing_option=3": { "model": "pouchandpaper:block/seedpocket_beet3_z" }
+    "fill_level=0,placing_option=0": { "model": "pouchandpaper:block/seedpocket_beet_empty" },
+    "fill_level=0,placing_option=1": { "model": "pouchandpaper:block/seedpocket_beet_empty1" },
+    "fill_level=0,placing_option=2": { "model": "pouchandpaper:block/seedpocket_beet_empty2" },
+    "fill_level=0,placing_option=3": { "model": "pouchandpaper:block/seedpocket_beet_empty3" },
+    "fill_level=1,placing_option=0": { "model": "pouchandpaper:block/seedpocket_beet_semi" },
+    "fill_level=1,placing_option=1": { "model": "pouchandpaper:block/seedpocket_beet_semi1" },
+    "fill_level=1,placing_option=2": { "model": "pouchandpaper:block/seedpocket_beet_semi2" },
+    "fill_level=1,placing_option=3": { "model": "pouchandpaper:block/seedpocket_beet_semi3" },
+    "fill_level=2,placing_option=0": { "model": "pouchandpaper:block/seedpocket_beet_full" },
+    "fill_level=2,placing_option=1": { "model": "pouchandpaper:block/seedpocket_beet_full1" },
+    "fill_level=2,placing_option=2": { "model": "pouchandpaper:block/seedpocket_beet_full2" },
+    "fill_level=2,placing_option=3": { "model": "pouchandpaper:block/seedpocket_beet_full3" }
   }
 }

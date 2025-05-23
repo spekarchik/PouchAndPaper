@@ -17,7 +17,6 @@ public class PouchOfBeetrootSeeds extends PouchOfSeeds implements EntityBlock
     protected PouchOfBeetrootSeeds(Properties properties)
     {
         super(properties);
-        registerDefaultState(stateDefinition.any().setValue(FACING_ALONG_X, true));
     }
 
     @Override
