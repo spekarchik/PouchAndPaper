@@ -31,7 +31,7 @@ public class FarmSackBlockItem extends ModBlockItem implements ITooltipProvider
     {
         if (!utils.text.showExtendedDescription(tooltip)) return;
 
-        for (int i = 1; i <= 6; i++)
+        for (int i = 1; i <= 7; i++)
         {
             tooltip.addLine(getItemDescriptionId(), i).apply();
         }
