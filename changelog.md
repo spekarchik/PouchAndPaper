@@ -1,3 +1,11 @@
+## 📦 Version 2.1.4
+
+### 🛠️ Changed
+- Increased capacity of pouches and sacks from 60 to 124 items.
+- Pouches and sacks now drop 4 seeds/crops instead of the container itself.
+- Updated tooltips to reflect the new capacity and drop behavior.
+
+
 ## 📦 Version 2.1.3
 
 ### 🛠️ Improvements
