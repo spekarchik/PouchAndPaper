@@ -1,3 +1,13 @@
+## 📦 Version 2.1.5
+
+### 📝 Improvements
+- Changed pouch and crop sack breaking behavior:  
+  — When broken while sneaking (shift), the block now drops full pouches/sacks instead of individual seeds/crops (one pouch per 4 units).  
+  — Any leftover seeds/crops less than 4 units drop as individual items.  
+  — Breaking without sneaking continues to drop all seeds/crops as individual items.  
+- This change improves inventory management and consistency with stacking logic.
+
+
 ## 📦 Version 2.1.4
 
 ### 🛠️ Changed
