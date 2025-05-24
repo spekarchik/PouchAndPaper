@@ -170,7 +170,18 @@ public abstract class FarmContainer extends ModBlock
         if (!level.isClientSide() && blockEntity instanceof FarmContainerBlockEntity containerBlockEntity)
         {
             int seedsInside = containerBlockEntity.getSeedsInside();
-            popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsInside + 4));
+            if (player.isShiftKeyDown())
+            {
+                int pouches = seedsInside / 4;
+                int seeds = seedsInside % 4;
+                popResourceFromFace(level, pos, player.getDirection().getOpposite(), getPouchBlock().toStack(pouches + 1));
+                if (seeds > 0)
+                    popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seeds));
+            }
+            else
+            {
+                popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsInside + 4));
+            }
         }
     }
 
