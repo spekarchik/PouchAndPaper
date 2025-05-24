@@ -23,7 +23,7 @@
   "item.pouchandpaper.pouch.desc2": "- Use another pouch or compatible seeds to add them inside",
   "item.pouchandpaper.pouch.desc3": "- Each extra pouch adds 4 seeds to the storage",
   "item.pouchandpaper.pouch.desc4": "- Holds up to 60 seeds, excluding the 4 used to craft it",
-  "item.pouchandpaper.pouch.desc5": "- Breaking it drops the pouch and all stored seeds",
+  "item.pouchandpaper.pouch.desc5": "- Breaking it drops 4 seeds used to craft the pouch and all stored seeds",
   "item.pouchandpaper.pouch.desc6": "- Right-click with an empty hand or incompatible item to withdraw 4 seeds (or what's left)",
 
   "item.pouchandpaper.sack_of_potato": "Sack of Potatoes",
@@ -34,7 +34,7 @@
   "item.pouchandpaper.crop_sack.desc2": "- Use another sack or compatible crops to add them inside",
   "item.pouchandpaper.crop_sack.desc3": "- Each extra sack adds 4 units of crop to the storage",
   "item.pouchandpaper.crop_sack.desc4": "- Holds up to 60 units, excluding the 4 used to craft it",
-  "item.pouchandpaper.crop_sack.desc5": "- Breaking it drops the sack and all stored crops",
+  "item.pouchandpaper.crop_sack.desc5": "- Breaking it drops 4 units used to craft the sack and all stored crops",
   "item.pouchandpaper.crop_sack.desc6": "- Right-click with an empty hand or incompatible item to withdraw 4 units (or what's left)",
 
   "item.pouchandpaper.paperblock": "Paper Block",
