@@ -27,21 +27,13 @@ public abstract class FarmContainer extends ModBlock
 {
     public static final IntegerProperty PLACING_OPTION = IntegerProperty.create("placing_option", 0, 3);
     public static final IntegerProperty FILL_LEVEL = IntegerProperty.create("fill_level", 0, 2);
-    private static final int MAX_SEEDS_INSIDE = 60;
+    private static final int MAX_SEEDS_INSIDE = 124;
 
     public FarmContainer(Properties properties)
     {
         super(properties);
         registerDefaultState(stateDefinition.any().setValue(PLACING_OPTION, 0));
         registerDefaultState(stateDefinition.any().setValue(FILL_LEVEL, 0));
-    }
-
-    protected static long mixCoords(int x, int y, int z)
-    {
-        long a = x * 341873128712L;
-        long b = y * 132897987541L;
-        long c = z * 42317861L;
-        return a ^ b ^ c;
     }
 
     protected abstract DeferredBlock<Block> getPouchBlock();
@@ -62,6 +54,14 @@ public abstract class FarmContainer extends ModBlock
         var rand = new Random(seed);
         int placingOption = rand.nextInt(4);
         return defaultBlockState().setValue(FILL_LEVEL, 0).setValue(PLACING_OPTION, placingOption);
+    }
+
+    private static long mixCoords(int x, int y, int z)
+    {
+        long a = x * 341873128712L;
+        long b = y * 132897987541L;
+        long c = z * 42317861L;
+        return a ^ b ^ c;
     }
 
     @Override
@@ -170,12 +170,7 @@ public abstract class FarmContainer extends ModBlock
         if (!level.isClientSide() && blockEntity instanceof FarmContainerBlockEntity containerBlockEntity)
         {
             int seedsInside = containerBlockEntity.getSeedsInside();
-            if (seedsInside > 0)
-            {
-                popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsInside));
-            }
-
-            popResourceFromFace(level, pos, player.getDirection().getOpposite(), getPouchBlock().toStack());
+            popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsInside + 4));
         }
     }
 
@@ -218,7 +213,7 @@ public abstract class FarmContainer extends ModBlock
             int seeds = containerBlockEntity.getSeedsInside();
             int fillLevel;
 
-            if (seeds > 56)
+            if (seeds > MAX_SEEDS_INSIDE - 4)
                 fillLevel = 2;
             else if (seeds > 3)
                 fillLevel = 1;
