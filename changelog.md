@@ -1,3 +1,9 @@
+## 📦 Version 2.1.6
+
+### 🛠️ Improvements
+- Grouped the two Paper and two Paper Stack recipes using the `group` property to reduce clutter in recipe listings and advancements
+
+
 ## 📦 Version 2.1.5
 
 ### 📝 Improvements
