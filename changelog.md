@@ -1,6 +1,6 @@
 ## 📦 Version 2.1.6
 
-### 🛠️ Improvements
+### 📝 Improvements
 - Grouped the two Paper and two Paper Stack recipes using the `group` property to reduce clutter in recipe listings and advancements
 
 
@@ -24,7 +24,7 @@
 
 ## 📦 Version 2.1.3
 
-### 🛠️ Improvements
+### 📝 Improvements
 - Pouches now support **visual fill levels**, just like sacks.
 - Fill level thresholds have been updated for both sacks and pouches:
   - **Empty** — less than **4** seeds or crops.
@@ -39,7 +39,7 @@
 
 ## 📦 Version 2.1.1
 
-### 🛠️ Improvements
+### 📝 Improvements
 - **Adjusted sack hitboxes** for more accurate collisions and visuals  
 - **Sacks no longer transform Farmland into Dirt** when placed on top
 
@@ -59,7 +59,7 @@
 
 ## 📦 Version 2.0.1
 
-### 📝 Fixed
+### 🐞 Fixed
 - Fixed visual artifacts on seed pouch models caused by transparent texture edges.
 
 
