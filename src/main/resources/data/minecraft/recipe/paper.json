@@ -3,7 +3,9 @@
   "group": "paper",
   "category": "misc",
   "key": {
-    "#": "minecraft:sugar_cane"
+    "#": {
+      "item": "minecraft:sugar_cane"
+    }
   },
   "pattern": [
     "###"
