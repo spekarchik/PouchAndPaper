@@ -89,6 +89,9 @@ Pouch & Paper is fully compatible with the following mods by the same author:
   Fixed XP costs, enchanted book duplication, material-based repairs, and perfect gear cloning — all with vanilla-style mechanics.  
   Fully supports custom gear and enchantments from The Block of Angel mod.
 
+- **[🧭 Compass Cleaner](https://www.curseforge.com/minecraft/mc-mods/compass-cleaner)** — adds a minimalist recipe to reset a _Lodestone Compass_ to a regular _Compass_.  
+    Ideal for tidying up obsolete compasses after you lose or remove their lodestone targets.
+
 ---
 
 ## ☕ Support Development
