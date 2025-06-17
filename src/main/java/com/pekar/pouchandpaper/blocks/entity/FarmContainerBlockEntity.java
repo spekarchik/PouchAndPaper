@@ -6,6 +6,8 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 
 public abstract class FarmContainerBlockEntity extends BlockEntity
 {
@@ -17,17 +19,17 @@ public abstract class FarmContainerBlockEntity extends BlockEntity
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries)
+    protected void loadAdditional(ValueInput input)
     {
-        super.loadAdditional(tag, registries);
-        seedsInside = tag.getIntOr("seeds_inside", 0);
+        super.loadAdditional(input);
+        seedsInside = input.getIntOr("seeds_inside", 0);
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries)
+    protected void saveAdditional(ValueOutput output)
     {
-        super.saveAdditional(tag, registries);
-        saveModTag(tag);
+        super.saveAdditional(output);
+        output.putInt("seeds_inside", seedsInside);
     }
 
     @Override
