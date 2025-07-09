@@ -14,10 +14,122 @@
 
 ## 📦 Version 2.1.8
 
-- Promoted from beta to stable release
+- Internal metadata (build.gradle, gradle.properties) updated to align with Minecraft 1.21.5
+- Purely maintenance update — no gameplay or logic changes
 
 
-## 📦 Version 2.1.8-beta
+## 📦 Version 2.1.7
+
+### 📝 Improvements
+- Grouped the two Leather recipes using the `group` property
+
+
+## 📦 Version 2.1.6
+
+### 📝 Improvements
+- Grouped the two Paper and two Paper Stack recipes using the `group` property to reduce clutter in recipe listings and advancements
+
+
+## 📦 Version 2.1.5
+
+### 📝 Improvements
+- Changed pouch and crop sack breaking behavior:  
+  — When broken while sneaking (shift), the block now drops full pouches/sacks instead of individual seeds/crops (one pouch per 4 units).  
+  — Any leftover seeds/crops less than 4 units drop as individual items.  
+  — Breaking without sneaking continues to drop all seeds/crops as individual items.  
+- This change improves inventory management and consistency with stacking logic.
+
+
+## 📦 Version 2.1.4
+
+### 🛠️ Changed
+- Increased capacity of pouches and sacks from 60 to 124 items.
+- Pouches and sacks now drop 4 seeds/crops instead of the container itself.
+- Updated tooltips to reflect the new capacity and drop behavior.
+
+
+## 📦 Version 2.1.3
+
+### 📝 Improvements
+- Pouches now support **visual fill levels**, just like sacks.
+- Fill level thresholds have been updated for both sacks and pouches:
+  - **Empty** — less than **4** seeds or crops.
+  - **Full** — more than **56** seeds or crops.
+
+
+## 📦 Version 2.1.2
+
+### 📝 Improvements
+- Updated texture for Leather Pack.
+
+
+## 📦 Version 2.1.1
+
+### 📝 Improvements
+- **Adjusted sack hitboxes** for more accurate collisions and visuals  
+- **Sacks no longer transform Farmland into Dirt** when placed on top
+
+### 🐞 Fixed
+- **Blocked placement of sacks and pouches** on non-solid surfaces
+
+
+## 📦 Version 2.1.0
+
+### ✨ New
+- Added three new **crop sacks**: **Sack of Potato**, **Sack of Carrot**, and **Sack of Beetroot**.
+- These sacks behave similarly to seed pouches — they can be placed as blocks and used to store respective crops.
+- Each crop sack shows different fill levels depending on how much crop is stored inside.
+- Added full tooltip descriptions for all three new sacks.
+- Added crafting recipes and advancements for each new crop sack.
+
+
+## 📦 Version 2.0.1
+
+### 🐞 Fixed
+- Fixed visual artifacts on seed pouch models caused by transparent texture edges.
+
+
+## 📦 Version 2.0.0
+
+### ✨ New
+- Seed pouches are now blocks: they can be placed in the world and used as seed storage containers.
+- Added detailed descriptions to pouch tooltips.
+
+### 📝 Improvements
+- Updated texture for Feather Pack.
+
+
+## 📦 Version 1.2.0-beta
+
+### ✨ New
+- Added full support for Belarusian localization
+
+### 📝 Improvements
+- Improved tooltip formatting for `Paper Block` and `Burnt Paper Block`
+- Improved text for Russian localization
+
+
+## 📦 Version 1.1.0-beta
+
+### ✨ Added
+- Advancement-based recipe unlocking
+
+## 📦 Version 1.0.4-beta
+
+### 🐞 Fixed
+- Creative Mode Tab: name misspeling fixed
+
+## 📦 Version 1.0.3-beta
+
+### 🐞 Fixed
+- Bug fixed: textures did not display due to renaming. Now the mod completely renamed to 'pounchandpaper' including the namespace and directories.
+
+## 📦 Version 1.0.2-beta
+
+### 🛠️ Changed
+- CompactMod has been renamed to Pouch & Paper
+
+## 📦 Version 1.0.1-beta
 
 - Initial publishing
 
