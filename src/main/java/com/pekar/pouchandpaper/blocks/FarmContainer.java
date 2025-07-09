@@ -175,12 +175,15 @@ public abstract class FarmContainer extends ModBlock
             return InteractionResult.CONSUME;
         }
 
-        int seedsToDrop = Math.min(seedsInside, SEEDS_TO_EXTRACT_PER_USE);
+        int seedsToWithdraw = player.isShiftKeyDown()
+                ? 1
+                : Math.min(seedsInside, SEEDS_TO_EXTRACT_PER_USE);
+
         if (!level.isClientSide())
         {
-            popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsToDrop));
+            popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsToWithdraw));
         }
-        containerBlockEntity.setSeedsInside(seedsInside - seedsToDrop);
+        containerBlockEntity.setSeedsInside(seedsInside - seedsToWithdraw);
 
         return InteractionResult.sidedSuccess(level.isClientSide());
     }
