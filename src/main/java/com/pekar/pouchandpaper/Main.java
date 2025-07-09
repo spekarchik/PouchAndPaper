@@ -2,16 +2,19 @@ package com.pekar.pouchandpaper;
 
 import com.pekar.pouchandpaper.blocks.BlockRegistry;
 import com.pekar.pouchandpaper.blocks.entity.BlockEntityRegistry;
+import com.pekar.pouchandpaper.events.EventRegistry;
 import com.pekar.pouchandpaper.items.ItemRegistry;
 import com.pekar.pouchandpaper.tab.MainTab;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -36,7 +39,7 @@ public class Main
 
     public Main(IEventBus modEventBus, ModContainer modContainer)
     {
-        initialyzeRegistry();
+        initializeRegistry();
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -50,7 +53,9 @@ public class Main
         CREATIVE_MODE_TABS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
-        //NeoForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(this);
+
+        EventRegistry.registerEvents();
 
         // Register the item to a creative tab
         //modEventBus.addListener(this::addCreative);
@@ -61,7 +66,7 @@ public class Main
         //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
     }
 
-    private void initialyzeRegistry()
+    private void initializeRegistry()
     {
         BlockRegistry.initStatic();
         BlockEntityRegistry.initStatic();
@@ -81,7 +86,7 @@ public class Main
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
-    //@SubscribeEvent
+    @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
         // do something when the server starts
