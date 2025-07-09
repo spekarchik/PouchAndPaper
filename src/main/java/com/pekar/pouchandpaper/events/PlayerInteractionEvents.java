@@ -1,8 +1,8 @@
 package com.pekar.pouchandpaper.events;
 
 import com.pekar.pouchandpaper.blocks.FarmContainer;
-import net.minecraft.util.TriState;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.common.util.TriState;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 public class PlayerInteractionEvents implements IEventHandler
