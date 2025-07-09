@@ -32,10 +32,10 @@ public class PouchOfSeedsBlockItem extends ModBlockItem implements ITooltipProvi
     {
         if (!utils.text.showExtendedDescription(tooltip)) return;
 
-        for (int i = 1; i <= 9; i++)
+        for (int i = 1; i <= 10; i++)
         {
             tooltip.addLine(getItemDescriptionId(), i)
-                    .styledAs(TextStyle.DarkGray, i == 5)
+                    .styledAs(TextStyle.DarkGray, i == 5 || i == 10)
                     .apply();
         }
     }
