@@ -1,3 +1,12 @@
+## 📦 Version 2.2.1
+
+### 📝 Improvements
+- **Burnt Paper Block** no longer breaks from random mob steps.
+  Now it breaks only if:
+  - a player steps on it
+  - or any entity falls on it from ≥1.5 blocks height.
+
+
 ## 📦 Version 2.2.0
 
 ### 📝 Improvements
