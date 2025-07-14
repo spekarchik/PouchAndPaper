@@ -11,6 +11,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -65,16 +66,15 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
     @Override
     public void fallOn(Level level, BlockState blockState, BlockPos pos, Entity entity, float fallDistance)
     {
-        if (entity instanceof Creeper && fallDistance < 0.5f) return;
-        if (entity instanceof Bee) return;
-        level.destroyBlock(pos, false);
+        if (entity instanceof Player || fallDistance > 1.5F)
+            level.destroyBlock(pos, false);
     }
 
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity)
     {
-        if (entity instanceof Creeper || entity instanceof Bee) return;
-        level.destroyBlock(pos, false);
+        if (entity instanceof Player)
+            level.destroyBlock(pos, false);
     }
 
     @Override
