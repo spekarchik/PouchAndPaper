@@ -1,3 +1,10 @@
+## 📦 Version 2.2.2-beta
+
+### 🛠️ Changes
+- Now compatible with Minecraft 1.21.6–1.21.8
+- ⚠️ Minecraft 1.21.5 is now supported via a **separate dedicated build** due to data format incompatibility with later versions
+
+
 ## 📦 Version 2.2.1
 
 ### 📝 Improvements
