@@ -1,3 +1,10 @@
+## 📦 Version 2.2.2
+
+### 🐞 Fixed
+- Fixed a compatibility issue on Minecraft 1.21.5 where sacks and pouches lost their content after world reload
+- The 1.21.5 build is now published separately due to internal data format differences
+
+
 ## 📦 Version 2.2.1
 
 ### 📝 Improvements
