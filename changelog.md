@@ -1,3 +1,8 @@
+## 📦 Version 2.2.2
+
+- Promoted from 'beta' to stable 'release'
+
+
 ## 📦 Version 2.2.2-beta
 
 ### 🛠️ Changes
