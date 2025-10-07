@@ -29,7 +29,7 @@ public class PaperBlockItem extends ModBlockItem implements ITooltipProvider
     @Override
     public void addTooltip(ItemStack stack, Item.TooltipContext context, ITooltip tooltip, TooltipFlag flag)
     {
-        if (!Utils.instance.text.showExtendedDescription(tooltip)) return;
+        if (!Utils.instance.text.showExtendedDescription(tooltip, flag)) return;
 
         for (int i = 1; i <= 5; i++)
         {
