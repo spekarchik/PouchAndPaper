@@ -12,6 +12,7 @@ public class ItemRegistry
     public static final DeferredItem<Item> GLOW_INK_BOTTLE = ITEMS.registerItem("glow_ink_bottle", ModItem::new);
     public static final DeferredItem<Item> LEATHER_PACK = ITEMS.registerItem("leatherpack", ModItem::new);
     public static final DeferredItem<Item> FEATHERS_PACK = ITEMS.registerItem("feathers_pack", ModItem::new);
+    public static final DeferredItem<Item> LEAVES_PACK = ITEMS.registerItem("leaves_pack", ModItem::new);
 
     public static void initStatic()
     {
