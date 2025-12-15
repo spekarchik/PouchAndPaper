@@ -1,3 +1,9 @@
+## 📦 Version 2.3.0
+
+### ✨ New
+- Added **Dry Leaves Pack**.
+
+
 ## 📦 Version 2.2.2
 
 ### 🐞 Fixed
