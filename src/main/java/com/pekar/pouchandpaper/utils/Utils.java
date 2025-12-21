@@ -17,6 +17,7 @@ public class Utils
     public static Random random = new Random();
 
     public final Text text = new Text();
+    public final Sound sound = new Sound();
 
     public AABB getRenderBoundingBox(BlockPos pos)
     {

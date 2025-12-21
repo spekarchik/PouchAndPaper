@@ -1,7 +1,10 @@
 package com.pekar.pouchandpaper.blocks;
 
 import com.google.common.collect.ImmutableMap;
+import com.pekar.pouchandpaper.utils.Utils;
 import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -150,5 +153,17 @@ public abstract class FarmSack extends FarmContainer
                 default -> throw new IllegalStateException("Unexpected placingOption: " + placingOption);
             };
         };
+    }
+
+    @Override
+    protected void playAddSeedsSound(Player player, BlockPos pos)
+    {
+        Utils.instance.sound.playSoundByBlock(player, pos, SoundEvents.NETHERRACK_BREAK);
+    }
+
+    @Override
+    protected void playExtractSeedsSound(Player player, BlockPos pos)
+    {
+        Utils.instance.sound.playSoundByBlock(player, pos, SoundEvents.NETHERRACK_HIT);
     }
 }

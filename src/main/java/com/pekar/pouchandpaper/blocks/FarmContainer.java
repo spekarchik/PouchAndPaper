@@ -44,6 +44,10 @@ public abstract class FarmContainer extends ModBlock
 
     protected abstract Item getSeedsItem();
 
+    protected abstract void playAddSeedsSound(Player player, BlockPos pos);
+
+    protected abstract void playExtractSeedsSound(Player player, BlockPos pos);
+
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
@@ -115,6 +119,8 @@ public abstract class FarmContainer extends ModBlock
                     player.getItemInHand(hand).shrink(pouchesToAdd);
             }
 
+            playAddSeedsSound(player, pos);
+
             return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
         else if (stack.is(getSeedsItem()))
@@ -146,6 +152,8 @@ public abstract class FarmContainer extends ModBlock
                 if (!player.isCreative())
                     player.getItemInHand(hand).shrink(seedsToAdd);
             }
+
+            playAddSeedsSound(player, pos);
 
             return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
@@ -184,6 +192,7 @@ public abstract class FarmContainer extends ModBlock
             popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsToWithdraw));
         }
         containerBlockEntity.setSeedsInside(seedsInside - seedsToWithdraw);
+        playExtractSeedsSound(player, pos);
 
         return InteractionResult.sidedSuccess(level.isClientSide());
     }
