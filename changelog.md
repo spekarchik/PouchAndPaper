@@ -1,3 +1,13 @@
+## 📦 Version 3.0.0
+
+### ✨ New
+- **Feathers Pack** can now be placed as a block and behaves like a feather container.
+- **Leaves Pack** can now be placed as a block and behaves like a leaves container.
+
+### 📝 Improvements
+- Sounds for other blocks have been reviewed.
+
+
 ## 📦 Version 2.3.1
 
 ### 📝 Improvements
