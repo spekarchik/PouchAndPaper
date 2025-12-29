@@ -11,7 +11,18 @@
   "item.pouchandpaper.ink_bottle": "Бутэлечка з чарнілам",
   "item.pouchandpaper.glow_ink_bottle": "Бутэлечка з зіхатлівым чарнілам",
   "item.pouchandpaper.leatherpack": "Пачак скуры",
+
   "item.pouchandpaper.leaves_pack": "Пакет з сухім лісцем",
+  "item.pouchandpaper.leaves_pack.desc1": "- Можна размясціць як блок",
+  "item.pouchandpaper.leaves_pack.desc2": "- Пасля размяшчэння ў яго можна дадаваць іншыя пакеты або лісце",
+  "item.pouchandpaper.leaves_pack.desc3": "- Кожны дадатковы пакет павялічвае запас на 4 адзінкі лісця",
+  "item.pouchandpaper.leaves_pack.desc4": "- За адно выкарыстанне дадаецца да 16 пакетаў або 64 адзінкі лісця (або колькі магчыма)",
+  "item.pouchandpaper.leaves_pack.desc5": "  Пры прысяданні дадаецца толькі 1 пакет або 1 адзінка лісця за раз",
+  "item.pouchandpaper.leaves_pack.desc6": "- Максімальная ёмістасць — 252 адзінкі лісця, не лічачы 4, з якіх зроблены пакет (эквівалент поўнай стоскі пакетаў)",
+  "item.pouchandpaper.leaves_pack.desc7": "- Пры разбіцці выпадаюць 4 адзінкі лісця (з якіх зроблены пакет) і ўсё змесціва",
+  "item.pouchandpaper.leaves_pack.desc8": "- Пры разбіцці ў прысяданні змесціва выпадае як пакеты (па адным на кожныя 4 адзінкі лісця), рэшта менш за 4 — як лісце",
+  "item.pouchandpaper.leaves_pack.desc9": "- Правай кнопкай з пустой рукой або непрыдатным прадметам: выдае 16 адзінак лісця (або рэшту)",
+  "item.pouchandpaper.leaves_pack.desc10": "  Пры прысяданні дастаецца толькі 1 адзінка лісця за раз",
 
   "item.pouchandpaper.feathers_pack": "Пакет з пер'ем",
   "item.pouchandpaper.feathers_pack.desc1": "- Можна размясціць як блок",
