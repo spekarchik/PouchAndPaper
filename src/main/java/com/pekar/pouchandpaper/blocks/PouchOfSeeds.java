@@ -30,9 +30,9 @@ public abstract class PouchOfSeeds extends FarmContainer
     private static final VoxelShape SHAPE_FULL2 = Shapes.create(0.25, 0.0, 0.296875, 0.65625, 0.4375, 0.765625);
     private static final VoxelShape SHAPE_FULL3 = Shapes.create(0.3125, 0.0, 0.25, 0.734375, 0.4375, 0.71875);
 
-    public PouchOfSeeds(Properties properties)
+    public PouchOfSeeds(Properties properties, FarmContainerConfiguration containerConfiguration)
     {
-        super(properties);
+        super(properties, containerConfiguration);
     }
 
     @Override
