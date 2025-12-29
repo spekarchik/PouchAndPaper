@@ -11,7 +11,18 @@
   "item.pouchandpaper.ink_bottle": "Баночка чернил",
   "item.pouchandpaper.glow_ink_bottle": "Баночка светящихся чернил",
   "item.pouchandpaper.leatherpack": "Пачка кожи",
+
   "item.pouchandpaper.leaves_pack": "Пакет с сухими листьями",
+  "item.pouchandpaper.leaves_pack.desc1": "- Можно размещать как блок",
+  "item.pouchandpaper.leaves_pack.desc2": "- После размещения в него можно добавлять другие такие же пакеты и листья",
+  "item.pouchandpaper.leaves_pack.desc3": "- Каждый добавленный пакет увеличивает запас на 4 единицы листьев",
+  "item.pouchandpaper.leaves_pack.desc4": "- За одно использование добавляется до 16 пакетов или 64 единицы листьев (или сколько возможно)",
+  "item.pouchandpaper.leaves_pack.desc5": "  В приседании добавляется только 1 пакет или 1 единица листьев за одно использование",
+  "item.pouchandpaper.leaves_pack.desc6": "- Максимальная вместимость — 252 единицы листьев, не считая 4, из которых сделан сам пакет (эквивалент полной стопки пакетов)",
+  "item.pouchandpaper.leaves_pack.desc7": "- При разрушении выпадают листья: 4 единицы (эквивалент пакета) и всё содержимое",
+  "item.pouchandpaper.leaves_pack.desc8": "- При разрушении в приседании всё выпадает в виде пакетов (по одному на каждые 4 единицы листьев). Остаток меньше 4 — в виде листьев",
+  "item.pouchandpaper.leaves_pack.desc9": "- ПКМ с пустой рукой или неподходящим предметом выдаёт по 16 единиц листьев, или остаток",
+  "item.pouchandpaper.leaves_pack.desc10": "  В приседании извлекается только 1 единица листьев за одно использование",
 
   "item.pouchandpaper.feathers_pack": "Пакет с перьями",
   "item.pouchandpaper.feathers_pack.desc1": "- Можно размещать как блок",
