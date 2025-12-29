@@ -1,7 +1,6 @@
 {
-	"format_version": "1.21.11",
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
-	"texture_size": [64, 64],
 	"textures": {
 		"2": "pouchandpaper:block/leaves_pack",
 		"particle": "pouchandpaper:block/leaves_pack"
@@ -10,7 +9,7 @@
 		{
 			"from": [3.25, 0.25, 3],
 			"to": [12.5, 2, 13],
-			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 0, 7.5]},
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 0, 8.5]},
 			"faces": {
 				"north": {"uv": [9, 10.25, 11.3125, 10.6875], "texture": "#2"},
 				"east": {"uv": [6.5, 10.25, 9, 10.6875], "texture": "#2"},
@@ -23,7 +22,7 @@
 		{
 			"from": [4, 0.25, 2.5],
 			"to": [12, 1.5, 3],
-			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 0, 7.5]},
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 0, 8.5]},
 			"faces": {
 				"north": {"uv": [9.1875, 10.3125, 11.1875, 10.625], "texture": "#2"},
 				"east": {"uv": [7.5, 11.375, 7.625, 11.6875], "texture": "#2"},
@@ -36,7 +35,7 @@
 		{
 			"from": [5, 0.25, 13],
 			"to": [11, 1.5, 13.5],
-			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 0, 7.5]},
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 0, 8.5]},
 			"faces": {
 				"north": {"uv": [9.8125, 10.25, 11.3125, 10.6875], "texture": "#2"},
 				"east": {"uv": [1.5, 9.5, 1.75, 9.9375], "texture": "#2"},
@@ -49,7 +48,7 @@
 		{
 			"from": [4.75, 2, 4],
 			"to": [11, 3.5, 12],
-			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, -11, 7.5]},
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, -11, 8.5]},
 			"faces": {
 				"north": {"uv": [10.75, 8, 12.3125, 8.375], "texture": "#2"},
 				"east": {"uv": [2.5, 10.75, 4.5, 11.125], "texture": "#2"},
