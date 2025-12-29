@@ -14,9 +14,9 @@ import org.jetbrains.annotations.Nullable;
 public class PouchOfCocoaBeans extends PouchOfSeeds implements EntityBlock
 {
 
-    protected PouchOfCocoaBeans(Properties properties)
+    protected PouchOfCocoaBeans(Properties properties, FarmContainerConfiguration containerConfiguration)
     {
-        super(properties);
+        super(properties, containerConfiguration);
     }
 
     @Override

@@ -5,7 +5,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -49,9 +48,9 @@ public abstract class FarmSack extends FarmContainer
     private static final VoxelShape COLLISION_EMPTY2 = Shapes.create(0.046875 + 0.125, 0.0, 0.0625 + 0.125, 0.8125 - 0.125, 0.5, 0.9375 - 0.125);
     private static final VoxelShape COLLISION_EMPTY3 = Shapes.create(0.09375 + 0.125, 0.0, 0.125 + 0.125, 0.90625 - 0.125, 0.5, 0.9375 - 0.125);
 
-    public FarmSack(Properties properties)
+    public FarmSack(Properties properties, FarmContainerConfiguration containerConfiguration)
     {
-        super(properties);
+        super(properties, containerConfiguration);
     }
 
     @Override
