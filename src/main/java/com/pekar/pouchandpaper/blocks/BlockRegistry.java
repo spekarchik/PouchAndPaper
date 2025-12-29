@@ -109,7 +109,7 @@ public class BlockRegistry
     private static <T extends Block> DeferredBlock<T> register(String name, BiFunction<BlockBehaviour.Properties, FarmContainerConfiguration, T> blockSupplier, BiFunction<Block, Item.Properties, ? extends ModBlockItem> blockItemSupplier,
                                                                BlockBehaviour.Properties blockProperties, FarmContainerConfiguration containerConfiguration)
     {
-        var blockObject = Main.BLOCKS.registerBlock(name, prop -> blockSupplier.apply(prop, containerConfiguration), () -> blockProperties);
+        var blockObject = Main.BLOCKS.registerBlock(name, prop -> blockSupplier.apply(prop, containerConfiguration), blockProperties);
         Main.ITEMS.registerItem(name, p -> blockItemSupplier.apply(blockObject.get(), p));
         return blockObject;
     }

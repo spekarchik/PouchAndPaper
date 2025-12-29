@@ -30,7 +30,7 @@ public class PackOfFeathersBlockItem extends ModBlockItem implements ITooltipPro
     @Override
     public void addTooltip(ItemStack stack, TooltipContext context, ITooltip tooltip, TooltipFlag flag)
     {
-        if (!utils.text.showExtendedDescription(tooltip, flag)) return;
+        if (!utils.text.showExtendedDescription(tooltip)) return;
 
         for (int i = 1; i <= 10; i++)
         {
