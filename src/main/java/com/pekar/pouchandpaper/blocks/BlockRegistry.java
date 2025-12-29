@@ -68,6 +68,11 @@ public class BlockRegistry
                     .sound(SoundType.WOOL),
             new FarmContainerConfiguration(9, 32, 64, 16));
 
+    public static final DeferredBlock<Block> PACK_OF_LEAVES = register("leaves_pack", PackOfLeaves::new, PackOfLeavesBlockItem::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BIT).strength(0.1f, 9f)
+                    .sound(SoundType.MOSS_CARPET),
+            new FarmContainerConfiguration(4, 16, 64, 16));
+
     public static void initStatic()
     {
         // just to initialize static members
