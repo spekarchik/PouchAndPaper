@@ -1,5 +1,7 @@
 ## 📦 Version 3.0.0
 
+- Now supports Minecraft 26.1.1
+
 ### ✨ New
 - **Feathers Pack** can now be placed as a block and behaves like a feather container.
 - **Leaves Pack** can now be placed as a block and behaves like a leaves container.
