@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "fill_level=0,placing_option=0": { "model": "pouchandpaper:block/seedpocket_wheat_empty" },
+    "fill_level=0,placing_option=1": { "model": "pouchandpaper:block/seedpocket_wheat_empty1" },
+    "fill_level=0,placing_option=2": { "model": "pouchandpaper:block/seedpocket_wheat_empty2" },
+    "fill_level=0,placing_option=3": { "model": "pouchandpaper:block/seedpocket_wheat_empty3" },
+    "fill_level=1,placing_option=0": { "model": "pouchandpaper:block/seedpocket_wheat_semi" },
+    "fill_level=1,placing_option=1": { "model": "pouchandpaper:block/seedpocket_wheat_semi1" },
+    "fill_level=1,placing_option=2": { "model": "pouchandpaper:block/seedpocket_wheat_semi2" },
+    "fill_level=1,placing_option=3": { "model": "pouchandpaper:block/seedpocket_wheat_semi3" },
+    "fill_level=2,placing_option=0": { "model": "pouchandpaper:block/seedpocket_wheat_full" },
+    "fill_level=2,placing_option=1": { "model": "pouchandpaper:block/seedpocket_wheat_full1" },
+    "fill_level=2,placing_option=2": { "model": "pouchandpaper:block/seedpocket_wheat_full2" },
+    "fill_level=2,placing_option=3": { "model": "pouchandpaper:block/seedpocket_wheat_full3" }
+  }
+}

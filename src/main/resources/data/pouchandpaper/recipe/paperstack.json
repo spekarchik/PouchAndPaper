@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "paperstack",
+  "pattern": [
+    "A",
+    "A",
+    "A"
+  ],
+  "key": {
+    "A": "minecraft:paper"
+  },
+  "result": {
+    "id": "pouchandpaper:paperstack",
+    "count": 1
+  }
+}
