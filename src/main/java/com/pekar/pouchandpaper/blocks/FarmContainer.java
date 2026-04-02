@@ -27,15 +27,18 @@ public abstract class FarmContainer extends ModBlock
 {
     public static final IntegerProperty PLACING_OPTION = IntegerProperty.create("placing_option", 0, 3);
     public static final IntegerProperty FILL_LEVEL = IntegerProperty.create("fill_level", 0, 2);
-    private static final int POUCHES_TO_ADD_PER_USE = 16;
-    private static final int SEEDS_TO_ADD_PER_USE = 64;
-    private static final int SEEDS_TO_EXTRACT_PER_USE = 16;
-    private static final int SEEDS_PER_POUCH_TO_CRAFT = 4;
-    private static final int MAX_SEEDS_INSIDE = 63 * SEEDS_PER_POUCH_TO_CRAFT;
+    private final int itemsPerContainerToCraft;
+    private final int maxContainerCapacity;
+    protected final FarmContainerConfiguration containerConfiguration;
 
-    public FarmContainer(Properties properties)
+    public FarmContainer(Properties properties, FarmContainerConfiguration containerConfiguration)
     {
         super(properties);
+        this.containerConfiguration = containerConfiguration;
+
+        itemsPerContainerToCraft = containerConfiguration.capacityPerPack();
+        maxContainerCapacity = 63 * itemsPerContainerToCraft;
+
         registerDefaultState(stateDefinition.any().setValue(PLACING_OPTION, 0));
         registerDefaultState(stateDefinition.any().setValue(FILL_LEVEL, 0));
     }
@@ -98,7 +101,7 @@ public abstract class FarmContainer extends ModBlock
             }
 
             int seedsInside = containerBlockEntity.getSeedsInside();
-            if (seedsInside + SEEDS_PER_POUCH_TO_CRAFT > MAX_SEEDS_INSIDE)
+            if (seedsInside + itemsPerContainerToCraft > maxContainerCapacity)
             {
                 return InteractionResult.CONSUME;
             }
@@ -107,11 +110,11 @@ public abstract class FarmContainer extends ModBlock
             if (!player.isShiftKeyDown())
             {
                 int pouchesInHand = player.isCreative() && stack.getCount() > 0 ? stack.getMaxStackSize() : stack.getCount();
-                int freeSpace = (MAX_SEEDS_INSIDE - seedsInside) / SEEDS_PER_POUCH_TO_CRAFT;
-                pouchesToAdd = Math.min(Math.min(pouchesInHand, POUCHES_TO_ADD_PER_USE), freeSpace);
+                int freeSpace = (maxContainerCapacity - seedsInside) / itemsPerContainerToCraft;
+                pouchesToAdd = Math.min(Math.min(pouchesInHand, containerConfiguration.packsToAddPerUse()), freeSpace);
             }
 
-            containerBlockEntity.setSeedsInside(seedsInside + pouchesToAdd * SEEDS_PER_POUCH_TO_CRAFT);
+            containerBlockEntity.setSeedsInside(seedsInside + pouchesToAdd * itemsPerContainerToCraft);
 
             if (!level.isClientSide())
             {
@@ -132,7 +135,7 @@ public abstract class FarmContainer extends ModBlock
             }
 
             int seedsInside = containerBlockEntity.getSeedsInside();
-            if (seedsInside >= MAX_SEEDS_INSIDE)
+            if (seedsInside >= maxContainerCapacity)
             {
                 return InteractionResult.CONSUME;
             }
@@ -141,8 +144,8 @@ public abstract class FarmContainer extends ModBlock
             if (!player.isShiftKeyDown())
             {
                 int seedsInHand = player.isCreative() && stack.getCount() > 0 ? stack.getMaxStackSize() : stack.getCount();
-                int freeSpace = MAX_SEEDS_INSIDE - seedsInside;
-                seedsToAdd = Math.min(Math.min(seedsInHand, SEEDS_TO_ADD_PER_USE), freeSpace);
+                int freeSpace = maxContainerCapacity - seedsInside;
+                seedsToAdd = Math.min(Math.min(seedsInHand, containerConfiguration.itemsToAddPerUse()), freeSpace);
             }
 
             containerBlockEntity.setSeedsInside(seedsInside + seedsToAdd);
@@ -185,7 +188,7 @@ public abstract class FarmContainer extends ModBlock
 
         int seedsToWithdraw = player.isShiftKeyDown()
                 ? 1
-                : Math.min(seedsInside, SEEDS_TO_EXTRACT_PER_USE);
+                : Math.min(seedsInside, containerConfiguration.itemsToExtractPerUse());
 
         if (!level.isClientSide())
         {
@@ -205,15 +208,15 @@ public abstract class FarmContainer extends ModBlock
             int seedsInside = containerBlockEntity.getSeedsInside();
             if (player.isShiftKeyDown())
             {
-                int pouches = seedsInside / SEEDS_PER_POUCH_TO_CRAFT;
-                int seeds = seedsInside % SEEDS_PER_POUCH_TO_CRAFT;
+                int pouches = seedsInside / itemsPerContainerToCraft;
+                int seeds = seedsInside % itemsPerContainerToCraft;
                 popResourceFromFace(level, pos, player.getDirection().getOpposite(), getPouchBlock().toStack(pouches + 1));
                 if (seeds > 0)
                     popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seeds));
             }
             else
             {
-                popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsInside + SEEDS_PER_POUCH_TO_CRAFT));
+                popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seedsInside + itemsPerContainerToCraft));
             }
         }
     }
@@ -257,9 +260,9 @@ public abstract class FarmContainer extends ModBlock
             int seeds = containerBlockEntity.getSeedsInside();
             int fillLevel;
 
-            if (seeds > MAX_SEEDS_INSIDE - SEEDS_PER_POUCH_TO_CRAFT)
+            if (seeds > maxContainerCapacity - itemsPerContainerToCraft)
                 fillLevel = 2;
-            else if (seeds >= SEEDS_PER_POUCH_TO_CRAFT)
+            else if (seeds >= itemsPerContainerToCraft)
                 fillLevel = 1;
             else
                 fillLevel = 0;

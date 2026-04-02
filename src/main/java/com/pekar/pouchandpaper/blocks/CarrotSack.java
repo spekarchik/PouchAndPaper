@@ -13,9 +13,9 @@ import org.jetbrains.annotations.Nullable;
 
 public class CarrotSack extends FarmSack implements EntityBlock
 {
-    public CarrotSack(Properties properties)
+    public CarrotSack(Properties properties, FarmContainerConfiguration containerConfiguration)
     {
-        super(properties);
+        super(properties, containerConfiguration);
     }
 
     @Override
