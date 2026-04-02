@@ -1,68 +1,141 @@
-# 🌟 Pouch & Paper — convenient storage of tradeable resources, with a curious effect of burnt paper
+# 🌟 Pouch & Paper — immersive, UI-free storage for everyday resources
 
-**Pouch & Paper** is designed to make storage and usage of common resources more convenient — specifically paper, ink, leather, seeds, and feathers. These items are often used for trading with villagers, both directly and for crafting more valuable goods like books and "Book and Quill".
+Tired of cluttered chests and constant inventory juggling?
 
-The mod introduces compact versions of:
-- paper — as stacks and blocks,
-- ink and glow ink — stored in small bottles,
-- leather — bundled into a neat pack,
-- seeds (wheat, beetroot, melon, pumpkin, cocoa) — packed into fabric pouches (placeable blocks),
-- feathers — wrapped into a dense, soft bundle,
-- carrots, potatoes, and beetroots — packed into functional crop sacks (placeable blocks).
+**Pouch & Paper** turns common resources into **physical, placeable storage** — things you can drop into the world, interact with instantly, and use without ever opening a UI.
 
-These forms allow you to:
-- save inventory and storage space,
-- streamline resource farming and trading,
-- quickly prepare for breeding animals and gaining XP.
+It’s not just about saving space.  
+It’s about making your world feel more **natural, alive, and convenient**.
 
-### 🌱 Seed Pouches — now placeable blocks with real functionality
+---
 
-Seed pouches are no longer just items — they are now **placeable blocks** that act as **mini seed containers**. When placed in the world, a pouch can store up to **60 seeds**, not counting the 4 used to craft it. You can fill it by:
-- inserting compatible seeds directly, or
-- right-clicking it with another pouch of the same type (which converts into seeds inside the block).
+## 📦 Store resources the way they feel
 
-Pouches can now be used for **organizing farms**, **decorating storage areas**, or **quickly planting seeds** during gardening. Breaking a pouch block will drop both the pouch and all stored seeds. You can withdraw seeds in portions of 4 by right-clicking with an empty hand or a non-seed item.
+Instead of loose items scattered across your inventory, resources can now be packed into tangible forms:
 
-### 🥕 Crop Sacks — same mechanic, now for carrots, potatoes, and beetroots
+- 📄 **Paper Stack** — an intermediate step toward compact Paper Blocks  
+- 🧴 **Ink Bottle / Glow Ink Bottle** — concentrated ink storage  
+- 🧥 **Leather Pack** — tightly bundled leather  
+- 🌱 **Seed Pouches** — small placeable containers for seeds  
+- 🥕 **Crop Sacks** — larger sacks for harvested crops  
+- 🐔 **Feather Pack** — a large transparent bag filled with feathers *(placeable in 1.21.6+)*
+- 🍂 **Dry Leaves Pack** *(1.21.5+)* — a matching bag filled with dry leaves *(placeable in 1.21.6+)*
 
-Version **2.1.0** introduces three new blocks:
+Many of these can be placed directly into the world and used as containers.
 
-- 🥔 **Sack of Potato**  
-- 🥕 **Sack of Carrot**  
-- 🍠 **Sack of Beetroot**
+---
 
-These sacks work **just like seed pouches**, but are designed for **storing harvested crops**. Each sack can be filled with its respective crop by right-clicking, including inserting another sack of the same type (which gets absorbed into storage).
+## 🧱 No UI. Just interaction.
 
-Crop sacks show how full they are with **three visual fill levels**, making them handy for inventory management in:
+Containers in this mod **don’t have interfaces**.
 
-- 🚜 Automated farms  
-- 🏡 Storage cellars  
-- 🧱 Farm-themed builds
+Instead:
+- ➕ Right-click to insert items  
+- ➖ Right-click to take them out (sneak for single items)  
+- 💥 Break the block to retrieve everything instantly  
 
-When broken, they drop all contents and the sack itself.
+It’s fast, simple, and feels completely natural — like handling real objects.
 
-### 🔥 Burnt Paper Block — natural and dangerous
+---
 
-The **Burnt Paper Block** is created by setting a regular Paper Block on fire. It has unique and realistic properties:
-- attracts creepers within a 70-block radius (when not burning),
-- repels bees within a 50-block radius,
-- drops nothing when broken and can't be harvested even with Silk Touch.
+## 🌱 Functional containers for farming
 
-Its natural behavior makes it ideal for traps, for driving away bees from the area if desired, or simply as a moody decoration in dark builds.
+### Seed Pouches
+Small fabric pouches for:
+- wheat
+- beetroot
+- melon
+- pumpkin
+- cocoa beans  
+
+Crafted using 4 seeds and placed directly into the world.
+
+- Hold up to **60 seeds**
+- Perfect for organizing farms
+- Great for quick planting sessions
+
+---
+
+### 🥕 Crop Sacks
+
+- 🥔 Sack of Potato  
+- 🥕 Sack of Carrot  
+- 🍠 Sack of Beetroot  
+
+Larger containers for harvested crops.
+
+- Same interaction as seed pouches  
+- Ideal for **farms, storage cellars, and builds**  
+
+---
+
+### 🍂 Packs (1.21.6+)
+
+**Feather Pack** and **Dry Leaves Pack** become full **container blocks**:
+
+- Store large amounts of materials  
+- Show **3 visual fill levels** (empty / partial / full)  
+- Have **4 subtle rotation variants** based on position  
+
+They don’t look perfectly aligned — they look *placed*.  
+Like someone actually left them there.
+
+---
+
+## 📄 Paper Blocks
+
+### Paper Block
+Crafted from Paper Stacks.
+
+- Behaves like a **falling block**
+- Breaks into paper when it lands
+
+---
+
+### 🔥 Burnt Paper Block
+
+Created by setting a Paper Block on fire.
+
+Looks harmless. It isn’t.
+
+- 💣 Attracts creepers from a long distance  
+- 🐝 Repels bees, breaking their hive attachment  
+- 🚫 Cannot be harvested (even with Silk Touch)  
+- 👣 Breaks if a player steps on it  
+
+Use it for:
+- traps  
+- mob manipulation  
+- moody, atmospheric builds  
+
+---
+
+## ✨ Why use this mod?
+
+- 📦 **Compact storage** for common trading resources  
+- ⚡ **Instant interaction** — no UI, no micromanagement  
+- 🧭 **Craft on the go** (most recipes fit into 2×2 grid)  
+- 🌍 **Natural-looking decoration**  
+- 🎮 Subtle gameplay depth (hello, creepers)
+
+---
+
+This is a **quality-of-life mod** —  
+but one that quietly changes how your world feels.
 
 ---
 
 # 🛠️ Installation and Technical Information
 
 ## Installation
-- Make sure you have **Minecraft 1.21.1 - 1.21.11** with **NeoForge** installed.
+- Make sure you have **Minecraft 1.21.x, 26.1.x** with **NeoForge** installed.
 - Download the mod `.jar` file.
 - Place it into your `mods` folder.
 - Launch the game and enjoy your adventure!
 
 ## Technical Details
 - **Developer:** Sergey Pekarchik (with testing and creative support by Tima Pekarchik)
-- **Supported Minecraft versions:** 1.21.1 - 1.21.11
+- **Supported Minecraft versions:** 1.21.1 - 1.21.11, 26.1 - 26.1.1
 - **Texture resolution:** 32×32
 - **Supported languages:** English, Belarusian, Russian
 
