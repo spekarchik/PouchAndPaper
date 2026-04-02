@@ -1,24 +1,31 @@
-name: Build
+name: Build NeoForge Mod
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - 'Neo/1.21.*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          fetch-tags: true
 
-      - name: Setup JDK 17
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Java 21
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
-          distribution: 'temurin'
+          distribution: temurin
+          java-version: 21
 
-      - name: Build with Gradle
-        uses: gradle/actions/setup-gradle@v3
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build mod
+        run: ./gradlew clean build
+
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
         with:
-          arguments: build
+          name: neoforge-mod
+          path: build/libs/*[^sources][^javadoc].jar
