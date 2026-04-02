@@ -13,9 +13,9 @@ import org.jetbrains.annotations.Nullable;
 
 public class BeetrootSack extends FarmSack implements EntityBlock
 {
-    public BeetrootSack(Properties properties)
+    public BeetrootSack(Properties properties, FarmContainerConfiguration containerConfiguration)
     {
-        super(properties);
+        super(properties, containerConfiguration);
     }
 
     @Override

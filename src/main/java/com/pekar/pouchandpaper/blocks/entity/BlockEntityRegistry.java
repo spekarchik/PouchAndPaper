@@ -43,6 +43,10 @@ public class BlockEntityRegistry
             Main.BLOCK_ENTITIES.register("sack_of_carrot_block_entity", () ->
                     BlockEntityType.Builder.of(CarrotSackBlockEntity::new, BlockRegistry.SACK_OF_CARROT.get()).build(null));
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PackOfFeathersBlockEntity>> PACK_OF_FEATHERS_BLOCK_ENTITY =
+            Main.BLOCK_ENTITIES.register("pack_of_feathers_block_entity", () ->
+                    new BlockEntityType<>(PackOfFeathersBlockEntity::new, BlockRegistry.PACK_OF_FEATHERS.get()));
+
     public static void initStatic()
     {
         // just to initialize static members

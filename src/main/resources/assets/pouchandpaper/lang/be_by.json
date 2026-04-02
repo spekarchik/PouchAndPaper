@@ -11,7 +11,18 @@
   "item.pouchandpaper.ink_bottle": "Бутэлечка з чарнілам",
   "item.pouchandpaper.glow_ink_bottle": "Бутэлечка з зіхатлівым чарнілам",
   "item.pouchandpaper.leatherpack": "Пачак скуры",
+
   "item.pouchandpaper.feathers_pack": "Пакет з пер'ем",
+  "item.pouchandpaper.feathers_pack.desc1": "- Можна размясціць як блок",
+  "item.pouchandpaper.feathers_pack.desc2": "- Пасля размяшчэння можна дадаваць іншыя пакеты або пер'е",
+  "item.pouchandpaper.feathers_pack.desc3": "- Кожны дадатковы пакет павялічвае запас на 9 пёраў",
+  "item.pouchandpaper.feathers_pack.desc4": "- За адно выкарыстанне дадаецца да 16 пакетаў або 144 пёраў (або колькі магчыма)",
+  "item.pouchandpaper.feathers_pack.desc5": "  Пры прысяданні дадаецца толькі 1 пакет або 1 адзінка пер'я за раз",
+  "item.pouchandpaper.feathers_pack.desc6": "- Максімальная ёмістасць — 567 пёраў, не лічачы 9, з якіх зроблены пакет (эквівалент поўнай стоскі пакетаў)",
+  "item.pouchandpaper.feathers_pack.desc7": "- Пры разбіцці выпадаюць 9 пёраў (з якіх зроблены пакет) і ўсё змесціва",
+  "item.pouchandpaper.feathers_pack.desc8": "- Пры разбіцці ў прысяданні змесціва выпадае як пакеты (па адным на кожныя 9 пёраў), рэшта менш за 9 — як пер'е",
+  "item.pouchandpaper.feathers_pack.desc9": "- Правай кнопкай з пустой рукой або непрыдатным прадметам: выдае 32 адзінак пер'я (або рэшту)",
+  "item.pouchandpaper.feathers_pack.desc10": "  Пры прысяданні дастаецца толькі 1 адзінка пер'я за раз",
 
   "item.pouchandpaper.seedpocket_wheat": "Мяшочак з насеннем пшаніцы",
   "item.pouchandpaper.seedpocket_beet": "Мяшочак з насеннем буракоў",
