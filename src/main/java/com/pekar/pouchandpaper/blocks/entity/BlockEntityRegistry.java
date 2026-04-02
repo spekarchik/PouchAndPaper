@@ -45,7 +45,7 @@ public class BlockEntityRegistry
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PackOfFeathersBlockEntity>> PACK_OF_FEATHERS_BLOCK_ENTITY =
             Main.BLOCK_ENTITIES.register("pack_of_feathers_block_entity", () ->
-                    new BlockEntityType<>(PackOfFeathersBlockEntity::new, BlockRegistry.PACK_OF_FEATHERS.get()));
+                    BlockEntityType.Builder.of(PackOfFeathersBlockEntity::new, BlockRegistry.PACK_OF_FEATHERS.get()).build(null));
 
     public static void initStatic()
     {
