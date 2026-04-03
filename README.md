@@ -18,8 +18,8 @@ Instead of loose items scattered across your inventory, resources can now be pac
 - 🧥 **Leather Pack** — tightly bundled leather  
 - 🌱 **Seed Pouches** — small placeable containers for seeds  
 - 🥕 **Crop Sacks** — larger sacks for harvested crops  
-- 🐔 **Feather Pack** — a large transparent bag filled with feathers *(placeable in 1.21.6+)*
-- 🍂 **Dry Leaves Pack** *(1.21.5+)* — a matching bag filled with dry leaves *(placeable in 1.21.6+)*
+- 🐔 **Feather Pack** — a large transparent bag filled with feathers
+- 🍂 **Dry Leaves Pack** *(1.21.5+)* — a matching bag filled with dry leaves
 
 Many of these can be placed directly into the world and used as containers.
 
