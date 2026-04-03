@@ -12,10 +12,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -24,8 +22,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 @Mod(Main.MODID)
 public class Main
 {
-    // Directly reference a log4j logger.
-//    private static final Logger LOGGER = LogManager.getLogger();
     public static final String MODID = "pouchandpaper";
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
@@ -56,14 +52,6 @@ public class Main
         NeoForge.EVENT_BUS.register(this);
 
         EventRegistry.registerEvents();
-
-        // Register the item to a creative tab
-        //modEventBus.addListener(this::addCreative);
-
-        // Register the setup method for modloading
-        //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
-
-        //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
     }
 
     private void initializeRegistry()
@@ -80,23 +68,9 @@ public class Main
 //        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
-    private void clientSetup(final FMLClientSetupEvent event)
-    {
-        // TODO: register key bindings
-    }
-
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
-        // do something when the server starts
-//        LOGGER.info("HELLO from server starting");
-    }
-
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-//        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-//            event.accept(ItemRegistry.INK_BOTTLE);
     }
 }
