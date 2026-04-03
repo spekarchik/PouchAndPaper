@@ -69,7 +69,7 @@ Larger containers for harvested crops.
 
 ---
 
-### 🍂 Packs (1.21.6+)
+### 🍂 Packs
 
 **Feather Pack** and **Dry Leaves Pack** become full **container blocks**:
 
