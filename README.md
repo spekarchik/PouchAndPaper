@@ -38,9 +38,9 @@ It’s fast, simple, and feels completely natural — like handling real objects
 
 ---
 
-## 🌱 Functional containers for farming
+## Functional containers for farming
 
-### Seed Pouches
+### 🌱 Seed Pouches
 Small fabric pouches for:
 - wheat
 - beetroot
