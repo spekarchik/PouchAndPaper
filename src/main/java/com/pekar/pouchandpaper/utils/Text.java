@@ -1,7 +1,6 @@
 package com.pekar.pouchandpaper.utils;
 
 import com.pekar.pouchandpaper.tooltip.ITooltip;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.world.item.TooltipFlag;
 
 public class Text
