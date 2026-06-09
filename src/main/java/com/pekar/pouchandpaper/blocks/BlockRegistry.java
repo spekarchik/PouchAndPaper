@@ -78,27 +78,6 @@ public class BlockRegistry
         // just to initialize static members
     }
 
-    private static <T extends Block> DeferredBlock<T> register(String name, Supplier<T> blockSupplier)
-    {
-        var blockObject = Main.BLOCKS.register(name, blockSupplier);
-        Main.ITEMS.registerItem(name, p -> new ModBlockItem(blockObject.get(), p));
-        return blockObject;
-    }
-
-    private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> blockSupplier)
-    {
-        var blockObject = Main.BLOCKS.registerBlock(name, blockSupplier);
-        Main.ITEMS.registerItem(name, p -> new ModBlockItem(blockObject.get(), p));
-        return blockObject;
-    }
-
-    private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> blockSupplier, BlockBehaviour.Properties properties)
-    {
-        var blockObject = Main.BLOCKS.registerBlock(name, blockSupplier, properties);
-        Main.ITEMS.registerItem(name, p -> new ModBlockItem(blockObject.get(), p));
-        return blockObject;
-    }
-
     private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> blockSupplier, BiFunction<Block, Item.Properties, ? extends ModBlockItem> blockItemSupplier, BlockBehaviour.Properties blockProperties)
     {
         var blockObject = Main.BLOCKS.registerBlock(name, blockSupplier, blockProperties);
@@ -112,20 +91,5 @@ public class BlockRegistry
         var blockObject = Main.BLOCKS.registerBlock(name, prop -> blockSupplier.apply(prop, containerConfiguration), blockProperties);
         Main.ITEMS.registerItem(name, p -> blockItemSupplier.apply(blockObject.get(), p));
         return blockObject;
-    }
-
-    private static <T extends Block> DeferredBlock<T> registerSkipTab(String name, Supplier<T> supplier)
-    {
-        return Main.BLOCKS.register(name, supplier);
-    }
-
-    private static <T extends Block> DeferredBlock<T> registerSkipTab(String name, Function<BlockBehaviour.Properties, T> supplier)
-    {
-        return Main.BLOCKS.registerBlock(name, supplier);
-    }
-
-    private static <T extends Block> DeferredBlock<T> registerSkipTab(String name, Function<BlockBehaviour.Properties, T> supplier, BlockBehaviour.Properties properties)
-    {
-        return Main.BLOCKS.registerBlock(name, supplier, properties);
     }
 }
