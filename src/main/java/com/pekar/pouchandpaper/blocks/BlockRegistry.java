@@ -7,15 +7,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
-import java.util.function.Supplier;
-
-import static com.pekar.pouchandpaper.Main.BLOCKS;
 
 public class BlockRegistry
 {
@@ -75,27 +71,6 @@ public class BlockRegistry
         // just to initialize static members
     }
 
-    private static <T extends Block> DeferredBlock<T> register(String name, Supplier<T> supplier)
-    {
-        var blockObject = BLOCKS.register(name, supplier);
-        Main.ITEMS.registerItem(name, p -> new ModBlockItem(blockObject.get(), p));
-        return blockObject;
-    }
-
-    private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> supplier)
-    {
-        var blockObject = BLOCKS.registerBlock(name, supplier);
-        Main.ITEMS.registerItem(name, p -> new ModBlockItem(blockObject.get(), p));
-        return blockObject;
-    }
-
-    private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> supplier, BlockBehaviour.Properties properties)
-    {
-        var blockObject = BLOCKS.registerBlock(name, supplier, properties);
-        Main.ITEMS.registerItem(name, p -> new ModBlockItem(blockObject.get(), p));
-        return blockObject;
-    }
-
     private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> blockSupplier, BiFunction<Block, Item.Properties, ? extends ModBlockItem> blockItemSupplier, BlockBehaviour.Properties blockProperties)
     {
         var blockObject = Main.BLOCKS.registerBlock(name, blockSupplier, blockProperties);
@@ -109,20 +84,5 @@ public class BlockRegistry
         var blockObject = Main.BLOCKS.registerBlock(name, prop -> blockSupplier.apply(prop, containerConfiguration), blockProperties);
         Main.ITEMS.registerItem(name, p -> blockItemSupplier.apply(blockObject.get(), p));
         return blockObject;
-    }
-
-    private static <T extends Block> DeferredBlock<T> registerSkipTab(String name, Supplier<T> supplier)
-    {
-        return BLOCKS.register(name, supplier);
-    }
-
-    private static <T extends Block> DeferredBlock<T> registerSkipTab(String name, Function<BlockBehaviour.Properties, T> supplier)
-    {
-        return BLOCKS.registerBlock(name, supplier);
-    }
-
-    private static <T extends Block> DeferredBlock<T> registerSkipTab(String name, Function<BlockBehaviour.Properties, T> supplier, BlockBehaviour.Properties properties)
-    {
-        return BLOCKS.registerBlock(name, supplier, properties);
     }
 }
