@@ -1,11 +1,6 @@
 ## 📦 Version 3.0.1
 
-### ✨ New
-- **Feathers Pack** can now be placed as a block and behaves like a feather container.
-
-### 📝 Improvements
-- Improved the sound of *pouches* when stepped on.
-- Sounds for other blocks have been reviewed.
+- Now supports Fabric.
 
 
 ## 📦 Version 2.3.1
