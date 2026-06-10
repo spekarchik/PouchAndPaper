@@ -128,14 +128,14 @@ but one that quietly changes how your world feels.
 # 🛠️ Installation and Technical Information
 
 ## Installation
-- Make sure you have **Minecraft 1.21.x, 26.1.x** with **NeoForge** installed.
+- Make sure you have **Minecraft 26.1.2** with **Fabric Loader** and **Fabric API** installed.
 - Download the mod `.jar` file.
 - Place it into your `mods` folder.
 - Launch the game and enjoy your adventure!
 
 ## Technical Details
 - **Developer:** Sergey Pekarchik (with testing and creative support by Tima Pekarchik)
-- **Supported Minecraft versions:** 1.21.1 - 1.21.11, 26.1 - 26.1.1
+- **Supported Minecraft versions:** 26.1.2
 - **Texture resolution:** 32×32
 - **Supported languages:** English, Belarusian, Russian
 

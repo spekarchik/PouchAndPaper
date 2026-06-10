@@ -3,7 +3,6 @@ package com.pekar.pouchandpaper.blocks;
 import com.mojang.serialization.MapCodec;
 import com.pekar.pouchandpaper.items.ItemRegistry;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
@@ -13,7 +12,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FallingBlock;
@@ -29,13 +27,7 @@ public class PaperBlock extends FallingBlock
     }
 
     @Override
-    public boolean isFireSource(BlockState state, LevelReader world, BlockPos pos, Direction side)
-    {
-        return false;
-    }
-
-    @Override
-    public boolean canDropFromExplosion(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion)
+    public boolean dropFromExplosion(Explosion explosion)
     {
         return false;
     }
@@ -53,7 +45,7 @@ public class PaperBlock extends FallingBlock
     {
         int paperStacks = level.getRandom().nextIntBetweenInclusive(0, 4);
         int papers = 12 - paperStacks * 3;
-        popResource(level, pos, new ItemStack(ItemRegistry.PAPER_STACK.get(), paperStacks));
+        popResource(level, pos, new ItemStack(ItemRegistry.PAPER_STACK, paperStacks));
         popResource(level, pos, new ItemStack(Items.PAPER, papers));
         level.removeBlock(pos, false);
     }
@@ -65,7 +57,7 @@ public class PaperBlock extends FallingBlock
     }
 
     @Override
-    public void onBlockExploded(BlockState state, ServerLevel level, BlockPos pos, Explosion explosion)
+    public void wasExploded(ServerLevel level, BlockPos pos, Explosion explosion)
     {
         dropBlock(level, pos);
     }
@@ -84,27 +76,24 @@ public class PaperBlock extends FallingBlock
             int val = randomSource.nextIntBetweenInclusive(0, 4);
             if (val == 0)
             {
-                serverLevel.setBlock(pos, BlockRegistry.BURNT_PAPER_BLOCK.get().defaultBlockState(), Block.UPDATE_ALL);
+                serverLevel.setBlock(pos, BlockRegistry.BURNT_PAPER_BLOCK.defaultBlockState(), Block.UPDATE_ALL);
             }
         }
 
         super.tick(blockState, serverLevel, pos, randomSource);
     }
 
-    @Override
     public int getDustColor(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos)
     {
         return 0x777777;
     }
 
-    @Override
-    public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face)
+    public static int getFireSpreadSpeed()
     {
         return 200; // ignite: 5..60
     }
 
-    @Override
-    public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction)
+    public static int getFlammability()
     {
         return 10; // burn: 5..100
     }

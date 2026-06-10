@@ -7,6 +7,6 @@ public class CarrotSackBlockEntity extends FarmContainerBlockEntity
 {
     public CarrotSackBlockEntity(BlockPos pos, BlockState blockState)
     {
-        super(BlockEntityRegistry.SACK_OF_CARROT_BLOCK_ENTITY.get(), pos, blockState);
+        super(BlockEntityRegistry.SACK_OF_CARROT_BLOCK_ENTITY, pos, blockState);
     }
 }

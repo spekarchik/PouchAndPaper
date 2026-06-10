@@ -2,7 +2,6 @@ package com.pekar.pouchandpaper.tooltip;
 
 import net.minecraft.network.chat.Component;
 
-import javax.annotation.CheckReturnValue;
 import java.util.function.Consumer;
 
 public class Tooltip implements ITooltip
@@ -34,7 +33,6 @@ public class Tooltip implements ITooltip
         return this;
     }
 
-    @CheckReturnValue
     @Override
     public void addEmptyLine()
     {
@@ -47,14 +45,12 @@ public class Tooltip implements ITooltip
         return new TooltipLine(this, descriptionId, ignoreEmptyLines);
     }
 
-    @CheckReturnValue
     @Override
     public ITooltipLine addLine(String descriptionRoot)
     {
         return addLineById(descriptionRoot + ".desc");
     }
 
-    @CheckReturnValue
     @Override
     public ITooltipLine addLine(String descriptionRoot, int descNumber)
     {

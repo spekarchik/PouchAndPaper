@@ -8,7 +8,7 @@ public class PouchOfCocoaBeansBlockEntity extends FarmContainerBlockEntity
 
     public PouchOfCocoaBeansBlockEntity(BlockPos pos, BlockState blockState)
     {
-        super(BlockEntityRegistry.POUCH_OF_COCOA_BLOCK_ENTITY.get(), pos, blockState);
+        super(BlockEntityRegistry.POUCH_OF_COCOA_BLOCK_ENTITY, pos, blockState);
     }
 
 }

@@ -8,7 +8,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.Nullable;
 
 public class PouchOfWheatSeeds extends PouchOfSeeds implements EntityBlock
@@ -20,7 +19,7 @@ public class PouchOfWheatSeeds extends PouchOfSeeds implements EntityBlock
     }
 
     @Override
-    protected DeferredBlock<Block> getPouchBlock()
+    protected Block getPouchBlock()
     {
         return BlockRegistry.POUCH_OF_WHEAT;
     }
@@ -34,6 +33,6 @@ public class PouchOfWheatSeeds extends PouchOfSeeds implements EntityBlock
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState)
     {
-        return BlockEntityRegistry.POUCH_OF_WHEAT_BLOCK_ENTITY.get().create(blockPos, blockState);
+        return BlockEntityRegistry.POUCH_OF_WHEAT_BLOCK_ENTITY.create(blockPos, blockState);
     }
 }

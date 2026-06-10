@@ -7,6 +7,6 @@ public class PackOfLeavesBlockEntity extends FarmContainerBlockEntity
 {
     public PackOfLeavesBlockEntity(BlockPos pos, BlockState blockState)
     {
-        super(BlockEntityRegistry.PACK_OF_LEAVES_BLOCK_ENTITY.get(), pos, blockState);
+        super(BlockEntityRegistry.PACK_OF_LEAVES_BLOCK_ENTITY, pos, blockState);
     }
 }

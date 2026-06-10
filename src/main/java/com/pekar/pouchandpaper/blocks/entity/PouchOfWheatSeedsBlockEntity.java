@@ -8,7 +8,7 @@ public class PouchOfWheatSeedsBlockEntity extends FarmContainerBlockEntity
 
     public PouchOfWheatSeedsBlockEntity(BlockPos pos, BlockState blockState)
     {
-        super(BlockEntityRegistry.POUCH_OF_WHEAT_BLOCK_ENTITY.get(), pos, blockState);
+        super(BlockEntityRegistry.POUCH_OF_WHEAT_BLOCK_ENTITY, pos, blockState);
     }
 
 }

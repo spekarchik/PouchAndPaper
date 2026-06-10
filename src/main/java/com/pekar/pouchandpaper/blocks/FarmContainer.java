@@ -18,7 +18,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.phys.BlockHitResult;
-import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
@@ -43,7 +42,7 @@ public abstract class FarmContainer extends ModBlock
         registerDefaultState(stateDefinition.any().setValue(FILL_LEVEL, 0));
     }
 
-    protected abstract DeferredBlock<Block> getPouchBlock();
+    protected abstract Block getPouchBlock();
 
     protected abstract Item getSeedsItem();
 
@@ -88,6 +87,13 @@ public abstract class FarmContainer extends ModBlock
         }
 
         return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
+    }
+
+    public InteractionResult useItemOnWhileSneaking(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand)
+    {
+        var result = useItemOnInternal(stack, state, level, pos, player, hand);
+        updateFillLevel(state, level, pos);
+        return result == null ? InteractionResult.PASS : result;
     }
 
     private InteractionResult.@Nullable Success useItemOnInternal(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand)
@@ -210,7 +216,7 @@ public abstract class FarmContainer extends ModBlock
             {
                 int pouches = seedsInside / itemsPerContainerToCraft;
                 int seeds = seedsInside % itemsPerContainerToCraft;
-                popResourceFromFace(level, pos, player.getDirection().getOpposite(), getPouchBlock().toStack(pouches + 1));
+                popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getPouchBlock(), pouches + 1));
                 if (seeds > 0)
                     popResourceFromFace(level, pos, player.getDirection().getOpposite(), new ItemStack(getSeedsItem(), seeds));
             }
@@ -244,7 +250,7 @@ public abstract class FarmContainer extends ModBlock
                     popResource(level, pos, new ItemStack(getSeedsItem(), seedsInside));
                 }
 
-                popResource(level, pos, getPouchBlock().toStack());
+                popResource(level, pos, new ItemStack(getPouchBlock()));
                 level.removeBlock(pos, false);
             }
         }

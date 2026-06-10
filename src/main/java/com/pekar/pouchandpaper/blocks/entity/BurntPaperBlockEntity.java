@@ -21,7 +21,7 @@ public class BurntPaperBlockEntity extends BlockEntity implements BlockEntityTic
 
     public BurntPaperBlockEntity(BlockPos pos, BlockState blockState)
     {
-        super(BlockEntityRegistry.BURNT_PAPER_BLOCK_ENTITY.get(), pos, blockState);
+        super(BlockEntityRegistry.BURNT_PAPER_BLOCK_ENTITY, pos, blockState);
     }
 
     @Override
