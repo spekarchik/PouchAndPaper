@@ -95,7 +95,7 @@ public class PaperBlock extends FallingBlock
 
     public static int getFlammability()
     {
-        return 10;
+        return 5;
     }
 
     @Override
