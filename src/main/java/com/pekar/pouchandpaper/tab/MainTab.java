@@ -1,15 +1,11 @@
 package com.pekar.pouchandpaper.tab;
 
-import com.pekar.pouchandpaper.Main;
 import com.pekar.pouchandpaper.blocks.BlockRegistry;
 import com.pekar.pouchandpaper.items.ItemRegistry;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
+import net.minecraft.world.item.ItemStack;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class MainTab extends ModTab
@@ -21,25 +17,19 @@ public class MainTab extends ModTab
     }
 
     @Override
-    protected DeferredItem<Item> getIconItem()
+    protected ItemStack getIconItem()
     {
-        return ItemRegistry.PAPER_STACK;
+        return new ItemStack(ItemRegistry.PAPER_STACK);
     }
 
     @Override
-    protected Collection<DeferredHolder<Item, ? extends Item>> getTabItems()
+    protected Collection<Item> getTabItems()
     {
         ItemRegistry.initStatic();
         BlockRegistry.initStatic();
-        return Main.ITEMS.getEntries(); // block items are also included
-    }
-
-    @Override
-    protected ResourceKey<CreativeModeTab>[] getTabsBefore()
-    {
-        return new ResourceKey[]
-                {
-                        CreativeModeTabs.SPAWN_EGGS
-                };
+        var items = new ArrayList<Item>();
+        items.addAll(ItemRegistry.getEntries());
+        items.addAll(BlockRegistry.getBlockItems());
+        return items;
     }
 }

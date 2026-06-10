@@ -4,17 +4,13 @@ import com.mojang.serialization.MapCodec;
 import com.pekar.pouchandpaper.blocks.entity.BlockEntityRegistry;
 import com.pekar.pouchandpaper.blocks.entity.BurntPaperBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.FallingBlock;
@@ -22,10 +18,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.PushReaction;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.function.BiConsumer;
 
 public class BurntPaperBlock extends PaperBlock implements EntityBlock
 {
@@ -59,7 +52,7 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
     }
 
     @Override
-    protected void onExplosionHit(BlockState state, Level level, BlockPos pos, Explosion explosion, BiConsumer<ItemStack, BlockPos> dropConsumer)
+    public void wasExploded(Level level, BlockPos pos, Explosion explosion)
     {
         level.destroyBlock(pos, false);
     }
@@ -79,39 +72,31 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
     }
 
     @Override
-    public boolean canDropFromExplosion(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion)
+    public boolean dropFromExplosion(Explosion explosion)
     {
         return false;
     }
 
-    @Override
-    public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face)
+    public static int getFireSpreadSpeed()
     {
-        return 60; // ignite: 5..60
+        return 0;
+    }
+
+    public static int getFlammability()
+    {
+        return 0;
     }
 
     @Override
-    public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction)
+    public int getDustColor(BlockState blockState, net.minecraft.world.level.BlockGetter blockGetter, BlockPos blockPos)
     {
-        return 0; // burn: 5..100 - how long it burns (100 - short)
-    }
-
-    @Override
-    public boolean isFireSource(BlockState state, LevelReader world, BlockPos pos, Direction side)
-    {
-        return false;
-    }
-
-    @Override
-    public @Nullable PushReaction getPistonPushReaction(BlockState state)
-    {
-        return PushReaction.DESTROY;
+        return 0x333333;
     }
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState)
     {
-        return BlockEntityRegistry.BURNT_PAPER_BLOCK_ENTITY.get().create(blockPos, blockState);
+        return BlockEntityRegistry.BURNT_PAPER_BLOCK_ENTITY.create(blockPos, blockState);
     }
 
     @Override

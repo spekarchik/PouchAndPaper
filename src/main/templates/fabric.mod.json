@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "entrypoints": {
+    "main": [
+      "com.pekar.pouchandpaper.Main"
+    ],
+    "client": [
+      "com.pekar.pouchandpaper.ClientMain"
+    ]
+  },
+  "contact": {
+    "homepage": "https://curseforge.com/minecraft/mc-mods/pouch-and-paper",
+    "sources": "https://github.com/spekarchik/PouchAndPaper"
+  },
+  "license": "${mod_license}",
+  "icon": "logo.png",
+  "environment": "*",
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

@@ -8,7 +8,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.Nullable;
 
 public class PotatoSack extends FarmSack implements EntityBlock
@@ -19,7 +18,7 @@ public class PotatoSack extends FarmSack implements EntityBlock
     }
 
     @Override
-    protected DeferredBlock<Block> getPouchBlock()
+    protected Block getPouchBlock()
     {
         return BlockRegistry.SACK_OF_POTATO;
     }
@@ -33,6 +32,6 @@ public class PotatoSack extends FarmSack implements EntityBlock
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState)
     {
-        return BlockEntityRegistry.SACK_OF_POTATO_BLOCK_ENTITY.get().create(blockPos, blockState);
+        return BlockEntityRegistry.SACK_OF_POTATO_BLOCK_ENTITY.create(blockPos, blockState);
     }
 }

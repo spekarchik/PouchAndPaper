@@ -7,6 +7,6 @@ public class PackOfFeathersBlockEntity extends FarmContainerBlockEntity
 {
     public PackOfFeathersBlockEntity(BlockPos pos, BlockState blockState)
     {
-        super(BlockEntityRegistry.PACK_OF_FEATHERS_BLOCK_ENTITY.get(), pos, blockState);
+        super(BlockEntityRegistry.PACK_OF_FEATHERS_BLOCK_ENTITY, pos, blockState);
     }
 }

@@ -1,20 +1,41 @@
 package com.pekar.pouchandpaper.items;
 
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.registries.DeferredItem;
 
-import static com.pekar.pouchandpaper.Main.ITEMS;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.function.Function;
+
+import static com.pekar.pouchandpaper.Main.MODID;
+import static com.pekar.pouchandpaper.utils.Resources.createResourceLocation;
 
 public class ItemRegistry
 {
-    public static final DeferredItem<Item> PAPER_STACK = ITEMS.registerItem("paperstack", ModItem::new);
-    public static final DeferredItem<Item> INK_BOTTLE = ITEMS.registerItem("ink_bottle", ModItem::new);
-    public static final DeferredItem<Item> GLOW_INK_BOTTLE = ITEMS.registerItem("glow_ink_bottle", ModItem::new);
-    public static final DeferredItem<Item> LEATHER_PACK = ITEMS.registerItem("leatherpack", ModItem::new);
+    private static final List<Item> ITEMS = new ArrayList<>();
+
+    public static final Item PAPER_STACK = registerItem("paperstack", ModItem::new);
+    public static final Item INK_BOTTLE = registerItem("ink_bottle", ModItem::new);
+    public static final Item GLOW_INK_BOTTLE = registerItem("glow_ink_bottle", ModItem::new);
+    public static final Item LEATHER_PACK = registerItem("leatherpack", ModItem::new);
 
     public static void initStatic()
     {
         // just to initialize static members
     }
-}
 
+    public static Collection<Item> getEntries()
+    {
+        return ITEMS;
+    }
+
+    public static Item registerItem(String name, Function<Item.Properties, Item> itemFactory)
+    {
+        var id = createResourceLocation(MODID, name);
+        var item = itemFactory.apply(new Item.Properties());
+        ITEMS.add(item);
+        return Registry.register(BuiltInRegistries.ITEM, id, item);
+    }
+}

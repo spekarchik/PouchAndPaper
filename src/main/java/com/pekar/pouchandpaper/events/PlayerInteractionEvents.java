@@ -1,26 +1,26 @@
 package com.pekar.pouchandpaper.events;
 
 import com.pekar.pouchandpaper.blocks.FarmContainer;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.common.util.TriState;
-import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.minecraft.world.InteractionResult;
 
 public class PlayerInteractionEvents implements IEventHandler
 {
-    @SubscribeEvent
-    public void onPlayerRightClickBlock(PlayerInteractEvent.RightClickBlock event)
+    public static void init()
     {
-        var player = event.getEntity();
-
-        if (!player.isShiftKeyDown()) return;
-
-        var level = player.level();
-        var pos = event.getPos();
-        var blockUseOn = level.getBlockState(pos);
-
-        if (blockUseOn.getBlock() instanceof FarmContainer container)
+        UseBlockCallback.EVENT.register((player, level, hand, hitResult) ->
         {
-            event.setUseBlock(TriState.TRUE);
-        }
+            if (!player.isShiftKeyDown()) return InteractionResult.PASS;
+
+            var pos = hitResult.getBlockPos();
+            var state = level.getBlockState(pos);
+
+            if (state.getBlock() instanceof FarmContainer container)
+            {
+                return container.useItemOnWhileSneaking(player.getItemInHand(hand), state, level, pos, player, hand);
+            }
+
+            return InteractionResult.PASS;
+        });
     }
 }
