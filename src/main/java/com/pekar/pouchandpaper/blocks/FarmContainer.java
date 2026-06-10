@@ -92,13 +92,15 @@ public abstract class FarmContainer extends ModBlock
     public InteractionResult useItemOnWhileSneaking(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand)
     {
         var result = useItemOnInternal(stack, state, level, pos, player, hand);
-        updateFillLevel(state, level, pos);
 
         if (result == null)
         {
-            return useWithoutItemInternal(level, pos, player);
+            var useWithoutItemResult = useWithoutItemInternal(level, pos, player);
+            updateFillLevel(level.getBlockState(pos), level, pos);
+            return useWithoutItemResult;
         }
 
+        updateFillLevel(level.getBlockState(pos), level, pos);
         return result.consumesAction()
                 ? InteractionResult.sidedSuccess(level.isClientSide())
                 : InteractionResult.PASS;
