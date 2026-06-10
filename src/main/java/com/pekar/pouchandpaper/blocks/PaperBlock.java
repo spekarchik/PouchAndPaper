@@ -90,12 +90,12 @@ public class PaperBlock extends FallingBlock
 
     public static int getFireSpreadSpeed()
     {
-        return 200; // ignite: 5..60
+        return 200;
     }
 
     public static int getFlammability()
     {
-        return 10; // burn: 5..100
+        return 10;
     }
 
     @Override

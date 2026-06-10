@@ -79,12 +79,12 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
 
     public static int getFireSpreadSpeed()
     {
-        return 60; // ignite: 5..60
+        return 0;
     }
 
     public static int getFlammability()
     {
-        return 0; // burn: 5..100 - how long it burns (100 - short)
+        return 0;
     }
 
     @Override
