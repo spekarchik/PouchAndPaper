@@ -1,7 +1,6 @@
 ## 📦 Version 3.0.1
 
-### 📝 Improvements
-- Improved the sound of *pouches* when stepped on.
+- Now supports Fabric.
 
 
 ## 📦 Version 3.0.0
