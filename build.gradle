@@ -65,7 +65,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
     from "src/main/templates"
     into "build/generated/sources/modMetadata"
 }
-sourceSets.main.resources.srcDir generateModMetadata
+sourceSets.main.resources.srcDir(generateModMetadata)
 
 publishing {
     publications {
@@ -75,7 +75,7 @@ publishing {
     }
     repositories {
         maven {
-            url "file://${project.projectDir}/repo"
+            url = file("repo").toURI()
         }
     }
 }
