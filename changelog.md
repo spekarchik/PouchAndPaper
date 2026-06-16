@@ -1,5 +1,7 @@
 ## 📦 Version 3.0.1
 
+- Now supports Minecraft 26.2
+
 ### 📝 Improvements
 - Improved the sound of *pouches* when stepped on.
 
