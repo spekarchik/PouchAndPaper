@@ -1,5 +1,8 @@
 ## 📦 Version 3.0.3
 
+### 🐞 Fixed
+- Fixed placing a new pouch or sack next to a full one when trying to add more contents, including while crouching.
+
 ### 📝 Improvements
 - Improved dedicated server compatibility.
 

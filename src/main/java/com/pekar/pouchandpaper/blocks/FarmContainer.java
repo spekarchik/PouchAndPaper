@@ -101,6 +101,11 @@ public abstract class FarmContainer extends ModBlock
         }
 
         updateFillLevel(level.getBlockState(pos), level, pos);
+        if (result == ItemInteractionResult.CONSUME)
+        {
+            return InteractionResult.CONSUME;
+        }
+
         return result.consumesAction()
                 ? InteractionResult.sidedSuccess(level.isClientSide())
                 : InteractionResult.PASS;
@@ -119,7 +124,7 @@ public abstract class FarmContainer extends ModBlock
             int seedsInside = containerBlockEntity.getSeedsInside();
             if (seedsInside + itemsPerContainerToCraft > maxContainerCapacity)
             {
-                return ItemInteractionResult.SKIP_DEFAULT_BLOCK_INTERACTION;
+                return ItemInteractionResult.CONSUME;
             }
 
             int pouchesToAdd = 1;
@@ -153,7 +158,7 @@ public abstract class FarmContainer extends ModBlock
             int seedsInside = containerBlockEntity.getSeedsInside();
             if (seedsInside >= maxContainerCapacity)
             {
-                return ItemInteractionResult.SKIP_DEFAULT_BLOCK_INTERACTION;
+                return ItemInteractionResult.CONSUME;
             }
 
             int seedsToAdd = 1;
