@@ -10,6 +10,9 @@
   "entrypoints": {
     "main": [
       "com.pekar.pouchandpaper.Main"
+    ],
+    "client": [
+      "com.pekar.pouchandpaper.ClientMain"
     ]
   },
   "contact": {
