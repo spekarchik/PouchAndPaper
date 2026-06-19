@@ -2,6 +2,8 @@ package com.pekar.pouchandpaper;
 
 import com.pekar.pouchandpaper.blocks.entity.BlockEntityRegistry;
 import com.pekar.pouchandpaper.blocks.entity.renderer.PackOfFeathersRenderer;
+import com.pekar.pouchandpaper.client.TooltipClientAccessor;
+import com.pekar.pouchandpaper.clientaccess.ClientAccessor;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
@@ -19,6 +21,9 @@ public class ClientMain implements ClientModInitializer
     {
         ModelLoadingPlugin.register(context -> context.addModels(FEATHERS_PACK_PLASTIC_MODELS));
         BlockEntityRenderers.register(BlockEntityRegistry.PACK_OF_FEATHERS_BLOCK_ENTITY, PackOfFeathersRenderer::new);
+        ClientAccessor.init(
+                new TooltipClientAccessor()
+        );
     }
 
     private static List<ResourceLocation> createFeathersPackPlasticModels()

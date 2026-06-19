@@ -11,6 +11,8 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.List;
 
+import static com.pekar.pouchandpaper.utils.Text.showExtendedDescription;
+
 public class PackOfFeathersBlockItem extends ModBlockItem implements ITooltipProvider
 {
     protected final Utils utils = new Utils();
@@ -29,7 +31,7 @@ public class PackOfFeathersBlockItem extends ModBlockItem implements ITooltipPro
     @Override
     public void addTooltip(ItemStack stack, TooltipContext context, ITooltip tooltip, TooltipFlag flag)
     {
-        if (!utils.text.showExtendedDescription(tooltip)) return;
+        if (!showExtendedDescription(tooltip, flag)) return;
 
         for (int i = 1; i <= 10; i++)
         {
