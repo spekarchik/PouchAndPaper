@@ -1,3 +1,9 @@
+## 📦 Version 3.0.3
+
+### 📝 Improvements
+- Improved dedicated server compatibility.
+
+
 ## 📦 Version 3.0.2
 
 - Now supports Minecraft 26.2

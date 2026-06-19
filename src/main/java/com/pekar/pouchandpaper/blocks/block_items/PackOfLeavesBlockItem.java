@@ -12,6 +12,8 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.function.Consumer;
 
+import static com.pekar.pouchandpaper.utils.Text.showExtendedDescription;
+
 public class PackOfLeavesBlockItem extends ModBlockItem implements ITooltipProvider
 {
     protected final Utils utils = new Utils();
@@ -30,7 +32,7 @@ public class PackOfLeavesBlockItem extends ModBlockItem implements ITooltipProvi
     @Override
     public void addTooltip(ItemStack stack, TooltipContext context, ITooltip tooltip, TooltipFlag flag)
     {
-        if (!utils.text.showExtendedDescription(tooltip, flag)) return;
+        if (!showExtendedDescription(tooltip, flag)) return;
 
         for (int i = 1; i <= 10; i++)
         {

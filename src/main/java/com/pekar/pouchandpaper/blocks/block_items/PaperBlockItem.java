@@ -3,7 +3,6 @@ package com.pekar.pouchandpaper.blocks.block_items;
 import com.pekar.pouchandpaper.tooltip.ITooltip;
 import com.pekar.pouchandpaper.tooltip.ITooltipProvider;
 import com.pekar.pouchandpaper.tooltip.TextStyle;
-import com.pekar.pouchandpaper.utils.Utils;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -12,6 +11,8 @@ import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.block.Block;
 
 import java.util.function.Consumer;
+
+import static com.pekar.pouchandpaper.utils.Text.showExtendedDescription;
 
 public class PaperBlockItem extends ModBlockItem implements ITooltipProvider
 {
@@ -29,7 +30,7 @@ public class PaperBlockItem extends ModBlockItem implements ITooltipProvider
     @Override
     public void addTooltip(ItemStack stack, Item.TooltipContext context, ITooltip tooltip, TooltipFlag flag)
     {
-        if (!Utils.instance.text.showExtendedDescription(tooltip, flag)) return;
+        if (!showExtendedDescription(tooltip, flag)) return;
 
         for (int i = 1; i <= 5; i++)
         {
