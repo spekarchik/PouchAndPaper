@@ -225,7 +225,7 @@ public abstract class FarmContainer extends ModBlock
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos)
     {
         var blockBelow = level.getBlockState(pos.below());
-        return blockBelow.isSolidRender()
+        return blockBelow.isCollisionShapeFullBlock(level, pos.below())
                 || blockBelow.is(Blocks.FARMLAND)
                 || blockBelow.is(Blocks.DIRT_PATH);
     }
