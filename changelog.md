@@ -1,7 +1,9 @@
 ## 📦 Version 3.0.4
 
 ### 📝 Improvements
-- Pouches, sacks and packs can now be placed on **Glass** and other full blocks where placement was previously not possible.
+- Pouches, sacks and packs can now be placed:
+  - on **Glass** and other full blocks where placement was previously not possible.
+  - on **Soul Sand** and **Mud** blocks.
 
 
 ## 📦 Version 3.0.3
