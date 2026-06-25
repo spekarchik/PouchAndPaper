@@ -236,6 +236,8 @@ public abstract class FarmContainer extends ModBlock
     {
         var blockBelow = level.getBlockState(pos.below());
         return blockBelow.isCollisionShapeFullBlock(level, pos.below())
+                || blockBelow.is(Blocks.SOUL_SAND)
+                || blockBelow.is(Blocks.MUD)
                 || blockBelow.is(Blocks.FARMLAND)
                 || blockBelow.is(Blocks.DIRT_PATH);
     }
