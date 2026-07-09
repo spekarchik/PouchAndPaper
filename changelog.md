@@ -1,5 +1,10 @@
 ## 📦 Version 3.0.4
 
+- Promoted to **Release**.
+
+
+## 📦 Version 3.0.4-beta
+
 ### 📝 Improvements
 - Pouches, sacks and packs can now also be placed:
   - on **Glass** and other previously unsupported full blocks.
