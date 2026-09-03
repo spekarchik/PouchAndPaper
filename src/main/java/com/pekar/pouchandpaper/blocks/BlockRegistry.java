@@ -31,7 +31,7 @@ public class BlockRegistry
             BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.BAMBOO_WOOD).strength(0.6f));
 
     public static final Block BURNT_PAPER_BLOCK = register("burnt_paper_block", BurntPaperBlock::new, BurntPaperBlockItem::new,
-            BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.GRASS).strength(0.6f).pushReaction(PushReaction.DESTROY));
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).sound(SoundType.GRASS).strength(0.6f).pushReaction(PushReaction.POPPED));
 
     public static final Block POUCH_OF_WHEAT = register("seedpocket_wheat", PouchOfWheatSeeds::new, PouchOfSeedsBlockItem::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).strength(0.1f, 9f)

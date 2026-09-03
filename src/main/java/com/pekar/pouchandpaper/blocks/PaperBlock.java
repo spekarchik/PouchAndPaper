@@ -1,6 +1,5 @@
 package com.pekar.pouchandpaper.blocks;
 
-import com.mojang.serialization.MapCodec;
 import com.pekar.pouchandpaper.items.ItemRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -19,8 +18,6 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class PaperBlock extends FallingBlock
 {
-    private static final MapCodec<PaperBlock> CODEC = simpleCodec(PaperBlock::new);
-
     public PaperBlock(Properties properties)
     {
         super(properties);
@@ -96,11 +93,5 @@ public class PaperBlock extends FallingBlock
     public static int getFlammability()
     {
         return 5;
-    }
-
-    @Override
-    protected MapCodec<? extends FallingBlock> codec()
-    {
-        return CODEC;
     }
 }
