@@ -1,5 +1,10 @@
 ## 📦 Version 3.0.5
 
+- Now supports Minecraft 26.3
+
+
+## 📦 Version 3.0.5
+
 ### ⚙️ Updated
 - Updated mod metadata for NeoForge **26.2.0.50-beta and newer**:
   - Replaced the deprecated `logoFile` property with `iconFile` and `bannerFile`.
