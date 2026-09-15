@@ -1,6 +1,5 @@
 package com.pekar.pouchandpaper.blocks;
 
-import com.mojang.serialization.MapCodec;
 import com.pekar.pouchandpaper.blocks.entity.BlockEntityRegistry;
 import com.pekar.pouchandpaper.blocks.entity.BurntPaperBlockEntity;
 import net.minecraft.core.BlockPos;
@@ -16,7 +15,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -26,8 +24,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class BurntPaperBlock extends PaperBlock implements EntityBlock
 {
-    private static final MapCodec<BurntPaperBlock> CODEC = simpleCodec(BurntPaperBlock::new);
-
     public BurntPaperBlock(Properties properties)
     {
         super(properties);
@@ -102,7 +98,7 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
     @Override
     public @Nullable PushReaction getPistonPushReaction(BlockState state)
     {
-        return PushReaction.DESTROY;
+        return PushReaction.POPPED;
     }
 
     @Override
@@ -123,11 +119,5 @@ public class BurntPaperBlock extends PaperBlock implements EntityBlock
     public int getDustColor(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos)
     {
         return 0x333333;
-    }
-
-    @Override
-    protected MapCodec<? extends FallingBlock> codec()
-    {
-        return CODEC;
     }
 }

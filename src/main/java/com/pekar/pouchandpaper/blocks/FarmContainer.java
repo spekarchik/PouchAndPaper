@@ -2,6 +2,8 @@ package com.pekar.pouchandpaper.blocks;
 
 import com.pekar.pouchandpaper.blocks.entity.FarmContainerBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -201,7 +203,7 @@ public abstract class FarmContainer extends ModBlock
     }
 
     @Override
-    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool)
+    public void playerDestroy(ServerLevel level, ServerPlayer player, BlockPos pos, BlockState state, @org.jspecify.annotations.Nullable BlockEntity blockEntity, ItemStack destroyedWith)
     {
         if (!level.isClientSide() && blockEntity instanceof FarmContainerBlockEntity containerBlockEntity)
         {
