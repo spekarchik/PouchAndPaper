@@ -43,7 +43,7 @@ public class PaperBlock extends FallingBlock
 
     private static void dropBlock(Level level, BlockPos pos)
     {
-        int paperStacks = level.getRandom().nextIntBetweenInclusive(0, 4);
+        int paperStacks = level.random.nextIntBetweenInclusive(0, 4);
         int papers = 12 - paperStacks * 3;
         popResource(level, pos, new ItemStack(ItemRegistry.PAPER_STACK, paperStacks));
         popResource(level, pos, new ItemStack(Items.PAPER, papers));
